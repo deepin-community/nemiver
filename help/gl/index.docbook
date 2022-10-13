@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "0.5.0">
+<!ENTITY manrevision "2.0">
+<!ENTITY date "February 2008">
+<!ENTITY app "Nemiver">
+<!ENTITY appcmd "nemiver">
+<!ENTITY website "http://www.gnome.org/projects/nemiver/">
+]>
+<!--
+(Do not remove this comment block.)
+Maintained by the GNOME Documentation Project
+http://developer.GNOME.org/projects/gdp
+Template version: 2.0 beta
+Template last modified Jan 30, 2002
+
+-->
+<!-- =============Document Header ============================= -->
+<?chunk-depth 2?>
+<article id="index" lang="gl">
+  <!-- please do not change the id; for translations, change lang to -->
+  <!-- appropriate code -->
+  <articleinfo>
+    <title>Manual do Nemiver</title>
+    <copyright lang="en">
+      <year>2008</year>
+      <holder>Jonathon Jongsma</holder>
+    </copyright>
+    <!-- translators: uncomment this:
+
+    <copyright>
+      <year>2003</year>
+      <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+    </copyright>
+
+    -->
+    <publisher role="maintainer">
+      <publishername>Proxecto Nemiver</publishername>
+    </publisher>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <authorgroup>
+      <author lang="en">
+        <firstname>Jonathon</firstname>
+        <surname>Jongsma</surname>
+        <affiliation>
+          <orgname>GNOME</orgname>
+        </affiliation>
+      </author>
+      <!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+      <othercredit role="translator">
+        <firstname>Latin</firstname>
+        <surname>Translator 1</surname>
+        <affiliation>
+          <orgname>Latin Translation Team</orgname>
+          <address> <email>translator@gnome.org</email> </address>
+        </affiliation>
+        <contrib>Latin translation</contrib>
+      </othercredit>
+      -->
+    </authorgroup>
+    <!-- According to GNU FDL, revision history is mandatory if you are -->
+    <!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+    <revhistory>
+      <!-- Remember to remove the &manrevision; entity from the revision entries other
+      than the current revision. -->
+      <revision lang="en">
+        <revnumber>1.0</revnumber>
+        <date>2007</date>
+        <revdescription>
+          <para lang="en">Initial version</para>
+        </revdescription>
+      </revision>
+      <revision lang="en">
+        <revnumber>2.0</revnumber>
+        <date>2008</date>
+        <revdescription>
+          <para lang="en">Updated for 0.5.0 Release</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+    <releaseinfo>Este manual describe a versión 0.5.0 do Nemiver.</releaseinfo>
+    <legalnotice>
+      <title>Comentarios</title>
+      <para>Para informar dun erro ou facer unha suxestión sobre o <application> Nemiver </application>, ou sobre esta guía, consulte o <ulink url="http://www.gnome.org/projects/nemiver/" type="http"> sitio web do proxecto Nemiver</ulink>.</para>
+      <!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+    <abstract role="description">
+      <para>Nemiver é un depurador gráfico para o contorno de escritorio GNOME.</para>
+    </abstract>
+  </articleinfo>
+  <indexterm lang="en">
+    <primary>Nemiver</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>debugger</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>gdb</primary>
+  </indexterm>
+  <!-- ============= Document Body ============================= -->
+  <!-- ============= Introduction ============================== -->
+  <sect1 id="nemiver-sect-intro">
+    <title>Visión xeral</title>
+    <para>Nemiver constitúe un esforzo continuado de crear un depurador gráfico que se integre no contorno de escritorio GNOME. Agora mesmo conta cun motor baseado no coñecido Depurador de gdb GNU para depurar programa C / C++.</para>
+    <sect2 id="nemiver-sect-perspectives">
+      <title>Perspectivas</title>
+      <para>Nemiver está deseñado como un <interface>aplicativo</interface> gráfico xenérico e como un sistema de complementos que poden ofrecer diversas perspectivas.  Nestes momentos o único punto de vista que se fornece é o do depurado, pero nun futuro pode haber novas perspectiva grazas á depuración de memoria con <application>valgrind</application>, ou para ferramentas de creación de perfís como o <application>oprofile</application>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-getting-started">
+    <title>Iniciarse</title>
+    <para>Esta sección explica como iniciar Nemiver e dá unha visión xeral da aplicación.</para>
+    <sect2 id="nemiver-sect-starting">
+      <title>Iniciando Nemiver</title>
+      <para>Podes iniciar o Nemiver das seguintes formas:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Prema no Menú de <guimenu>Aplicativos</guimenu></term>
+          <listitem>
+            <para>Escolla <menuchoice><guisubmenu>Programación</guisubmenu><guimenuitem>Depurador Nemiver</guimenuitem></menuchoice>. </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Liña de ordes</term>
+          <listitem>
+            <para>Escriba <command>nemiver</command> e prema <keycap>Intro</keycap>.</para>
+            <tip>
+              <title>Opcións adicionais da liña de comandos</title>
+              <para>Pode atopar unha lista de opción que poden ser introducidas no Nemiver a través da liña de comandos escribindo <command>nemiver --help-all</command>. </para>
+            </tip>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="nemiver-sect-window">
+      <title>A fiestra do Nemiver</title>
+      <para>Ao iniciar o Nemiver aparecerá unha xanela semellante á seguinte:</para>
+      <figure id="nemiver-window">
+        <title>Xanela do Nemiver</title>
+        <screenshot>
+          <mediaobject lang="en">
+            <imageobject>
+              <imagedata fileref="figures/main-window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Shows Nemiver main window.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para>A xanela do <application>Nemiver</application> contén os seguintes elementos:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Barra do menú</term>
+          <listitem>
+            <para>Os menús da barra do menú conteñen todos os comandos que precisa para usar o <application>Nemiver</application>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Barra de ferramentas</term>
+          <listitem>
+            <para>A barra de ferramentas contén as accións básicas de depuración precisas para executar ou depurar o programa.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Notas da visualización da fonte</term>
+          <listitem>
+            <para>Ao abrir os ficheiros fonte aparecerá nesta área os ficheiros fonte do programa que está a ser depurado.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Notas de estado</term>
+          <listitem>
+            <para>As notas de estado conteñen varias lapelas que amosan a información do programa que está a ser depurado. Nestas inclúense:</para>
+            <variablelist>
+              <varlistentry>
+                <term>Pila de chamadas</term>
+                <listitem>
+                  <para>Amosa o estado actual das chamadas acumuladas do programa en depuración.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Variábeis</term>
+                <listitem>
+                  <para>Amosa unha lista de variábeis locais e de argumentos de función, ademais dos seus valores e tipos.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Terminal de destino</term>
+                <listitem>
+                  <para>Se o programa que está sendo depurado envía algunha saída áo terminal, esta aparecerá nesta lapela.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Puntos de interrupción</term>
+                <listitem>
+                  <para>Esta lapela amosa unha lista de todos os puntos de interrupción definidos. Pode ver o código de fonte dun punto de interrupción facendo dobre click no obxecto da lista ou facendo click co botón dereito e seleccionando <menuchoice><guimenuitem>ir á fonte</guimenuitem></menuchoice> do menú. Ademais, os puntos de interrupción poden ser borrados, activados ou desactivados nesta lapela. Para máis información sobre os puntos de interrupción, vexa <xref linkend="nemiver-sect-breakpoints"/>.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Rexistros</term>
+                <listitem>
+                  <para>Esta lapela amosa todos os rexistros da UCP e os seus valores Para máis información, vexa <xref linkend="nemiver-sect-registers"/>.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Memoria</term>
+                <listitem>
+                  <para>Esta lapela amosa o estado actual dunha localización de memoria específica. Para máis información, vexa <xref linkend="nemiver-sect-memory"/>.</para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="nemiver-sect-loading-program">
+      <title>Escollendo un programa para depurar</title>
+      <para>Hai moitas maneiras de comezar a depurar un programa. Nemiver permitiralle cargar un ficheiro executábel local, cargar un ficheiro core, acoplalo a un proceso en execución ou conectar a un servidor de depuración remoto.</para>
+      <sect3 id="nemiver-sect-starting-executable">
+        <title>Depurando un programa executábel</title>
+        <sect4>
+          <title>Usando o aplicativo</title>
+          <para>Para escoller un programa executábel para depurar, seleccione <menuchoice><guimenu> Ficheiro </guimenu><guimenuitem> Executar... </guimenuitem></menuchoice> e aparecerá o seguinte diálogo:</para>
+          <figure id="nemiver-execute-dialog">
+            <title>Executar diálogo</title>
+            <screenshot>
+              <mediaobject lang="en">
+                <imageobject>
+                  <imagedata fileref="figures/execute-dialog.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>Shows dialog for selecting an executable to run</phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+          <para>Neste diálogo pode escoller o programa que será depurado, calquera argumento ou opción que será introducido no executábel mediante a liña de comando, o cartafol de traballo no que será executado e calquera variábel do contorno que deba ser estabelecida cando o executábel esta a ser depurado.</para>
+        </sect4>
+        <sect4>
+          <title>Usando a liña de comandos</title>
+          <para>Para iniciar un programa executábel e depuralo desde a liña de comandos especifique soamente o nome do ficheiro. Tamén pode fornecer a ruta completa ou, se xa se atopa na ruta do ficheiro, escribir o nome do executábel. Por exemplo, se na ruta está <filename>/usr/bin</filename> ambas as dúas opcións seguintes serán válidas: </para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                <command>nemiver /usr/bin/progname</command>
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <command>nemiver progname</command>
+              </para>
+            </listitem>
+          </itemizedlist>
+          <tip>
+            <title>Introducindo opcións na liña de comandos</title>
+            <para>Se desexa introducir as opcións da liña de comandos no programa que está a depurar, debe escribilo entre comiñas, como en <command>nemiver "prognam --arg1 --arg2"</command>, para evitar que o Nemiver o inclúa no proceso.</para>
+          </tip>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-attach">
+        <title>Acoplando a un programa en execución</title>
+        <sect4>
+          <title>Usando o aplicativo</title>
+          <para>Escolla <menuchoice><guimenu> Ficheiro </guimenu><guimenuitem> Acolpar ao programa en execución... </guimenuitem></menuchoice> no menú para que apareza o seguinte diálogo:</para>
+          <figure id="nemiver-attach-dialog">
+            <title>Acoplar diálogo</title>
+            <screenshot>
+              <mediaobject lang="en">
+                <imageobject>
+                  <imagedata fileref="figures/attach-dialog.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>Shows dialog for attaching to a running program</phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+          <para>Seleccione un proceso da lista e prema <guibutton>Aceptar</guibutton> para comezar a depuración do programa seleccionado. Pode haber varios procesos na lista de diálogo, así que podes escoller só os que che interesen escribindo na caixa situada baixo a lista.</para>
+        </sect4>
+        <sect4>
+          <title>Usando a liña de comandos</title>
+          <para>Para acoplar a un programa en execución desde a liña de comandos use a opción <option>--attach</option>. A opción <option>--attach</option> acepta tanto un pid coma un nome de proceso. Daquela, para depurar un proceso en execución como <command>foo</command>, que ten un pid de 1121, pode escribir <command>nemiver --attach foo</command> ou <command>nemiver --attach 1121</command>.</para>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-core-file">
+        <title>Cargando un ficheiro core</title>
+        <sect4>
+          <title>Usando o aplicativo</title>
+          <para>Seleccione no menú <menuchoice><guimenu> Ficheiro </guimenu><guimenuitem> Cargar ficheiro core... </guimenuitem></menuchoice></para>
+          <figure id="nemiver-load-core-dialog">
+            <title>Cargar diálogo do ficheiro core</title>
+            <screenshot>
+              <mediaobject lang="en">
+                <imageobject>
+                  <imagedata fileref="figures/load-core-dialog.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>Shows dialog for loading a core file</phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+        </sect4>
+        <sect4>
+          <title>Usando a liña de comandos</title>
+          <para>Non foi posíbel cargar os ficheiros core da liña de comandos.</para>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-remote">
+        <title>Depuración remota</title>
+        <para>Nemiver permítelle conectar cun servidor de depuración remoto.</para>
+        <sect4>
+          <title>Usando o aplicativo</title>
+          <para>Para conectar a un servidor de depuración remoto seleccionando <menuchoice><guimenu>Ficheiro</guimenu><guimenuitem>Conectar a un destino remoto...</guimenuitem></menuchoice></para>
+          <screenshot>
+            <mediaobject lang="en">
+              <imageobject>
+                <imagedata fileref="figures/connect-remote-dialog.png" format="PNG"/>
+              </imageobject>
+              <textobject>
+                <phrase>Remote Debugging Dialog</phrase>
+              </textobject>
+            </mediaobject>
+          </screenshot>
+          <para>Seleccione os executábeis para cargar e a localización onde estean localizadas as bibliotecas compartidas, e logo especifique nos detalle como conectar ao servidor remoto.</para>
+        </sect4>
+        <sect4>
+          <title>Usando a liña de comandos</title>
+          <para>O Nemiver non fornece a posibilidade de conectar cun servidor remoto mediante unha liña de comandos</para>
+        </sect4>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-using">
+    <title>Usando o Nemiver</title>
+    <para>Esta sección describe como usar o Nemiver para depurar o teu aplicativo.</para>
+    <sect2 id="nemiver-sect-basic-debugging">
+      <title>Acción de depuración básicas</title>
+      <para>As accións de depuración básicas están dispoñíbeis na barra de ferramentas, no menú <guimenu>Depurar</guimenu> e nos atallos do teclado. As accións máis comúns están enumeradas embaixo:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Continuar</term>
+          <listitem>
+            <para>Inicia o programa. O programa executarase até que chegue a un punto de interrupción ou até que remate senón é interrompido de forma manual ao premer <action>Deter</action>. Esta acción pode ser activada desde o teclado premendo <keycap>F5</keycap>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Seguinte</term>
+          <listitem>
+            <para>Executa a seguinte orde e detense ao chegar ao final da seguinte liña do ficheiro. Algúns depuradores chaman a esta acción «Solapamento» Esta acción pode ser activada desde o teclado mediante <keycap>F6</keycap>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Paso</term>
+          <listitem>
+            <para>Executa a seguinte orde, entrando, se é posíbel, na seguinte función. Algúns depuradores chaman a esta acción "Estrada". Esta acción pode ser activada desde o teclado mediante <keycap>F7</keycap></para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Paso de saída</term>
+          <listitem>
+            <para>Remata a execución da función actual e detense cando volver á función de chamada. Esta acción pode ser activada desde o teclado mediante <keycombo><keycap>Shift</keycap><keycap>F7</keycap></keycombo>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Reiniciar</term>
+          <listitem>
+            <para>Recarga o executábel actual e inicia a execución desde o principio. Esta acción pode ser activada desde o teclado mediante <keycombo><keycap>Shift</keycap><keycap>F5</keycap></keycombo>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Deter</term>
+          <listitem>
+            <para>Interrompe manualmente a execución do programa. Esta acción só está dispoñíbel cando o depurador esta a executar o ficheiro (e.g. despois de premer <action>Continuar</action>).  Esta acción pode ser activada desde o teclado mediante <keycap>F9</keycap>.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Por defecto, o Nemiver creará un punto de interrupción en <function>main()</function> despois de cargar o executábel, polo que ao chegar a ese punto deterase e agardará por outra orde. Entón, poderás entrar no programa, examinar as variábeis (vexa <xref linkend="nemiver-sect-inspecting-variables"/>) ou estabelecer puntos de interrupción adicionais (vexa <xref linkend="nemiver-sect-breakpoints"/>).</para>
+    </sect2>
+    <sect2 id="nemiver-sect-inspecting-variables">
+      <title>Inspeccionar as variábeis</title>
+      <para>O Nemiver amosa unha lista de todas as variábeis na lapela <interface>Variábeis</interface> das <interface>Notas de estado</interface>. Se quixer examinar unha variábel diferente (ou incluso unha expresión arbitraria) pode usar a <interface>Inspección de variábeis</interface>. Para iniciar o <interface>Inspector de variábeis</interface> seleccione <menuchoice><guimenu>Depurar</guimenu><guimenuitem>Inspeccionar unha variábel</guimenuitem></menuchoice>. Ao aparecer a inspección de variábeis verá unha xanela semellante á seguinte:</para>
+      <screenshot>
+        <mediaobject lang="en">
+          <imageobject>
+            <imagedata fileref="figures/variable-inspector.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Variable Inspector Dialog</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>Pode escribir unha variábel ou simplemente unha expresión (como <literal>pFoo-&gt;bar</literal>) na caixa de entrada, e se a variábel é válida e ten cabida, Mostraranse os detalles desa expresión.</para>
+      <para>Por outra banda, se escolle o nome dunha variábel no <interface>editor da fonte</interface> e inicia a <interface>Inspección das variábeis</interface> tentarase Mostrar a información sobre a variábel seleccionada.</para>
+      <tip>
+        <title>Atallos do teclado</title>
+        <para>Tamén podes iniciar a <interface>Inspección da variábel</interface> premendo <keycap>F12</keycap>.</para>
+      </tip>
+      <para>O Nemiver tamén Mostrará unha lista de todas as variábeis globais dunha aplicación nun diálogo separado. Para Mostrar o diálogo das <interface>Variábeis globais</interface> seleccione <menuchoice><guimenu>Depurar</guimenu><guimenuitem>Mostrar variábeis globais</guimenuitem></menuchoice> ou prema <keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo>.</para>
+      <screenshot>
+        <mediaobject lang="en">
+          <imageobject>
+            <imagedata fileref="figures/global-variables-dialog.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Global Variables Dialog</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <warning>
+        <para>A listaxe de todas as variábeis locais para algúns programas (en especial os creados baixo C++) pode levar bastante tempo.</para>
+      </warning>
+    </sect2>
+    <sect2 id="nemiver-sect-breakpoints">
+      <title>Estabelecendo os puntos de interrupción</title>
+      <para>Hai varias maneiras de estabelecer os puntos de interrupción no Nemiver. O Nemiver estabelecerá un punto de interrupción en <function>main()</function> cando comece a depurar un executábel novo de forma automática. Se quixer engadir máis puntos de interrupción pode facelo das seguintes maneiras:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Prema na marxe seguinte á liña onde quere estabelecer o punto de interrupción</para>
+        </listitem>
+        <listitem>
+          <para>Sitúe o cursor sobre a liña onde quere estabelecer o punto de interrupción e seleccione <menuchoice><guimenu>Depurar</guimenu><guimenuitem>Mudar o punto de interrupción ao cursor</guimenuitem></menuchoice> ou prema <keycap>F8</keycap></para>
+        </listitem>
+        <listitem>
+          <para>Estabeleza un punto de interrupción nun nome de función ou nunha localización específicos nun ficheiro seleccionando <menuchoice><guimenu>Depurar</guimenu><guimenuitem>Estabelecer punto de interrupción...</guimenuitem></menuchoice> ou premendo <keycombo><keycap>Ctrl</keycap><keycap>B</keycap></keycombo>. Con isto abrirase un diálogo semellante ao seguinte:</para>
+          <screenshot>
+            <mediaobject lang="en">
+              <imageobject>
+                <imagedata fileref="figures/set-breakpoint-dialog.png" format="PNG"/>
+              </imageobject>
+              <textobject>
+                <phrase>Set Breakpoint Dialog</phrase>
+              </textobject>
+            </mediaobject>
+          </screenshot>
+          <para>Pode especificar un punto de interrupción nunha localización particular no ficheiro ou nun nome de función. Se houber máis dunha función co mesmo nome, o Nemiver Mostrará unha lista coas coincidencias </para>
+        </listitem>
+      </itemizedlist>
+      <sect3>
+        <title>Disabled Breakpoints</title>
+        <para>Breakpoints can be either enabled or disabled. The debugger will stop execution whenever it reaches an enabled breakpoint but will not be affected by any breakpoints in the disabled state. This allows you to temporarily remove a breakpoint without actually deleting it.</para>
+        <para>To disable or enable a breakpoint, click the checkbox next to the breakpoint number you want to enable or disable in the <interface>Breakpoints</interface> tab of the <interface>Status Notebook</interface>. Alternately, you can press <keycombo><keycap>Shift</keycap><keycap>F8</keycap></keycombo> to enable or disable a breakpoint that is set on the line that the cursor is currently on.</para>
+        <para>The following figures show the difference between enabled and disabled breakpoints in the source editor.</para>
+        <screenshot>
+          <mediaobject lang="en">
+            <imageobject>
+              <imagedata fileref="figures/enabled-breakpoint.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Illustration of an enabled breakpoint</phrase>
+            </textobject>
+            <caption><para lang="en">Enabled Breakpoint</para></caption>
+          </mediaobject>
+        </screenshot>
+        <screenshot>
+          <mediaobject lang="en">
+            <imageobject>
+              <imagedata fileref="figures/disabled-breakpoint.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Illustration of a disabled breakpoint</phrase>
+            </textobject>
+            <caption><para lang="en">Disabled Breakpoint</para></caption>
+          </mediaobject>
+        </screenshot>
+      </sect3>
+      <sect3>
+        <title>Opening Source Files</title>
+        <para>Sometimes you don't know exactly the function name or line number where you want a breakpoint to be set, so you must open a source file to figure it out. You could just open arbitrary files from the filesystem, but Nemiver can also provide a list of source files that were used to build the executable and allow you to select from this list. When you select <menuchoice><guimenu>File</guimenu><guimenuitem>Open Source File...</guimenuitem></menuchoice>, the following window should be displayed:</para>
+        <screenshot>
+          <mediaobject lang="en">
+            <imageobject>
+              <imagedata fileref="figures/open-files-target.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Shows dialog for opening source files</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>To select an arbitrary file from the filesystem, choose the <guilabel>Select from Filesystem</guilabel> option. To select from a list of files that produced the executable, choose <guilabel>Select from Target Executable</guilabel>.</para>
+        <warning>
+          <title>Determining Source Files for Dynamically Loaded Modules</title>
+          <para>If the target executable loads modules at runtime (e.g. using <function>dlopen()</function>), Nemiver will not be able to determine which files were used to build these modules until they are actually loaded.</para>
+        </warning>
+      </sect3>
+    </sect2>
+    <sect2 id="nemiver-sect-advanced">
+      <title>Advanced Debugging</title>
+      <sect3 id="nemiver-sect-registers">
+        <title>Rexistros</title>
+        <para>The register editing widget is located in the <interface>Registers</interface> tab of the <interface>Status Notebook</interface>. Alternately, you can press <keycombo><keycap>Alt</keycap><keycap>F5</keycap></keycombo> to jump directly to the correct tab.</para>
+        <screenshot>
+          <mediaobject lang="en">
+            <imageobject>
+              <imagedata fileref="figures/registers-view.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>The Register Editing Widget</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>This widget shows the current values of all of the CPU registers. You can edit the register values by clicking in the <interface>Value</interface> column and entering a new value. If the value for the register changed since the last time the debugger stopped, it will be highlighted in red.</para>
+      </sect3>
+      <sect3 id="nemiver-sect-memory">
+        <title>Memoria</title>
+        <para>The memory widget allows you to view a section of memory directly. This enables you to get a lower-level view of what's happening while your program is running.</para>
+        <screenshot>
+          <mediaobject lang="en">
+            <imageobject>
+              <imagedata fileref="figures/memory-view.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>The Memory Editing Widget</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>To display a segment of memory in the memory view widget, enter a memory address in the <interface>Address</interface> field. If the address is valid for the program being debugged, the memory view will display the memory values starting at the specified address. Memory values can be displayed in byte format, word format (2 bytes), or long word format (4 bytes) by choosing an option from the <interface>Group By</interface> drop-down menu. The memory values will automatically be updated as you step through the program.</para>
+        <para>In addition to viewing the memory values, you can also use the memory widget to modify memory values. You can edit either the hex byte representation (the left-hand section of the memory widget), or the ASCII representation (the right-hand section of the memory widget). All changes will be applied immediately.</para>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-sessions">
+    <title>Session Save and Restore</title>
+    <para>Nemiver can save your debugging sessions for you so that you can resume them at a later time. This includes saving information such as which executable is being debugged, what environment variables are set, what command-line options are passed to the executable, which files are open, and which breakpoints are set so that you can get back to where you left off last time as quickly as possible.</para>
+    <sect2 id="nemiver-sect-saving-sessions">
+      <title>Saving Sessions</title>
+      <para>Nemiver will save your session automatically on exit, so you don't even have to worry about it. However, if you want to explicitly save the session before closing Nemiver, you can do so by selecting <menuchoice><guimenu>File</guimenu><guimenuitem>Save Session To Disk</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <sect2 id="nemiver-sect-resuming-sessions">
+      <title>Resuming Saved Sessions</title>
+      <sect3>
+        <title>Usando o aplicativo</title>
+        <para>Select <menuchoice><guimenu>File</guimenu><guimenuitem>Resume Saved Session...</guimenuitem></menuchoice> and select a session from the list.</para>
+        <figure id="nemiver-sessions-dialog">
+          <title>Session Dialog</title>
+          <screenshot>
+            <mediaobject lang="en">
+              <imageobject>
+                <imagedata fileref="figures/sessions-dialog.png" format="PNG"/>
+              </imageobject>
+              <textobject>
+                <phrase>Shows dialog for resuming a saved session</phrase>
+              </textobject>
+            </mediaobject>
+          </screenshot>
+        </figure>
+      </sect3>
+      <sect3>
+        <title>From the Command Line</title>
+        <para>If you know the session ID of the session you want to run, you can start that debugging session from the command line. For example, if you want to run session number 3, you can do so with the following command: <command>nemiver --session 3</command>.</para>
+      </sect3>
+    </sect2>
+  </sect1>
+  <!-- This should be the last section in the manual -->
+  <sect1 id="nemiver-sect-about">
+    <title>About Nemiver</title>
+    <para><application>Nemiver</application> was written by Dodji Seketeli and Jonathon Jongsma, with contributions from many others. To find more information about Nemiver, please visit the <ulink url="http://www.gnome.org/projects/nemiver/" type="http">Nemiver project website</ulink>.</para>
+    <para>To report a bug or make a suggestion regarding this application or this manual, see the Feedback section of the <ulink url="ghelp:user-guide?feedback-bugs" type="help">GNOME User Guide</ulink>.</para>
+    <para>This program is distributed under the terms of the GNU General Public license as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. A copy of this license can be found at this <ulink url="ghelp:gpl" type="help">link</ulink>, or in the file COPYING included with the source code of this program.</para>
+  </sect1>
+</article>
+<!--
+vim: ts=2 sw=2 et
+-->

@@ -1,0 +1,1518 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Alex 'mainframe' Z <alex.mainframe@gmail.com>, 2010.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011.
+# Yuri Myasoedov <omerta13@yandex.ru>, 2012, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: nemiver 0.73\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=nemiver&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-02-14 13:41+0000\n"
+"PO-Revision-Date: 2014-04-01 08:26+0400\n"
+"Last-Translator: Yuri Myasoedov <ymyasoedov@yandex.ru>\n"
+"Language-Team: русский <gnome-cyr@gnome.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.6.4\n"
+
+#: ../data/nemiver.appdata.xml.in.h:1
+msgid ""
+"Nemiver is an on-going effort to write a standalone graphical debugger that "
+"integrates well in the GNOME desktop environment. It currently features a "
+"backend which uses the well known GNU Debugger gdb to debug C / C++ programs."
+msgstr ""
+"Nemiver — это попытка написать самостоятельный графический отладчик с "
+"интерграцией с рабочим окружением GNOME. В настоящий в качестве драйвера для "
+"отладки программ, написанных на C/C++ Nemiver использует хорошо известный "
+"отладчик GNU Debugger (gdb)."
+
+#: ../data/nemiver.appdata.xml.in.h:2
+msgid ""
+"We believe that Nemiver is mature and robust enough to just let you debug "
+"your favorite C or C++ application in a pleasant way."
+msgstr ""
+"Мы верим, что Nemiver стал достаточно зрелым проектом, чтобы вы могли "
+"комфортно отлаживать свои приложения, написанные на C и C++."
+
+#: ../data/nemiver.desktop.in.h:1 ../ui/workbench.ui.h:1
+msgid "Nemiver"
+msgstr "Nemiver"
+
+#: ../data/nemiver.desktop.in.h:2
+msgid "C/C++ Debugger"
+msgstr "Отладчик C/C++"
+
+#: ../data/nemiver.desktop.in.h:3
+msgid "Nemiver C/C++ Debugger"
+msgstr "Отладчик C/C++ Nemiver"
+
+#: ../data/nemiver.desktop.in.h:4
+msgid "Debug Applications"
+msgstr "Отлаживаемые приложения"
+
+#: ../data/nemiver.desktop.in.h:5
+msgid "gdb;disassembler;debugger;c;c++;"
+msgstr "gdb;дизассемблер;отладчик;c;c++;"
+
+#: ../src/main.cc:78
+msgid "Set the environment of the program to debug"
+msgstr "Установить окружение отлаживаемой программы"
+
+#: ../src/main.cc:87
+msgid "Attach to a process"
+msgstr "Подключиться к процессу"
+
+#: ../src/main.cc:96
+msgid "Load a core file"
+msgstr "Загрузить файл core"
+
+#: ../src/main.cc:104
+msgid "List the saved debugging sessions"
+msgstr "Список сохранённых сеансов отладки"
+
+#: ../src/main.cc:112
+msgid "Erase the saved debugging sessions"
+msgstr "Стереть сохранённые сеансы отладки"
+
+#: ../src/main.cc:120
+msgid "Debug the program that was of session number N"
+msgstr "Отладить программу, сохранённую в сеансе номер N"
+
+#: ../src/main.cc:128
+msgid "Execute the last session"
+msgstr "Загрузить предыдущий сеанс отладки"
+
+#: ../src/main.cc:136
+msgid "Enable logging domains DOMAINS"
+msgstr "Включить протоколирование доменов DOMAINS"
+
+#: ../src/main.cc:144
+msgid "Log the debugger output"
+msgstr "Записывать в журнал вывод отладчика"
+
+#: ../src/main.cc:152
+msgid "Use this terminal as the debugee's terminal"
+msgstr "Использовать этот терминал для отладки"
+
+#: ../src/main.cc:161
+msgid "Connect to remote target specified by HOST:PORT"
+msgstr "Подключиться к удалённой цели, указанной как УЗЕЛ:ПОРТ"
+
+#: ../src/main.cc:170
+msgid ""
+"Where to look for shared libraries loaded by the inferior. Use in "
+"conjunction with --remote"
+msgstr ""
+"Где искать разделяемые библиотеки, загружаемые отлаживаемой программой. "
+"Используйте в сочетании с --remote"
+
+#: ../src/main.cc:180
+msgid "Set the path of the GDB binary to use to debug the inferior"
+msgstr "Установить путь исполняемого файла GDB для отладки"
+
+#: ../src/main.cc:189
+msgid "Do not set a breakpoint in 'main' and do not run the inferior either"
+msgstr ""
+"Не устанавливать точку останова в «main» и не запускать отлаживаемую "
+"программу"
+
+#: ../src/main.cc:198
+msgid "Show the version number of Nemiver"
+msgstr "Показать номер версии Nemiver"
+
+#: ../src/main.cc:264
+msgid " [<prog-to-debug> [prog-args]]"
+msgstr " [<программа-для-отладки> [параметры-программы]]"
+
+#: ../src/main.cc:267 ../src/workbench/nmv-workbench.cc:251
+msgid "A C/C++ debugger for GNOME"
+msgstr "Отладчик C/C++ для GNOME"
+
+#: ../src/main.cc:361
+msgid ""
+"Please provide a local copy of the binary you intend to debug remotely.\n"
+"Like this:\n"
+msgstr ""
+"Укажите локальную копию удалённо отлаживаемого исполняемого файла.\n"
+"Например так:\n"
+
+#: ../src/main.cc:366 ../src/main.cc:385
+msgid "Otherwise, find below the full set of Nemiver options.\n"
+msgstr "Или смотрите ниже полный набор параметров Nemiver.\n"
+
+#: ../src/main.cc:380
+msgid ""
+"Please provide the path to the binary that generated the core file too.\n"
+"Like this:\n"
+msgstr ""
+"Укажите путь к исполняемому файлу, который также генерирует файл core.\n"
+"Например так:\n"
+
+#. create the columns of the tree view
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:148
+#: ../src/persp/dbgperspective/nmv-registers-view.cc:100
+#: ../src/persp/dbgperspective/nmv-saved-sessions-dialog.cc:101
+msgid "ID"
+msgstr "ID"
+
+#. create the columns of the tree view
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:149
+#: ../src/persp/dbgperspective/nmv-file-list.cc:108
+msgid "File Name"
+msgstr "Имя файла"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:150
+msgid "Line"
+msgstr "Строка"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:151
+#: ../src/persp/dbgperspective/nmv-call-stack.cc:607
+msgid "Function"
+msgstr "Функция"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:152
+#: ../src/persp/dbgperspective/nmv-call-stack.cc:610
+msgid "Address"
+msgstr "Адрес"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:153
+msgid "Condition"
+msgstr "Условие"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:155
+msgid "Toggle countpoint"
+msgstr "Считать попадания"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:157
+#: ../src/persp/dbgperspective/nmv-vars-treeview.cc:70
+msgid "Type"
+msgstr "Тип"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:158
+msgid "Hits"
+msgstr "Попаданий"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:159
+msgid "Expression"
+msgstr "Выражение"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:162
+msgid "Ignore count"
+msgstr "Игнорировать счётчик"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:364
+msgid "breakpoint"
+msgstr "точка останова"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:368
+msgid "watchpoint"
+msgstr "точка наблюдения"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:371
+msgid "countpoint"
+msgstr "точка подсчёта"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:374
+msgid "unknown"
+msgstr "неизвестно"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:441
+msgid "_Delete"
+msgstr "_Удалить"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:442
+msgid "Remove this breakpoint"
+msgstr "Удалить точку останова"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:451
+msgid "_Go to Source"
+msgstr "_Показать в исходном коде"
+
+#: ../src/persp/dbgperspective/nmv-breakpoints-view.cc:452
+msgid "Find this breakpoint in the source editor"
+msgstr "Найти точку останова в редакторе кода"
+
+#: ../src/persp/dbgperspective/nmv-call-stack.cc:177
+#: ../src/uicommon/nmv-terminal.cc:174
+msgid "_Copy"
+msgstr "_Копировать"
+
+#: ../src/persp/dbgperspective/nmv-call-stack.cc:178
+msgid "Copy the call stack to the clipboard"
+msgstr "Скопировать стек вызовов в буфер обмена"
+
+#: ../src/persp/dbgperspective/nmv-call-stack.cc:606
+msgid "Frame"
+msgstr "Кадр"
+
+#: ../src/persp/dbgperspective/nmv-call-stack.cc:608
+msgid "Arguments"
+msgstr "Аргументы"
+
+#: ../src/persp/dbgperspective/nmv-call-stack.cc:609
+#: ../src/persp/dbgperspective/nmv-choose-overloads-dialog.cc:112
+msgid "Location"
+msgstr "Расположение"
+
+#: ../src/persp/dbgperspective/nmv-call-stack.cc:611
+msgid "Binary"
+msgstr "Двоичн."
+
+#: ../src/persp/dbgperspective/nmv-call-stack.cc:767
+#, c-format
+msgid "(Click here to see the next %d row of the call stack"
+msgid_plural "(Click here to see the next %d rows of the call stack)"
+msgstr[0] "(Нажмите, чтобы увидеть следующую %d строку стека вызовов"
+msgstr[1] "(Нажмите, чтобы увидеть следующие %d строки стека вызовов)"
+msgstr[2] "(Нажмите, чтобы увидеть следующие %d строк стека вызовов)"
+
+#: ../src/persp/dbgperspective/nmv-choose-overloads-dialog.cc:110
+msgid "Function Name"
+msgstr "Имя функции"
+
+#. labels for widget tabs in the status notebook
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:118
+msgid "Context"
+msgstr "Контекст"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:119
+msgid "Target Terminal"
+msgstr "Терминал цели"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:120
+msgid "Breakpoints"
+msgstr "Точки останова"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:121
+msgid "Registers"
+msgstr "Регистры"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:122
+msgid "Memory"
+msgstr "Память"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:123
+msgid "Expression Monitor"
+msgstr "Монитор выражений"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:1730
+msgid "Reached end of file"
+msgstr "Достигнут конец файла"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:1733
+#, c-format
+msgid "Could not find string %s"
+msgstr "Строка %s не найдена"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2117
+msgid "Change to Standard Breakpoint"
+msgstr "Изменить на обычную точку останова"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2120
+msgid "Change to Countpoint"
+msgstr "Изменить на точку подсчёта"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2122
+msgid "Remove _Breakpoint"
+msgstr "_Удалить точку останова"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2125
+msgid "Disable Breakpoint"
+msgstr "Отключить точку останова"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2127
+msgid "Enable Breakpoint"
+msgstr "Включить точку останова"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2130
+msgid "Set _Breakpoint"
+msgstr "_Установить точку останова"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2132
+msgid "Set Countpoint"
+msgstr "Установить точку подсчёта"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2295
+#, c-format
+msgid "%s (path=\"%s\", pid=%i)"
+msgstr "%s (путь=«%s», pid=%i)"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2309
+msgid "Connected to remote target!"
+msgstr "Подключён к удалённой цели!"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2510
+msgid "Program exited"
+msgstr "Программа завершилась"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2539
+msgid "The underlying debugger engine process died."
+msgstr "Процесс консольного отладчика завершился."
+
+#. translators: first %s is the signal name, second one is the reason
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2643
+#, c-format
+msgid "Target received a signal: %s, %s"
+msgstr "Цель получила сигнал: %s, %s"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2658
+#, c-format
+msgid "An error occurred: %s"
+msgstr "Произошла ошибка: %s"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:2821
+#, c-format
+msgid "File %s has been modified. Do you want to reload it?"
+msgstr "Файл %s был изменён. Перезагрузить его?"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3183
+msgid "_Detach From the Running Program"
+msgstr "_Отключиться от запущенной программы"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3184
+msgid "Disconnect the debugger from the running target without killing it"
+msgstr "Отключить отладчик от запущенной цели без её завершения"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3199
+msgid "_Save Session to Disk"
+msgstr "_Сохранить сеанс на диск"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3200
+msgid "Save the current debugging session to disk"
+msgstr "Сохранить текущий сеанс отладки на диск"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3209
+msgid "_Run or Restart"
+msgstr "_Запустить или перезапустить"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3210
+msgid "Run or Restart the target"
+msgstr "Запустить или перезапустить цель"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3219
+msgid "Set Breakpoint with Dialog..."
+msgstr "Установить точку останова с параметрами…"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3220
+msgid "Set a breakpoint at the current line using a dialog"
+msgstr "Установить точку останова на текущей строке с параметрами"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3231
+msgid "Set Breakpoint..."
+msgstr "Установить точку останова…"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3232
+msgid "Set a breakpoint at a function or line number"
+msgstr "Установить точку останова на функции или номере строки"
+
+#. Depending on the context we will want this string to be
+#. either "Set Breakpoint", or "Remove Breakpoint". Hence
+#. this string is updated by
+#. DBGPerspective::update_toggle_menu_text when needed. So
+#. this initial value is going to be displayed only when
+#. Nemiver is launched with no executable on the command
+#. line.
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3248
+msgid "Toggle _Breakpoint"
+msgstr "_Переключить точку останова"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3249
+msgid "Set/Unset a breakpoint at the current cursor location"
+msgstr "Поставить/убрать точку останова в позиции курсора"
+
+#. Depending on the context we will want this string to be
+#. either "Enable Breakpoint", or "Disable
+#. Breakpoint". Hence this string is updated by
+#. DBGPerspective::update_toggle_menu_text when needed. So
+#. this initial value is going to be displayed only when
+#. Nemiver is launched with no executable on the command
+#. line.
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3266
+msgid "Enable/Disable Breakpoint"
+msgstr "Включить/отключить точку останова"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3267
+msgid ""
+"Enable or disable the breakpoint that is set at the current cursor location"
+msgstr ""
+"Включить или отключить точку останова, установленную в текущей позиции "
+"курсора"
+
+#. Depending on the context we will want this string to be
+#. either "Set Countpoint", or "Change to Countpoint", or
+#. "Change to Standard Breakpoint". Hence
+#. this string is updated by
+#. DBGPerspective::update_toggle_menu_text when needed. So
+#. this initial value is going to be displayed only when
+#. Nemiver is launched with no executable on the command
+#. line.
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3287
+msgid "Toggle _Countpoint"
+msgstr "Подсчёт"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3288
+msgid "Set/Unset a countpoint at the current cursor location"
+msgstr "Поставить/убрать точку подсчёта в позиции курсора"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3298
+msgid "Set Watchpoint with Dialog..."
+msgstr "Установить точку наблюдения с параметрами…"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3299
+msgid "Set a watchpoint using a dialog"
+msgstr "Поставить точку наблюдения с параметрами"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3314
+msgid "_Next"
+msgstr "_Далее"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3315
+msgid "Execute next line stepping over the next function, if any"
+msgstr "Выполнить следующую строку, не входя в функцию"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3324
+msgid "_Step"
+msgstr "_Шаг"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3325
+msgid "Execute next line, stepping into the next function, if any"
+msgstr "Выполнить следующую строку, заходя в функцию"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3334
+msgid "Step _Out"
+msgstr "В_ыйти из функции"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3335
+msgid "Finish the execution of the current function"
+msgstr "Закончить выполнение текущей функции"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3344
+msgid "Step Into asm"
+msgstr "Выполнить следующую инструкцию asm"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3345
+msgid "Step into the next assembly instruction"
+msgstr "Выполнить следующую ассемблерную инструкцию"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3354
+msgid "Step Over asm"
+msgstr "Перешагнуть через инструкцию asm"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3355
+msgid "Step over the next assembly instruction"
+msgstr "Перешагнуть через следующую ассемблерную инструкцию"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3364
+msgid "_Continue"
+msgstr "_Продолжить"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3365
+msgid "Continue program execution until the next breakpoint"
+msgstr "Продолжить выполнение программы до следующей точки останова"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3374
+msgid "Run to Cursor"
+msgstr "Выполнить до курсора"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3375
+msgid "Continue program execution until the currently selected line is reached"
+msgstr "Продолжить выполнение программы до текущей выбранной строки"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3385
+msgid "Jump to Cursor"
+msgstr "Перейти к курсору"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3386
+msgid "Jump to the currently selected line"
+msgstr "Перейти к текущей выбранной строке"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3396
+msgid "Jump and Stop to Cursor"
+msgstr "Перейти и остановиться на курсоре"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3397
+msgid "Sets a breakpoint to the currently selected line and jump there"
+msgstr ""
+"Поставить точку останова на текущей строке с параметрами и перейти к ней"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3409
+msgid "Jump to a Given Location"
+msgstr "Перейти к заданному местоположению"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3410
+msgid "Select a given code location and jump there"
+msgstr "Выбрать нужное место в коде и перейти к нему"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3421
+#: ../src/persp/dbgperspective/ui/exprinspectordialog.ui.h:1
+msgid "Inspect an Expression"
+msgstr "Инспектировать выражение"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3422
+msgid "Inspect a global or local expression"
+msgstr "Инспектировать глобальное или локальное выражение"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3432
+#: ../src/persp/dbgperspective/ui/callfunctiondialog.ui.h:1
+msgid "Call a Function"
+msgstr "Вызвать функцию"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3433
+msgid "Call a function in the program being debugged"
+msgstr "Вызвать функцию в отлаживаемой программе"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3442
+msgid "Show Global Variables"
+msgstr "Показать глобальные переменные"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3443
+msgid "Display all global variables"
+msgstr "Показать все глобальные переменные"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3453
+msgid "Refresh Locals"
+msgstr "Обновить локальные переменные"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3454
+msgid "Refresh the list of variables local to the current function"
+msgstr "Обновить список локальных переменных в текущей функции"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3463
+msgid "Show Assembly"
+msgstr "Показать ассемблерный код"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3464
+msgid ""
+"Show the assembly code of the source code being currently debugged, in "
+"another tab"
+msgstr ""
+"Показать ассемблерный код отлаживаемого исходного кода в другой вкладке"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3476
+msgid "Switch to Assembly"
+msgstr "Переключиться на ассемблерный код"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3477
+msgid "Show the assembly code of the source code being currently debugged"
+msgstr "Показать ассемблерный код отлаживаемого исходного кода"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3489
+msgid "Switch to Source"
+msgstr "Переключиться на исходный код"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3490
+msgid "Show the source code being currently debugged"
+msgstr "Показать исходный код отлаживаемой программы"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3502
+msgid "Stop"
+msgstr "Остановить"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3503
+msgid "Stop the debugger"
+msgstr "Остановить отладчик"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3515
+msgid "_View"
+msgstr "_Вид"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3526
+msgid "Switch to Target Terminal View"
+msgstr "Переключиться в окно терминала цели"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3537
+msgid "Switch to Context View"
+msgstr "Переключиться в окно контекста"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3548
+msgid "Switch to Breakpoints View"
+msgstr "Переключиться на список точек останова"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3559
+msgid "Switch to Registers View"
+msgstr "Переключиться на список регистров"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3571
+msgid "Switch to Memory View"
+msgstr "Переключиться на просмотр памяти"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3582
+msgid "Switch to Variables Monitor View"
+msgstr "Переключиться на монитор переменных"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3591
+msgid "_Debug"
+msgstr "_Отладка"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3601
+msgid "_Open Source File..."
+msgstr "_Открыть исходный файл…"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3602
+msgid "Open a source file for viewing"
+msgstr "Открыть исходный файл для просмотра"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3611
+msgid "Load _Executable..."
+msgstr "_Загрузить исполняемый файл…"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3612
+msgid "Execute a program"
+msgstr "Выполнить программу"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3622
+msgid "_Load Core File..."
+msgstr "_Загрузить файл core…"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3623
+msgid "Load a core file from disk"
+msgstr "Загрузить файл core с диска"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3633
+msgid "_Attach to Running Program..."
+msgstr "_Присоединиться к запущенной программе…"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3634
+msgid "Debug a program that's already running"
+msgstr "Отладить запущенную программу"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3644
+msgid "_Connect to Remote Target..."
+msgstr "Подключиться к _удалённой цели…"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3645
+msgid "Connect to a debugging server to debug a remote target"
+msgstr "Подключиться к серверу для отладки удалённой цели"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3656
+msgid "Resume Sa_ved Session..."
+msgstr "_Загрузить сохранённый сеанс…"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3657
+msgid "Open a previously saved debugging session"
+msgstr "Открыть сохранённый сеанс отладки"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3667
+msgid "_Preferences"
+msgstr "Пара_метры"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3668
+msgid "Edit the properties of the current session"
+msgstr "Изменить параметры текущего сеанса"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3682
+msgid "_Copy selected text"
+msgstr "_Копировать выделенный текст"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3683
+msgid "Copy the text selected in the current source file"
+msgstr "Копировать выделенный текст в текущем файле исходного кода"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3692
+msgid "_Reload Source File"
+msgstr "_Перезагрузить исходный файл"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3693
+msgid "Reloads the source file"
+msgstr "Перезагрузить исходный файл"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3702
+msgid "_Close Source File"
+msgstr "Закрыть исходный файл"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3703
+msgid "Close the opened file"
+msgstr "Закрыть открытый файл"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3712
+msgid "_Find"
+msgstr "_Найти"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:3713
+msgid "Find a text string in file"
+msgstr "Найти строку текста в файле"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:4037
+#, c-format
+msgid "Close %s"
+msgstr "Закрыть %s"
+
+#. We cannot restart an inferior running on a remote target at
+#. the moment.
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:6027
+msgid "Sorry, it's impossible to restart a remote inferior"
+msgstr "Невозможно перезапустить удалённый отладчик"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:6172
+#, c-format
+msgid "Could not find file %s"
+msgstr "Не найден файл %s"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:6235
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:6422
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:6457
+#, c-format
+msgid "Could not load program: %s"
+msgstr "Не удалось загрузить программу %s"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:6351
+msgid "You cannot attach to Nemiver itself"
+msgstr "Вы не можете присоединиться к самому Nemiver"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:6364
+msgid "You cannot attach to the underlying debugger engine"
+msgstr "Не удалось подключиться к консольному отладчику"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:6656
+msgid "Failed to stop the debugger"
+msgstr "Не удалось остановить отладчик"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:6900
+#, c-format
+msgid "Invalid line number: %i"
+msgstr "Неверный номер строки: %i"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective.cc:8532
+#, c-format
+msgid ""
+"There is a program being currently debugged. Do you really want to exit from "
+"the debugger?"
+msgstr ""
+"Запущена отладка программы. Вы действительно хотите выйти из отладчика?"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective-default-layout.cc:138
+msgid "Default Layout"
+msgstr "Размещение по умолчанию"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective-default-layout.cc:145
+msgid "Nemiver's default layout"
+msgstr "Размещение Nemiver по умолчанию"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective-dynamic-layout.cc:132
+msgid "Source Code"
+msgstr "Исходный код"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective-dynamic-layout.cc:195
+msgid "Dynamic Layout"
+msgstr "Динамическое размещение"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective-dynamic-layout.cc:202
+msgid "A layout which can be modified"
+msgstr "Динамическое размещение"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective-two-pane-layout.cc:179
+msgid "Two Status Pane"
+msgstr "Две панели состояний"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective-two-pane-layout.cc:186
+msgid "A layout with two status pane"
+msgstr "Размещение с двумя панелями состояния"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective-wide-layout.cc:135
+msgid "Wide Layout"
+msgstr "Широкое размещение"
+
+#: ../src/persp/dbgperspective/nmv-dbg-perspective-wide-layout.cc:142
+msgid "A layout for very large monitors"
+msgstr "Размещение для больших мониторов"
+
+#: ../src/persp/dbgperspective/nmv-file-list.cc:128
+msgid "Expand _Selected"
+msgstr "Развернуть выбранное"
+
+#: ../src/persp/dbgperspective/nmv-file-list.cc:134
+msgid "Expand _All"
+msgstr "Развернут_ь всё"
+
+#: ../src/persp/dbgperspective/nmv-file-list.cc:144
+msgid "_Collapse"
+msgstr "Свер_нуть"
+
+#: ../src/persp/dbgperspective/nmv-file-list.cc:427
+msgid "Loading files from target executable..."
+msgstr "Загрузка файлов из целевого исполняемого файла…"
+
+#: ../src/persp/dbgperspective/nmv-global-vars-inspector-dialog.cc:300
+#: ../src/persp/dbgperspective/nmv-local-vars-inspector.cc:592
+#: ../src/persp/dbgperspective/nmv-expr-inspector.cc:233
+#, c-format
+msgid ""
+"Variable type is: \n"
+" %s"
+msgstr ""
+"Тип переменной: \n"
+" %s"
+
+#: ../src/persp/dbgperspective/nmv-local-vars-inspector.cc:125
+msgid "Local Variables"
+msgstr "Локальные переменные"
+
+#: ../src/persp/dbgperspective/nmv-local-vars-inspector.cc:133
+msgid "Function Arguments"
+msgstr "Параметры функции"
+
+#: ../src/persp/dbgperspective/nmv-local-vars-inspector.cc:257
+#: ../src/persp/dbgperspective/nmv-expr-inspector.cc:136
+msgid "_Copy Variable Name"
+msgstr "Копировать _имя переменной"
+
+#: ../src/persp/dbgperspective/nmv-local-vars-inspector.cc:258
+#: ../src/persp/dbgperspective/nmv-expr-inspector.cc:137
+msgid "Copy the variable path expression to the clipboard"
+msgstr "Копировать выражение пути переменной в буфер обмена"
+
+#: ../src/persp/dbgperspective/nmv-local-vars-inspector.cc:269
+#: ../src/persp/dbgperspective/nmv-expr-inspector.cc:148
+msgid "_Copy Variable Value"
+msgstr "Копировать _значение переменной"
+
+#: ../src/persp/dbgperspective/nmv-local-vars-inspector.cc:270
+#: ../src/persp/dbgperspective/nmv-expr-inspector.cc:149
+msgid "Copy the variable value to the clipboard"
+msgstr "Скопировать значение переменной в буфер обмена"
+
+#: ../src/persp/dbgperspective/nmv-local-vars-inspector.cc:281
+msgid "Create Watchpoint"
+msgstr "Создать точку наблюдения"
+
+#: ../src/persp/dbgperspective/nmv-local-vars-inspector.cc:282
+msgid ""
+"Create a watchpoint that triggers when the value of the expression changes"
+msgstr ""
+"Создать точку наблюдения, срабатывающую при изменении значения выражения"
+
+#: ../src/persp/dbgperspective/nmv-memory-view.cc:49
+msgid "Byte"
+msgstr "байтам"
+
+#: ../src/persp/dbgperspective/nmv-memory-view.cc:52
+msgid "Word"
+msgstr "словам"
+
+#: ../src/persp/dbgperspective/nmv-memory-view.cc:55
+msgid "Long Word"
+msgstr "двойным словам"
+
+#: ../src/persp/dbgperspective/nmv-memory-view.cc:98
+#: ../src/persp/dbgperspective/ui/remotetargetdialog.ui.h:9
+#: ../src/persp/dbgperspective/ui/setbreakpointdialog.ui.h:8
+#: ../src/persp/dbgperspective/ui/setjumptodialog.ui.h:9
+msgid "Address:"
+msgstr "Адрес:"
+
+#: ../src/persp/dbgperspective/nmv-memory-view.cc:100
+msgid "Show"
+msgstr "Показать"
+
+#: ../src/persp/dbgperspective/nmv-memory-view.cc:103
+msgid "Group By:"
+msgstr "Группировать по:"
+
+#: ../src/persp/dbgperspective/nmv-preferences-dialog.cc:153
+#: ../src/persp/dbgperspective/ui/remotetargetdialog.ui.h:5
+msgid "Choose a Directory"
+msgstr "Выбрать каталог"
+
+#: ../src/persp/dbgperspective/nmv-preferences-dialog.cc:284
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:18
+msgid "Source Directories"
+msgstr "Каталоги исходного кода"
+
+#: ../src/persp/dbgperspective/nmv-proc-list-dialog.cc:132
+msgid "User Name"
+msgstr "Имя пользователя"
+
+#: ../src/persp/dbgperspective/nmv-proc-list-dialog.cc:139
+msgid "Proc Args"
+msgstr "Параметры процесса"
+
+#: ../src/persp/dbgperspective/nmv-registers-view.cc:101
+#: ../src/persp/dbgperspective/nmv-run-program-dialog.cc:99
+msgid "Name"
+msgstr "Имя"
+
+#: ../src/persp/dbgperspective/nmv-registers-view.cc:102
+#: ../src/persp/dbgperspective/nmv-run-program-dialog.cc:102
+#: ../src/persp/dbgperspective/nmv-vars-treeview.cc:59
+msgid "Value"
+msgstr "Значение"
+
+#: ../src/persp/dbgperspective/nmv-saved-sessions-dialog.cc:71
+msgid "Session"
+msgstr "Сеанс"
+
+#: ../src/persp/dbgperspective/nmv-set-breakpoint-dialog.cc:117
+msgid "Throw Exception"
+msgstr "Сгенерировать исключение"
+
+#: ../src/persp/dbgperspective/nmv-set-breakpoint-dialog.cc:121
+msgid "Catch Exception"
+msgstr "Обработать исключение"
+
+#: ../src/persp/dbgperspective/nmv-set-breakpoint-dialog.cc:125
+msgid "Fork System Call"
+msgstr "Системный вызов fork"
+
+#: ../src/persp/dbgperspective/nmv-set-breakpoint-dialog.cc:129
+msgid "Vfork System Call"
+msgstr "Системный вызов vfork"
+
+#: ../src/persp/dbgperspective/nmv-set-breakpoint-dialog.cc:133
+msgid "Exec System Call"
+msgstr "Системный вызов exec"
+
+#: ../src/persp/dbgperspective/nmv-thread-list.cc:184
+msgid "Thread ID"
+msgstr "ID потока"
+
+#. create the columns of the tree view
+#: ../src/persp/dbgperspective/nmv-vars-treeview.cc:50
+msgid "Variable"
+msgstr "Переменная"
+
+#: ../src/persp/dbgperspective/nmv-expr-monitor.cc:128
+msgid "In scope expressions"
+msgstr "Выражения в области видимости"
+
+#: ../src/persp/dbgperspective/nmv-expr-monitor.cc:133
+msgid "Out of scope expressions"
+msgstr "Выражения вне области видимости"
+
+#: ../src/persp/dbgperspective/nmv-expr-monitor.cc:237
+msgid "Remove"
+msgstr "Убрать"
+
+#: ../src/persp/dbgperspective/nmv-expr-monitor.cc:238
+msgid "Remove selected expressions from the monitor"
+msgstr "Убрать выделенные выражения из наблюдаемых"
+
+#: ../src/persp/dbgperspective/nmv-expr-monitor.cc:247
+msgid "New..."
+msgstr "Создать…"
+
+#: ../src/persp/dbgperspective/nmv-expr-monitor.cc:248
+msgid "Add a new expression to the monitor"
+msgstr "Добавить новое наблюдаемое выражение"
+
+#: ../src/persp/dbgperspective/ui/callfunctiondialog.ui.h:2
+msgid "Call a function:"
+msgstr "Вызвать функцию:"
+
+#: ../src/persp/dbgperspective/ui/chooseoverloadsdialog.ui.h:1
+#: ../src/persp/dbgperspective/ui/setbreakpointdialog.ui.h:1
+msgid "Set Breakpoint"
+msgstr "Установить точку останова"
+
+#: ../src/persp/dbgperspective/ui/chooseoverloadsdialog.ui.h:2
+msgid "Choose Overloaded Function"
+msgstr "Выбрать перегруженную функцию"
+
+#: ../src/persp/dbgperspective/ui/chooseoverloadsdialog.ui.h:3
+msgid ""
+"Multiple functions match the specified name. Please choose one from the list "
+"below."
+msgstr ""
+"Выбранному имени соответствует несколько функций. Выберите одну из списка "
+"ниже."
+
+#: ../src/persp/dbgperspective/ui/findtextdialog.ui.h:1
+msgid "Find Text"
+msgstr "Найти текст"
+
+#: ../src/persp/dbgperspective/ui/findtextdialog.ui.h:2
+msgid "_Search:"
+msgstr "_Искать:"
+
+#: ../src/persp/dbgperspective/ui/findtextdialog.ui.h:3
+msgid "Match Options:"
+msgstr "Параметры совпадения:"
+
+#: ../src/persp/dbgperspective/ui/findtextdialog.ui.h:4
+msgid "Match c_ase"
+msgstr "С _учётом регистра"
+
+#: ../src/persp/dbgperspective/ui/findtextdialog.ui.h:5
+msgid "Match _entire word only"
+msgstr "Только _слово целиком"
+
+#: ../src/persp/dbgperspective/ui/findtextdialog.ui.h:6
+msgid "Cycling Options:"
+msgstr "Параметры цикла:"
+
+#: ../src/persp/dbgperspective/ui/findtextdialog.ui.h:7
+msgid "_Wrap around"
+msgstr "По в_сему файлу"
+
+#: ../src/persp/dbgperspective/ui/findtextdialog.ui.h:8
+msgid "Search _backwards"
+msgstr "Обратный _поиск"
+
+#: ../src/persp/dbgperspective/ui/globalvarsinspector.ui.h:1
+msgid "Global Variables"
+msgstr "Глобальные переменные"
+
+#: ../src/persp/dbgperspective/ui/loadcoredialog.ui.h:1
+msgid "Choose a Core File to Debug"
+msgstr "Выбрать файл core для отладки"
+
+#: ../src/persp/dbgperspective/ui/loadcoredialog.ui.h:2
+msgid "Select a Core File"
+msgstr "Выберите файл core…"
+
+#: ../src/persp/dbgperspective/ui/loadcoredialog.ui.h:3
+msgid "Core File:"
+msgstr "Файл core:"
+
+#: ../src/persp/dbgperspective/ui/loadcoredialog.ui.h:4
+msgid "Select the executable that created the core file"
+msgstr "Выбрать исполняемый файл, создавший core"
+
+#: ../src/persp/dbgperspective/ui/loadcoredialog.ui.h:5
+msgid "Executable:"
+msgstr "Исполняемый файл:"
+
+#: ../src/persp/dbgperspective/ui/openfiledialog.ui.h:1
+msgid "Open Source Files"
+msgstr "Открыть файлы с исходным кодом"
+
+#: ../src/persp/dbgperspective/ui/openfiledialog.ui.h:2
+msgid "Select from _Target Executable"
+msgstr "Выбрать из _исполняемых целей"
+
+#: ../src/persp/dbgperspective/ui/openfiledialog.ui.h:3
+msgid "Select from _File System"
+msgstr "Выбрать из _файловой системы"
+
+#: ../src/persp/dbgperspective/ui/openfiledialog.ui.h:4
+msgid "Choose Source Files to Open"
+msgstr "Выбрать файлы с исходным кодом для открытия"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:1
+msgid "Preferences"
+msgstr "Настройки"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:2
+msgid "Use system monospace font"
+msgstr "Использовать системный моноширинный шрифт"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:3
+msgid "Custom Font:"
+msgstr "Другой шрифт:"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:4
+msgid "Editor Font"
+msgstr "Шрифт редактора"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:5
+msgid "Visual Style"
+msgstr "Стиль оформления"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:6
+msgid "Display line numbers"
+msgstr "Показывать номера строк"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:7
+msgid "Line Numbers"
+msgstr "Номера строк"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:8
+msgid "Use launch terminal"
+msgstr "Использовать внешний _терминал"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:9
+msgid "Terminal"
+msgstr "Терминал"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:10
+msgid "When a source file is changed:"
+msgstr "Когда меняется файл с исходным кодом:"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:11
+msgid "Reload the file"
+msgstr "Перезагрузить файл"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:12
+msgid "Do not reload the file"
+msgstr "Не перезагружать файл"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:13
+msgid "Ask each time"
+msgstr "Спрашивать каждый раз"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:14
+msgid "File Monitoring"
+msgstr "Наблюдение за файлами"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:15
+msgid "Enable syntax highlighting"
+msgstr "Включить подсветку синтаксиса"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:16
+msgid "Syntax Highlighting"
+msgstr "Подсветка синтаксиса"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:17
+msgid "Editor"
+msgstr "Редактор"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:19
+msgid "Update at each stop"
+msgstr "Обновлять при каждой остановке"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:20
+msgid "Local variables"
+msgstr "Локальные переменные"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:21
+msgid "Pure assembly"
+msgstr "Только ассемблер"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:22
+msgid "Mixed source and assembly"
+msgstr "Исходный код и ассемблер"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:23
+msgid "Assembly style"
+msgstr "Стиль отображения ассемблера"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:24
+msgid "Assembly flavor"
+msgstr "Разновидность ассемблера"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:25
+#: ../src/persp/dbgperspective/ui/remotetargetdialog.ui.h:3
+msgid "Choose a File"
+msgstr "Выбрать файл"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:26
+msgid "Path to the GDB binary used"
+msgstr "Путь до исполняемого файла GDB"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:27
+msgid "GDB Binary"
+msgstr "Исполняемый файл GDB"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:28
+msgid "Number of instructions to disassemble by default"
+msgstr "Количество процессорных инструкций для дизассемблирования по умолчанию"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:29
+msgid "Instructions"
+msgstr "Инструкции"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:30
+msgid "Enable pretty printing (requires debugger restart)"
+msgstr "Включить pretty printing (требуется перезапуск отладчика)"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:31
+msgid "GDB Pretty Printing"
+msgstr "GDB Pretty Printing"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:32
+msgid "Follow parent"
+msgstr "Следовать за родителем"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:33
+msgid "Follow child"
+msgstr "Следовать за потомком"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:34
+msgid "GDB Follow Fork Mode"
+msgstr "Режим следования за вызовом fork"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:35
+msgid "Debugger"
+msgstr "Отладчик"
+
+#: ../src/persp/dbgperspective/ui/preferencesdialog.ui.h:36
+msgid "Layout"
+msgstr "Размещение"
+
+#: ../src/persp/dbgperspective/ui/proclistdialog.ui.h:1
+msgid "Attach to a Running Program"
+msgstr "Присоединиться к запущенной программе"
+
+#: ../src/persp/dbgperspective/ui/proclistdialog.ui.h:2
+msgid "Choose a Process to Debug"
+msgstr "Выберите процесс для отладки"
+
+#: ../src/persp/dbgperspective/ui/proclistdialog.ui.h:3
+msgid "_Filter list:"
+msgstr "Список _фильтров:"
+
+#: ../src/persp/dbgperspective/ui/remotetargetdialog.ui.h:1
+msgid "Connect to Remote Target"
+msgstr "Подключиться к удалённой цели"
+
+#: ../src/persp/dbgperspective/ui/remotetargetdialog.ui.h:2
+msgid "Executable to Load"
+msgstr "Исполняемый файл для загрузки"
+
+#: ../src/persp/dbgperspective/ui/remotetargetdialog.ui.h:4
+msgid "Shared Libraries Location"
+msgstr "Расположение разделяемых библиотек"
+
+#: ../src/persp/dbgperspective/ui/remotetargetdialog.ui.h:6
+msgid "Remote Debugging Server"
+msgstr "Удалённый сервер отладки"
+
+#: ../src/persp/dbgperspective/ui/remotetargetdialog.ui.h:7
+msgid "TCP/IP Connection"
+msgstr "Соединение TCP/IP"
+
+#: ../src/persp/dbgperspective/ui/remotetargetdialog.ui.h:8
+msgid "Port:"
+msgstr "Порт:"
+
+#: ../src/persp/dbgperspective/ui/remotetargetdialog.ui.h:10
+msgid "Serial Line Connection"
+msgstr "Подключение через последовательный порт"
+
+#: ../src/persp/dbgperspective/ui/runprogramdialog.ui.h:1
+msgid "Choose a Program to Execute"
+msgstr "Выбрать программу для выполнения"
+
+#: ../src/persp/dbgperspective/ui/runprogramdialog.ui.h:2
+msgid "Choose an Executable"
+msgstr "Выберите исполняемый файл"
+
+#: ../src/persp/dbgperspective/ui/runprogramdialog.ui.h:3
+msgid "Program:"
+msgstr "Программа:"
+
+#: ../src/persp/dbgperspective/ui/runprogramdialog.ui.h:4
+msgid "Arguments:"
+msgstr "Аргументы:"
+
+#: ../src/persp/dbgperspective/ui/runprogramdialog.ui.h:5
+msgid "Choose a Working Directory"
+msgstr "Выберите рабочий каталог"
+
+#: ../src/persp/dbgperspective/ui/runprogramdialog.ui.h:6
+msgid "Working Directory:"
+msgstr "Рабочий каталог:"
+
+#: ../src/persp/dbgperspective/ui/runprogramdialog.ui.h:7
+msgid "_Add"
+msgstr "_Добавить"
+
+#: ../src/persp/dbgperspective/ui/runprogramdialog.ui.h:8
+msgid "_Remove"
+msgstr "У_брать"
+
+#: ../src/persp/dbgperspective/ui/runprogramdialog.ui.h:9
+msgid "Environment Variables:"
+msgstr "Переменные окружения:"
+
+#: ../src/persp/dbgperspective/ui/savedsessionsdialog.ui.h:1
+msgid "Saved Sessions"
+msgstr "Сохранённые сеансы"
+
+#: ../src/persp/dbgperspective/ui/savedsessionsdialog.ui.h:2
+msgid "Choose a Session to Debug"
+msgstr "Выберите сеанс отладки"
+
+#: ../src/persp/dbgperspective/ui/setbreakpointdialog.ui.h:2
+msgid "Set a Breakpoint:"
+msgstr "Установить точку останова:"
+
+#: ../src/persp/dbgperspective/ui/setbreakpointdialog.ui.h:3
+msgid "Condition:"
+msgstr "Условие:"
+
+#: ../src/persp/dbgperspective/ui/setbreakpointdialog.ui.h:4
+msgid "_Event:"
+msgstr "_Событие:"
+
+#: ../src/persp/dbgperspective/ui/setbreakpointdialog.ui.h:5
+#: ../src/persp/dbgperspective/ui/setjumptodialog.ui.h:5
+msgid "_Binary Location:"
+msgstr "Расположение двоичного файла:"
+
+#: ../src/persp/dbgperspective/ui/setbreakpointdialog.ui.h:6
+#: ../src/persp/dbgperspective/ui/setjumptodialog.ui.h:4
+msgid "_Source Location:"
+msgstr "_Позиция в файле с исходным кодом:"
+
+#: ../src/persp/dbgperspective/ui/setbreakpointdialog.ui.h:7
+#: ../src/persp/dbgperspective/ui/setjumptodialog.ui.h:3
+msgid "F_unction Name:"
+msgstr "Имя _функции:"
+
+#: ../src/persp/dbgperspective/ui/setbreakpointdialog.ui.h:9
+#: ../src/persp/dbgperspective/ui/setjumptodialog.ui.h:7
+msgid "File name:"
+msgstr "Имя файла:"
+
+#: ../src/persp/dbgperspective/ui/setbreakpointdialog.ui.h:10
+#: ../src/persp/dbgperspective/ui/setjumptodialog.ui.h:6
+msgid "Function:"
+msgstr "Функция:"
+
+#: ../src/persp/dbgperspective/ui/setbreakpointdialog.ui.h:11
+#: ../src/persp/dbgperspective/ui/setjumptodialog.ui.h:8
+msgid "Line:"
+msgstr "Строка:"
+
+#: ../src/persp/dbgperspective/ui/setbreakpointdialog.ui.h:12
+msgid "Set as Countpoint"
+msgstr "Поставить как точку подсчёта"
+
+#: ../src/persp/dbgperspective/ui/setjumptodialog.ui.h:1
+msgid "Set Location to Jump To"
+msgstr "Установить точку для перехода"
+
+#: ../src/persp/dbgperspective/ui/setjumptodialog.ui.h:2
+msgid "Jump to location:"
+msgstr "Перейти к:"
+
+#: ../src/persp/dbgperspective/ui/setjumptodialog.ui.h:10
+msgid "Break at Destination"
+msgstr "Прервать в назначенном месте"
+
+#: ../src/persp/dbgperspective/ui/exprinspectordialog.ui.h:2
+msgid "Add to monitor"
+msgstr "Добавить в монитор"
+
+#: ../src/persp/dbgperspective/ui/exprinspectordialog.ui.h:3
+msgid "_Variable Name:"
+msgstr "_Имя переменной:"
+
+#: ../src/persp/dbgperspective/ui/exprinspectordialog.ui.h:4
+msgid "_Inspect"
+msgstr "И_зучить"
+
+#: ../src/persp/dbgperspective/ui/watchpointdialog.ui.h:1
+msgid "Set a watchpoint:"
+msgstr "Установить точку наблюдения:"
+
+#: ../src/persp/dbgperspective/ui/watchpointdialog.ui.h:2
+msgid "Expression:"
+msgstr "Выражение:"
+
+#: ../src/persp/dbgperspective/ui/watchpointdialog.ui.h:3
+msgid "Inspect"
+msgstr "Инспектировать"
+
+#: ../src/persp/dbgperspective/ui/watchpointdialog.ui.h:4
+msgid "Triggers on:"
+msgstr "Триггеры:"
+
+#: ../src/persp/dbgperspective/ui/watchpointdialog.ui.h:5
+msgid "Read"
+msgstr "Чтение"
+
+#: ../src/persp/dbgperspective/ui/watchpointdialog.ui.h:6
+msgid "Write"
+msgstr "Запись"
+
+#: ../src/uicommon/nmv-locate-file-dialog.cc:65
+#, c-format
+msgid "Select Location for %s"
+msgstr "Выбрать расположение для %s"
+
+#: ../src/uicommon/nmv-locate-file-dialog.cc:75
+#, c-format
+msgid ""
+"Cannot find file '%s'.\n"
+"Please specify the location of this file:"
+msgstr ""
+"Не удалось найти файл «%s».\n"
+"Укажите его расположение:"
+
+#: ../src/uicommon/nmv-source-editor.cc:645
+#, c-format
+msgid "Line: %i, Column: %i"
+msgstr "Строка: %i, Столбец: %i"
+
+#: ../src/uicommon/nmv-source-editor.cc:1473
+#, c-format
+msgid "Could not load file %s because its encoding is different from %s"
+msgstr "Не удалось загрузить файл %s, т.к. его кодировка отличается от %s"
+
+#: ../src/uicommon/nmv-terminal.cc:175
+msgid "Copy the selection"
+msgstr "Копировать выделение"
+
+#: ../src/uicommon/nmv-terminal.cc:181
+msgid "_Paste"
+msgstr "_Вставить"
+
+#: ../src/uicommon/nmv-terminal.cc:182
+msgid "Paste the clipboard"
+msgstr "Вставить содержимое из буфера обмена"
+
+#: ../src/uicommon/nmv-terminal.cc:188
+msgid "_Reset"
+msgstr "_Сбросить"
+
+#: ../src/uicommon/nmv-terminal.cc:189
+msgid "Reset the terminal"
+msgstr "Сбросить терминал"
+
+#: ../src/uicommon/nmv-ui-utils.cc:91
+msgid "Do not ask me again"
+msgstr "Больше не спрашивать"
+
+#: ../src/workbench/nmv-workbench.cc:263
+msgid "Project Website"
+msgstr "Страница проекта"
+
+#. Translators: change this to your name, separate multiple names with \n
+#: ../src/workbench/nmv-workbench.cc:283
+msgid "translator-credits"
+msgstr ""
+"Носенко Андрей <awn@bcs.zp.ua>, 2003\n"
+"Дмитрий Мастрюков <dmitry@taurussoft.org>, 2004\n"
+"Леонид Кантер <leon@asplinux.ru>, 2006"
+
+#: ../src/workbench/nmv-workbench.cc:661
+msgid "_File"
+msgstr "_Файл"
+
+#: ../src/workbench/nmv-workbench.cc:672
+msgid "_Quit"
+msgstr "_Закончить"
+
+#: ../src/workbench/nmv-workbench.cc:673
+msgid "Quit the application"
+msgstr "В_ыйти из программы"
+
+#: ../src/workbench/nmv-workbench.cc:683
+msgid "_Edit"
+msgstr "_Правка"
+
+#: ../src/workbench/nmv-workbench.cc:694
+msgid "_Help"
+msgstr "_Помощь"
+
+#: ../src/workbench/nmv-workbench.cc:705
+msgid "_About"
+msgstr "_О программе"
+
+#: ../src/workbench/nmv-workbench.cc:706
+msgid "Display information about this application"
+msgstr "Показать информацию об этой программе"
+
+#: ../src/workbench/nmv-workbench.cc:716
+msgid "_Contents"
+msgstr "_Содержание"
+
+#: ../src/workbench/nmv-workbench.cc:717
+msgid "Display the user manual for this application"
+msgstr "Показать справку по этой программе"
+
+#. end extern C
+#: ../ui/locatefiledialog.ui.h:1
+msgid "Select File Location"
+msgstr "Выбрать размещение файла"
+
+#: ../ui/locatefiledialog.ui.h:2
+msgid "Locate File"
+msgstr "Найти файл"

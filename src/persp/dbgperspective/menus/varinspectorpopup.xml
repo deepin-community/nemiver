@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ui>
+    <popup name="VarInspectorPopup">
+        <menuitem action="CopyVariablePathMenuItemAction"
+            name="CopyVariablePathMenuItem" />
+        <menuitem action="CopyVariableValueMenuItemAction"
+            name="CopyVariableValueMenuItem" />
+    </popup>
+</ui>
+

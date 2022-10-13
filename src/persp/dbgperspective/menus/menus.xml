@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <ui>
+  <menubar name="MenuBar">
+    <menu action="FileMenuAction" name="FileMenu">
+        <placeholder name="FileMenuAdditions">
+            <menuitem action="ExecuteProgramMenuItemAction"
+                      name="ExecuteProgramMenuItem"/>
+            <menuitem action="LoadCoreMenuItemAction"
+                      name="LoadCoreMenuItem"/>
+            <menuitem action="ConnectToRemoteTargetMenuItemAction"
+                      name="ConnectToRemoteTargetMenuItem"/>
+            <menuitem action="AttachToProgramMenuItemAction"
+                      name="AttachToProgramMenuItem"/>
+            <menuitem action="DetachFromProgramMenuItemAction"
+                      name="DetachFromProgramMenuItem"/>
+            <separator/>
+            <menuitem action="SavedSessionsMenuItemAction"
+                      name="SavedSessionsMenuItem" />
+            <menuitem action="SaveSessionMenuItemAction"
+                      name="SaveSessionMenuItem" />
+            <separator/>
+            <menuitem action="OpenMenuItemAction"
+                      name="OpenMenuItem"/>
+            <menuitem action="ReloadSourceMenuItemAction"
+                      name="ReloadSourceMenuItem"/>
+            <menuitem action="CloseMenuItemAction" name="CloseMenuItem"/>
+        </placeholder>
+    </menu>
+    <placeholder name="MenuBarAdditions">
+        <menu action="EditMenuAction" name="EditMenu">
+	  <menuitem action="CopyMenuItemAction"
+                    name="CopyMenuItem"/>
+	  <separator/>
+          <menuitem action="FindMenuItemAction"
+                    name="FindMenutItem"/>
+          <menuitem action="CurrentSessionPropertiesMenuItemAction"
+                      name="CurrentSessionPropertiesMenuItem"/>
+        </menu>
+        <menu action="ViewMenuAction" name="ViewMenu">
+            <menuitem action="ActivateTargetTerminalViewMenuAction"
+                name="ActivateTargetTerminalViewMenuItem"/>
+            <menuitem action="ActivateContextViewMenuAction"
+                name="ActivateContextViewMenuItem"/>
+            <menuitem action="ActivateBreakpointsViewMenuAction"
+                name="ActivateBreakpointsViewMenuItem"/>
+            <menuitem action="ActivateRegistersViewMenuAction"
+                name="ActivateRegistersViewMenuItem"/>
+	    <menuitem action="ActivateExprMonitorViewMenuAction"
+                name="ActivateExprMonitorViewMenuItem"/>
+        </menu>
+        <menu action="DebugMenuAction" name="DebugMenu">
+            <menuitem action="RunMenuItemAction" name="RunMenuItem"/>
+            <menuitem action="StopMenuItemAction" name="StopMenuItem"/>
+            <menuitem action="ContinueMenuItemAction"
+                name="ContinueMenuItem"/>
+            <menuitem action="ContinueUntilMenuItemAction"
+                name="ContinueUntilMenuItem"/>
+            <separator/>
+            <menuitem action="NextMenuItemAction" name="NextMenuItem"/>
+            <menuitem action="StepMenuItemAction" name="StepMenuItem"/>
+            <menuitem action="StepOutMenuItemAction" name="StepOutMenuItem"/>
+            <menuitem action="StepInAsmMenuItemAction"
+		      name="StepInAsmMenuItem"/>
+            <menuitem action="StepOverAsmMenuItemAction"
+                      name="StepOverAsmMenuItem"/>
+	    <menuitem action="JumpToLocationMenuItemAction"
+                      name="JumpToLocationMenuItem"/>
+            <separator/>
+	    <menuitem action="SetBreakpointUsingDialogMenuItemAction"
+                name="SetBreakUsingDialogMenuItem"/>
+	    <menuitem action="SetBreakpointMenuItemAction"
+                name="SetBreakMenuItem"/>
+	    <menuitem action="ToggleBreakpointMenuItemAction"
+                name="ToggleBreakMenuItem"/>
+            <menuitem action="ToggleEnableBreakpointMenuItemAction"
+                name="ToggleEnableBreakMenuItem"/>
+	    <menuitem action="ToggleCountpointMenuItemAction"
+                name="ToggleCountpointMenuItem"/>           
+            <menuitem action="SetWatchPointUsingDialogMenuItemAction"
+                name="SetWatchUsingDialogMenuItem"/>
+            <separator/>
+            <menuitem action="InspectExpressionMenuItemAction"
+                name="InspectExpressionMenuItem"/>
+            <menuitem action="CallFunctionMenuItemAction"
+                name="CallFunctionMenuItem"/>
+            <menuitem action="ActivateGlobalVariablesDialogMenuAction"
+                name="ActivateGlobalVariablesDialogMenuItem"/>
+            <menuitem action="RefreshLocalVariablesMenuItemAction"
+                name="RefreshLocalVariablesMenuItemAction"/>
+            <menuitem action="DisAsmMenuItemAction"
+                name="DisAsmMenuItemAction"/>
+            <menuitem action="SwitchToAsmMenuItemAction"
+                name="SwitchToAsmMenuItemAction"/>
+            <menuitem action="SwitchToSourceMenuItemAction"
+                name="SwitchToSourceMenuItemAction"/>
+        </menu>
+    </placeholder>
+  </menubar>
+ </ui>
+

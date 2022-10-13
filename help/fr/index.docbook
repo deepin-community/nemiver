@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "0.5.0">
+<!ENTITY manrevision "2.0">
+<!ENTITY date "February 2008">
+<!ENTITY app "Nemiver">
+<!ENTITY appcmd "nemiver">
+<!ENTITY website "http://www.gnome.org/projects/nemiver/">
+]>
+<!--
+(Do not remove this comment block.)
+Maintained by the GNOME Documentation Project
+http://developer.GNOME.org/projects/gdp
+Template version: 2.0 beta
+Template last modified Jan 30, 2002
+
+-->
+<!-- =============Document Header ============================= -->
+<?chunk-depth 2?>
+<article id="index" lang="fr">
+  <!-- please do not change the id; for translations, change lang to -->
+  <!-- appropriate code -->
+  <articleinfo>
+    <title>Manuel de <application>Nemiver</application></title>
+    <copyright><year>2008</year> <holder>Jonathon Jongsma</holder></copyright>
+    <!-- translators: uncomment this:
+
+    <copyright>
+      <year>2003</year>
+      <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+    </copyright>
+
+    -->
+    <publisher role="maintainer">
+      <publishername>Projet Nemiver</publishername>
+    </publisher>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <authorgroup>
+      <author><firstname>Jonathon</firstname> <surname>Jongsma</surname> <affiliation> <orgname>GNOME</orgname> </affiliation></author>
+      <!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+      <othercredit role="translator">
+        <firstname>Latin</firstname>
+        <surname>Translator 1</surname>
+        <affiliation>
+          <orgname>Latin Translation Team</orgname>
+          <address> <email>translator@gnome.org</email> </address>
+        </affiliation>
+        <contrib>Latin translation</contrib>
+      </othercredit>
+      -->
+    </authorgroup>
+    <!-- According to GNU FDL, revision history is mandatory if you are -->
+    <!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+    <revhistory>
+      <!-- Remember to remove the &manrevision; entity from the revision entries other
+      than the current revision. -->
+      <revision><revnumber>1.0</revnumber> <date>2007</date> <revdescription>
+          <para>Version initiale</para>
+        </revdescription></revision>
+      <revision><revnumber>2.0</revnumber> <date>2008</date> <revdescription>
+          <para>Mise à jour pour la version 0.5.0</para>
+        </revdescription></revision>
+    </revhistory>
+    <releaseinfo>Le présent manuel décrit le fonctionnement de la version 0.5.0 de Nemiver.</releaseinfo>
+    <legalnotice>
+      <title>Retours d'informations</title>
+      <para>Pour rapporter un bogue ou pour faire une suggestion concernant l'application <application>Nemiver</application> ou ce manuel, consultez le <ulink url="http://www.gnome.org/projects/nemiver/" type="http">site Web du projet Nemiver</ulink>.</para>
+      <!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+    <abstract role="description">
+      <para><application>Nemiver</application> est un débogueur avec interface graphique pour l'environnement de bureau GNOME.</para>
+    </abstract>
+  
+    <othercredit class="translator">
+      <personname>
+        <firstname>Gérard Baylard,</firstname>
+      </personname>
+      <email>gerard DOT b AT bbox DOT fr</email>
+    </othercredit>
+    <copyright>
+      
+        <year>2010</year>
+      
+      <holder>Gérard Baylard,</holder>
+    </copyright>
+  
+    <othercredit class="translator">
+      <personname>
+        <firstname>Bruno Brouard,</firstname>
+      </personname>
+      <email>annoa.b@gmail.com</email>
+    </othercredit>
+    <copyright>
+      
+        <year>2010</year>
+      
+      <holder>Bruno Brouard,</holder>
+    </copyright>
+  </articleinfo>
+  <indexterm><primary>Nemiver</primary></indexterm>
+  <indexterm><primary>débogueur</primary></indexterm>
+  <indexterm><primary>gdb</primary></indexterm>
+  <!-- ============= Document Body ============================= -->
+  <!-- ============= Introduction ============================== -->
+  <sect1 id="nemiver-sect-intro">
+    <title>Aperçu</title>
+    <para><application>Nemiver</application> est une tentative d'écriture d'un débogueur indépendant avec interface graphique, s'intégrant bien dans l'environnement de bureau GNOME. Il se fonde sur l'utilisation en arrière-plan du débogueur GNU bien connu <application>gdb</application> pour déboguer des programmes en C / C++.</para>
+    <sect2 id="nemiver-sect-perspectives">
+      <title>Perspectives</title>
+      <para><application>Nemiver</application> est conçu comme une <interface>boîte à outils</interface> graphique générique et un système de greffons qui ouvrent diverses perspectives. Actuellement la seule perspective offerte est le débogage, mais dans le futur, seront ajoutées des perspectives de débogage mémoire avec <application>valgrind</application> ou de profilage avec des outils tels que <application>oprofile</application>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-getting-started">
+    <title>Premiers pas</title>
+    <para>Ce paragraphe explique comment lancer <application>Nemiver</application> ; il donne également un aperçu des fondements de l'application.</para>
+    <sect2 id="nemiver-sect-starting">
+      <title>Lancement de <application>Nemiver</application></title>
+      <para>Vous pouvez lancer <application>Nemiver</application> de la manière suivante :</para>
+      <variablelist>
+        <varlistentry>
+          <term>Menu <guimenu>Applications</guimenu></term>
+          <listitem>
+            <para>Choisissez <menuchoice><guisubmenu>Programmation</guisubmenu><guimenuitem>Débogueur Nemiver</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>En ligne de commande</term>
+          <listitem>
+            <para>Saisissez <command>nemiver</command>, puis appuyez sur la touche <keycap>Entrée</keycap>.</para>
+            <tip>
+              <title>Options supplémentaires en ligne de commande</title>
+              <para>La liste des options pouvant être passées à <application>Nemiver</application> en ligne de commande s'affiche en saisissant <command>nemiver --help-all</command>.</para>
+            </tip>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="nemiver-sect-window">
+      <title>Fenêtre de <application>Nemiver</application></title>
+      <para>Quand vous lancez <application>Nemiver</application>, une fenêtre ressemblant beaucoup à la suivante apparaît :</para>
+      <figure id="nemiver-window">
+        <title>Fenêtre <application>Nemiver</application></title>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/main-window.png" format="PNG"/> </imageobject> <textobject> <phrase>Fenêtre principale de Nemiver</phrase> </textobject></mediaobject>
+        </screenshot>
+      </figure>
+      <para>La fenêtre <application>Nemiver</application> comporte les éléments suivants :</para>
+      <variablelist>
+        <varlistentry>
+          <term>Barre de menu</term>
+          <listitem>
+            <para>Les menus de la barre de menus comportent la totalité des commandes nécessaires à l'utilisation de <application>Nemiver</application>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Barre d'outils</term>
+          <listitem>
+            <para>La barre d'outils affiche les actions élémentaires de débogage pour le lancement ou l'exécution pas à pas du programme à déboguer.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Bloc-notes d'affichage du source</term>
+          <listitem>
+            <para>Quand des fichiers source sont ouverts, cette zone sert à l'affichage des sources du programme en cours de débogage.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Bloc-notes d'état</term>
+          <listitem>
+            <para>Le bloc notes d'état comporte plusieurs onglets pour afficher les informations relatives au programme en cours de débogage. Ces onglets sont les suivants :</para>
+            <variablelist>
+              <varlistentry>
+                <term>Pile d'appel</term>
+                <listitem>
+                  <para>Affiche l'état courant de la pile d'appel du programme en cours de débogage.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Variables</term>
+                <listitem>
+                  <para>Affiche une liste de toutes les variables locales et paramètres de fonction, ainsi que leurs types et leurs valeurs.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Terminal de la cible</term>
+                <listitem>
+                  <para>Si le programme en cours de débogage écrit une quelconque sortie sur le terminal, elle est affichée dans cet onglet.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Points d'arrêt</term>
+                <listitem>
+                  <para>Cet onglet affiche la liste de tous les points d'arrêt définis. Vous visualisez le code source d'un point d'arrêt donné en double cliquant sur un élément de la liste ou bien en choisissant <menuchoice><guimenuitem>Aller dans le source</guimenuitem></menuchoice> dans le menu contextuel affiché par un clic droit du bouton de souris. De plus, les points d'arrêt de cet onglet peuvent être détruits, activés ou désactivés. Pour plus d'informations concernant les points d'arrêt, consultez la <xref linkend="nemiver-sect-breakpoints"/>.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Registres</term>
+                <listitem>
+                  <para>Cet onglet affiche tous les registres processeur et leurs valeurs. Pour plus de détails, consultez la <xref linkend="nemiver-sect-registers"/>.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Mémoire</term>
+                <listitem>
+                  <para>Cet onglet donne l'état présent d'une zone de mémoire donnée. Pour plus d'informations, consultez la <xref linkend="nemiver-sect-memory"/>.</para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="nemiver-sect-loading-program">
+      <title>Choix d'un programme à déboguer</title>
+      <para>Il y a plusieurs manières de débuter le débogage d'un programme. <application>Nemiver</application> permet le chargement d'un exécutable local, d'un fichier « core », la connexion à un processus en cours ou à un serveur de débogage distant.</para>
+      <sect3 id="nemiver-sect-starting-executable">
+        <title>Débogage d'un exécutable</title>
+        <sect4>
+          <title>Utilisation de la boîte à outils</title>
+          <para>Pour sélectionner un exécutable à déboguer, choisissez <menuchoice><guimenu> Fichier </guimenu><guimenuitem> Charger le fichier exécutable... </guimenuitem></menuchoice> qui affiche la boîte de dialogue suivante :</para>
+          <figure id="nemiver-execute-dialog">
+            <title>Boîte de dialogue pour exécutable</title>
+            <screenshot>
+              <mediaobject><imageobject> <imagedata fileref="figures/execute-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Boîte de dialogue pour sélectionner un exécutable à lancer</phrase> </textobject></mediaobject>
+            </screenshot>
+          </figure>
+          <para>Dans cette boîte de dialogue, vous pouvez sélectionner le programme à déboguer, tous paramètres ou toutes options à transmettre à l'exécutable via sa ligne de commande, le répertoire de travail dans lequel l'exécutable sera lancé et l'ensemble des variables d'environnement à définir lors du débogage.</para>
+        </sect4>
+        <sect4>
+          <title>Utilisation de la ligne de commande</title>
+          <para>Pour lancer un exécutable à déboguer à partir de la ligne de commande, indiquez simplement le nom de l'exécutable. Précisez, soit le chemin complet vers l'exécutable, soit uniquement son nom de base si vous vous trouvez dans son répertoire. Par exemple, si votre chemin est <filename>/usr/bin</filename>, les deux syntaxes suivantes sont équivalentes :</para>
+          <itemizedlist>
+            <listitem>
+              <para><command>nemiver /usr/bin/nomprog</command></para>
+            </listitem>
+            <listitem>
+              <para><command>nemiver nomprog</command></para>
+            </listitem>
+          </itemizedlist>
+          <tip>
+            <title>Passage d'options par la ligne de commande</title>
+            <para>Si vous voulez transmettre au programme à déboguer des options via la ligne de commande, vous devez les saisir entre guillemets pour prévenir une interprétation immédiate par <application>Nemiver</application> : <command>nemiver "nomprog --arg1 --arg2"</command>.</para>
+          </tip>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-attach">
+        <title>Connexion à un programme en cours d'exécution</title>
+        <sect4>
+          <title>Utilisation de la boîte à outils</title>
+          <para>Choisissez l'élément de menu <menuchoice><guimenu> Fichier </guimenu><guimenuitem> Se connecter à un processus en cours... </guimenuitem></menuchoice> qui affiche la boîte de dialogue suivante :</para>
+          <figure id="nemiver-attach-dialog">
+            <title>Boîte de dialogue de connexion</title>
+            <screenshot>
+              <mediaobject><imageobject> <imagedata fileref="figures/attach-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Boîte de dialogue pour se connecter à un programme en cours d'exécution</phrase> </textobject></mediaobject>
+            </screenshot>
+          </figure>
+          <para>Choisissez un processus dans la liste et cliquez sur <guibutton>Valider</guibutton> pour débuter le débogage du programme choisi. La liste affichée dans la boîte de dialogue peut comporter de très nombreux d'éléments, vous pouvez filtrer ceux qui vous intéressent en saisissant du texte dans le contrôle de saisie situé immédiatement sous la liste.</para>
+        </sect4>
+        <sect4>
+          <title>Utilisation de la ligne de commande</title>
+          <para>Pour se connecter à un processus en cours à partir de la ligne de commande, servez-vous de l'option <option>--attach</option>. Elle accepte, soit le numéro d'identification du processus (pid), soit son nom. Ainsi, par exemple, pour déboguer le processus en cours <command>foo</command> possédant le numéro 1121, vous saisissez soit <command>nemiver --attach foo</command>, soit <command>nemiver --attach 1121</command>.</para>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-core-file">
+        <title>Chargement d'un fichier « core »</title>
+        <sect4>
+          <title>Utilisation de la boîte à outils</title>
+          <para>Choisissez l'élément de menu <menuchoice><guimenu> Fichier </guimenu><guimenuitem> Charger un fichier core... </guimenuitem></menuchoice> pour faire apparaître la boîte de dialogue suivante qui vous permet de charger un fichier core :</para>
+          <figure id="nemiver-load-core-dialog">
+            <title>Boîte de dialogue de chargement d'un fichier core</title>
+            <screenshot>
+              <mediaobject><imageobject> <imagedata fileref="figures/load-core-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Boîte de dialogue pour le chargement d'un fichier core.</phrase> </textobject></mediaobject>
+            </screenshot>
+          </figure>
+        </sect4>
+        <sect4>
+          <title>Utilisation de la ligne de commande</title>
+          <para>Les fichiers core ne peuvent pas être chargés à partir de la ligne de commande.</para>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-remote">
+        <title>Débogage distant</title>
+        <para><application>Nemiver</application> permet une connexion pour un débogage sur un serveur distant.</para>
+        <sect4>
+          <title>Utilisation de la boîte à outils</title>
+          <para>Pour se connecter à un serveur distant en vue d'un débogage, choisissez <menuchoice><guimenu>Fichier</guimenu><guimenuitem>Se connecter à une cible distante...</guimenuitem></menuchoice></para>
+          <screenshot>
+            <mediaobject><imageobject> <imagedata fileref="figures/connect-remote-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Boîte de dialogue pour débogage à distance</phrase> </textobject></mediaobject>
+          </screenshot>
+          <para>Choisissez l'exécutable à charger et indiquez l'endroit où se trouvent les bibliothèques partagées. Saisissez ensuite les informations détaillées pour vous connecter à distance.</para>
+        </sect4>
+        <sect4>
+          <title>Utilisation de la ligne de commande</title>
+          <para><application>Nemiver</application> ne dispose d'aucun moyen pour se connecter à un serveur distant à partir de la ligne de commande</para>
+        </sect4>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-using">
+    <title>Utilisation de <application>Nemiver</application></title>
+    <para>Ce paragraphe décrit comment utiliser <application>Nemiver</application> pour déboguer une application.</para>
+    <sect2 id="nemiver-sect-basic-debugging">
+      <title>Actions élémentaires de débogage</title>
+      <para>Les actions élémentaires de débogage sont accessibles soit à partir de la barre d'outils principale, soit à l'aide du menu <guimenu>Déboguer</guimenu>, soit avec des raccourcis clavier. Les actions les plus courantes sont listées ci-après :</para>
+      <variablelist>
+        <varlistentry>
+          <term>Continuer</term>
+          <listitem>
+            <para>Démarre le programme. L'exécution se poursuit jusqu'à la rencontre d'un point d'arrêt ou jusqu'à la fin du programme. Vous pouvez l'interrompre « à la main » en cliquant sur le bouton <action>Arrêter</action>. Le démarrage peut être activé en appuyant sur la touche <keycap>F5</keycap>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Suivante</term>
+          <listitem>
+            <para>Exécute l'instruction suivante et s'arrête sur la ligne immédiatement après dans le fichier. Certains débogueurs appellent cette action « Avancer ». Elle peut être activée en appuyant sur la touche <keycap>F6</keycap>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Pas à pas</term>
+          <listitem>
+            <para>Exécute l'instruction suivante en entrant dans la fonction si c'est possible. Certains débogueurs appellent cette action « Entrer ». Elle peut être activée en appuyant sur la touche <keycap>F7</keycap>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Sortir</term>
+          <listitem>
+            <para>Termine l'exécution de la fonction en cours et s'arrête au point de retour de son appel. Cette action peut être activée en appuyant sur les touches <keycombo><keycap>Maj</keycap><keycap>F7</keycap></keycombo>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Redémarrer</term>
+          <listitem>
+            <para>Recharge l'exécutable en cours de traitement et redémarre son exécution depuis le début. Cette action peut être activée en appuyant sur les touches <keycombo><keycap>Maj</keycap><keycap>F5</keycap></keycombo>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Arrêter</term>
+          <listitem>
+            <para>Arrête manuellement le déroulement du programme. Cette action n'est disponible que lorsque le débogueur est en train de déboguer l'exécutable (c'est-à-dire après que l'utilisateur a cliqué sur <action>Continuer</action>). Cette action peut être activée en appuyant sur la touche <keycap>F9</keycap>.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Par défaut, après avoir chargé un exécutable, <application>Nemiver</application> crée un point d'arrêt à l'entrée de la fonction <function>main()</function>. Ainsi dès que l'exécution atteint ce point, elle s'arrête et attend une commande. Vous pouvez ensuite parcourir pas à pas le programme, examiner les variables (consultez la <xref linkend="nemiver-sect-inspecting-variables"/>) ou ajouter des points d'arrêt supplémentaires (consultez la <xref linkend="nemiver-sect-breakpoints"/>).</para>
+    </sect2>
+    <sect2 id="nemiver-sect-inspecting-variables">
+      <title>Examen des variables</title>
+      <para><application>Nemiver</application> affiche une liste de toutes les variables locales dans l'onglet <interface>Variables</interface> du <interface>Bloc-notes d'état</interface>. Si vous voulez examiner une autre variable (ou même une expression quelconque), servez-vous de l'élément de menu <menuchoice><guimenu>Déboguer</guimenu><guimenuitem>Examiner une variable</guimenuitem></menuchoice> qui fait apparaître une fenêtre semblable à celle-ci :</para>
+      <screenshot>
+        <mediaobject><imageobject> <imagedata fileref="figures/variable-inspector.png" format="PNG"/> </imageobject> <textobject> <phrase>Boîte de dialogue d'examen de variables</phrase> </textobject></mediaobject>
+      </screenshot>
+      <para>Vous pouvez indiquer dans le contrôle de saisie tout nom de variable ou toute expression simple (comme <literal>pFoo-&gt;bar</literal>). Si cette variable est valide et à portée de vue, des informations détaillées la concernant seront affichées.</para>
+      <para>D'une autre façon, si vous sélectionnez un nom de variable dans la fenêtre d'<interface>édition des sources</interface> puis faites apparaître la boîte de dialogue <interface>Examiner une variable</interface>, Nemiver essaie d'afficher des informations concernant cette variable.</para>
+      <tip>
+        <title>Raccourci clavier</title>
+        <para>Vous ferez également apparaître la fenêtre <interface>Examiner une variable</interface> en appuyant sur la touche <keycap>F12</keycap>.</para>
+      </tip>
+      <para><application>Nemiver</application> vous permet également d'afficher la liste de toutes les variables globales d'une application dans une boîte de dialogue séparée. Pour faire apparaître la fenêtre <interface>Variables globales</interface>, choisissez l'élément de menu <menuchoice><guimenu>Déboguer</guimenu><guimenuitem>Afficher les variables globales</guimenuitem></menuchoice> ou bien pressez <keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo>.</para>
+      <screenshot>
+        <mediaobject><imageobject> <imagedata fileref="figures/global-variables-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Boîte de dialogue des variables globales</phrase> </textobject></mediaobject>
+      </screenshot>
+      <warning>
+        <para>Pour certains programmes (plus spécialement les programmes en C++), l'affichage de la totalité des variables globales peut prendre beaucoup de temps.</para>
+      </warning>
+    </sect2>
+    <sect2 id="nemiver-sect-breakpoints">
+      <title>Définition des points d'arrêt</title>
+      <para>Il y a plusieurs méthodes pour définir des points d'arrêt dans <application>Nemiver</application>. <application>Nemiver</application> définit automatiquement un point d'arrêt à l'entrée de la fonction <function>main()</function> quand vous débutez le débogage d'un exécutable. Si vous voulez définir d'autres points d'arrêt, utilisez un des moyens ci-après :</para>
+      <itemizedlist>
+        <listitem>
+          <para>Cliquez dans la marge de la ligne sur laquelle vous voulez placer un point d'arrêt.</para>
+        </listitem>
+        <listitem>
+          <para>Placez le curseur dans la ligne où vous voulez placer le point d'arrêt et définissez-le, soit via l'élément de menu <menuchoice><guimenu>Déboguer</guimenu><guimenuitem>Définir un point d'arrêt</guimenuitem></menuchoice>, soit en appuyant sur la touche <keycap>F8</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>Définissez un point d'arrêt en entrée d'une fonction particulière ou à un emplacement donné d'un fichier à l'aide du menu <menuchoice><guimenu>Déboguer</guimenu><guimenuitem>Définir un point d'arrêt...</guimenuitem></menuchoice> ou bien en pressant <keycombo><keycap>Ctrl</keycap><keycap>B</keycap></keycombo>. Cela fait apparaître une boîte de dialogue du type :</para>
+          <screenshot>
+            <mediaobject><imageobject> <imagedata fileref="figures/set-breakpoint-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Boîte de dialogue de définition d'un point d'arrêt</phrase> </textobject></mediaobject>
+          </screenshot>
+          <para>Vous pouvez définir un point d'arrêt à un emplacement particulier du fichier ou bien via le nom d'une fonction. S'il y a plusieurs fonctions portant ce nom, <application>Nemiver</application> en affiche la liste et vous demande de choisir celle que vous souhaitez.</para>
+        </listitem>
+      </itemizedlist>
+      <sect3>
+        <title>Désactivation de points d'arrêt</title>
+        <para>Les points d'arrêt peuvent être, soit activés, soit désactivés. Le débogueur arrête l'exécution quand il atteint un point d'arrêt activé mais il ignore tous ceux qui sont dans l'état désactivé. Cette fonctionnalité permet d'enlever un point d'arrêt sans réellement le détruire.</para>
+        <para>Pour activer ou désactiver un point d'arrêt, cliquez sur la case à cocher à côté du numéro du point d'arrêt dans l'onglet <interface>Points d'arrêt</interface> du <interface>Bloc notes d'état</interface>. Autrement, pressez <keycombo><keycap>Maj</keycap><keycap>F8</keycap></keycombo> pour activer ou désactiver le point d'arrêt situé dans la ligne de code possédant le curseur.</para>
+        <para>Les figures suivantes montrent la différence de représentation entre des points d'arrêt activés ou désactivés dans l'éditeur de sources.</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/enabled-breakpoint.png" format="PNG"/> </imageobject> <textobject> <phrase>Illustration d'un point d'arrêt activé</phrase> </textobject> <caption><para>Point d'arrêt activé</para></caption></mediaobject>
+        </screenshot>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/disabled-breakpoint.png" format="PNG"/> </imageobject> <textobject> <phrase>Illustration d'un point d'arrêt désactivé</phrase> </textobject> <caption><para>Point d'arrêt désactivé</para></caption></mediaobject>
+        </screenshot>
+      </sect3>
+      <sect3>
+        <title>Ouverture des fichiers source</title>
+        <para>Parfois, vous ne savez pas déterminer exactement le nom de la fonction ou le numéro de ligne à l'aplomb de laquelle placer un point d'arrêt. Il faut alors ouvrir le fichier source pour situer le point d'arrêt. Vous pouvez ouvrir arbitrairement des fichiers dans le système de fichiers, mais <application>Nemiver</application> fournit une liste des fichiers utilisés pour construire l'exécutable et vous permet d'en sélectionner un parmi ceux-ci. Si vous choisissez <menuchoice><guimenu>Fichier</guimenu><guimenuitem>Ouvrir un fichier source...</guimenuitem></menuchoice>, la fenêtre suivante est affichée :</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/open-files-target.png" format="PNG"/> </imageobject> <textobject> <phrase>Boîte de dialogue pour ouvrir des fichiers source</phrase> </textobject></mediaobject>
+        </screenshot>
+        <para>Pour choisir un fichier arbitrairement dans le système de fichier, cliquez sur l'option <guilabel>Sélectionnez depuis le système de fichiers</guilabel>. Pour choisir parmi les fichiers ayant servis à créer l'exécutable, cliquez sur <guilabel>Sélectionnez depuis l'exécutable cible</guilabel>.</para>
+        <warning>
+          <title>Détermination des fichiers source des modules chargés dynamiquement</title>
+          <para>Si l'exécutable cible charge des modules en cours d'exécution (par exemple, avec <function>dlopen()</function>), <application>Nemiver</application> ne sera pas capable de déterminer quels ont été les fichiers utilisés pour construire ces modules avant qu'ils n'aient été effectivement chargés.</para>
+        </warning>
+      </sect3>
+    </sect2>
+    <sect2 id="nemiver-sect-advanced">
+      <title>Débogage avancé</title>
+      <sect3 id="nemiver-sect-registers">
+        <title>Registres</title>
+        <para>L'élément graphique d'édition des registres est situé dans l'onglet <interface>Registres</interface> du <interface>Bloc notes d'état</interface>. Pour aller directement dans cet onglet, pressez <keycombo><keycap>Alt</keycap><keycap>F5</keycap></keycombo>.</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/registers-view.png" format="PNG"/> </imageobject> <textobject> <phrase>L'élément graphique d'édition des registres</phrase> </textobject></mediaobject>
+        </screenshot>
+        <para>Cet élément graphique affiche les valeurs actuelles de tous les registres du processeur. Vous pouvez modifier les valeurs en cliquant dans la colonne <interface>Valeur</interface> et en saisissant une nouvelle valeur. Si la valeur du registre a été modifiée depuis le précédent arrêt du débogueur, elle est mise en évidence en rouge.</para>
+      </sect3>
+      <sect3 id="nemiver-sect-memory">
+        <title>Mémoire</title>
+        <para>L'élément graphique mémoire permet d'afficher directement une partie de la mémoire, offrant ainsi une vue au plus bas niveau de ce qui se passe lors du déroulement du programme.</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/memory-view.png" format="PNG"/> </imageobject> <textobject> <phrase>L'élément graphique d'édition mémoire</phrase> </textobject></mediaobject>
+        </screenshot>
+        <para>Pour afficher une portion de mémoire dans l'élément graphique mémoire, saisissez une adresse mémoire dans le champ <interface>Adresse</interface>. Si l'adresse est valide par rapport au programme en cours de débogage, une vue de la mémoire, débutant à l'adresse indiquée, est affichée. Les valeurs mémoire sont affichées sous les formats octet, mot (2 octets) ou mot long (4 octets) selon le choix opéré avec le menu déroulant <interface>Regrouper par</interface>. Les valeurs de la mémoire sont automatiquement mises à jour au fur et à mesure que vous avancez pas à pas dans le programme.</para>
+        <para>Outre l'affichage des valeurs en mémoire, cet élément graphique peut servir à les modifier. Vous pouvez modifier, soit la représentation hexadécimale (côté gauche), soit la représentation ASCII (côté droit). Les changements sont appliqués immédiatement.</para>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-sessions">
+    <title>Enregistrement et restauration d'une session</title>
+    <para><application>Nemiver</application> enregistre les sessions de débogage pour vous et vous permet de les reprendre ultérieurement. Les informations d'enregistrement comprennent le nom de l'exécutable en cours de débogage, les variables d'environnement définies, les options passées en ligne de commande, les fichiers ouverts et les points d'arrêt définis de manière à retrouver le plus rapidement possible la situation que vous aviez abandonnée la fois précédente.</para>
+    <sect2 id="nemiver-sect-saving-sessions">
+      <title>Enregistrement de sessions</title>
+      <para><application>Nemiver</application> enregistre votre session automatiquement lorsque vous quittez. Vous n'avez pas à vous en soucier. Toutefois, si vous souhaitez explicitement enregistrer votre session avant la fermeture de <application>Nemiver</application>, choisissez l'élément de menu <menuchoice><guimenu>Fichier</guimenu><guimenuitem>Enregistrer la session sur le disque</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <sect2 id="nemiver-sect-resuming-sessions">
+      <title>Reprise de sessions enregistrées</title>
+      <sect3>
+        <title>Utilisation de la boîte à outils</title>
+        <para>Choisissez <menuchoice><guimenu>Fichier</guimenu><guimenuitem>Reprendre une session enregistrée...</guimenuitem></menuchoice> et sélectionnez une session dans la liste.</para>
+        <figure id="nemiver-sessions-dialog">
+          <title>Boîte de dialogue Sessions</title>
+          <screenshot>
+            <mediaobject><imageobject> <imagedata fileref="figures/sessions-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Boîte de dialogue pour reprendre une session enregistrée</phrase> </textobject></mediaobject>
+          </screenshot>
+        </figure>
+      </sect3>
+      <sect3>
+        <title>À partir de la ligne de commande</title>
+        <para>Si vous connaissez le numéro d'identification de la session que vous voulez reprendre, vous pouvez redémarrer la session à partir de la ligne de commande. Par exemple, pour reprendre la session numéro 3, tapez la commande suivante : <command>nemiver --session 3</command>.</para>
+      </sect3>
+    </sect2>
+  </sect1>
+  <!-- This should be the last section in the manual -->
+  <sect1 id="nemiver-sect-about">
+    <title>À propos de <application>Nemiver</application></title>
+    <para><application>Nemiver</application> a été écrit par Dodji Seketeli et Jonathon Jongsma, avec de nombreuses autres contributions. Pour obtenir plus d'information à propos de Nemiver, consultez le site Web du <ulink url="http://www.gnome.org/projects/nemiver/" type="http">projet Nemiver</ulink>.</para>
+    <para>Pour signaler une anomalie ou émettre une suggestion concernant l'application ou le présent manuel, procédez comme indiqué à la section « Votre avis » du <ulink url="ghelp:user-guide?feedback-bugs" type="help">Guide utilisateur GNOME</ulink>.</para>
+    <para>Ce programme est distribué selon les termes de la « GNU General Public license » telle que publiée par la Free Software Foundation ; soit la version 2 de la licence, soit, (à votre discrétion) toute version ultérieure. Une copie de la-dite licence est accessible <ulink url="ghelp:gpl" type="help">ici</ulink> ou bien dans le fichier COPYING joint au code source de ce programme.</para>
+  </sect1>
+</article>
+<!--
+vim: ts=2 sw=2 et
+-->

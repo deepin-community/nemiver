@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "0.5.0">
+<!ENTITY manrevision "2.0">
+<!ENTITY date "February 2008">
+<!ENTITY app "Nemiver">
+<!ENTITY appcmd "nemiver">
+<!ENTITY website "http://www.gnome.org/projects/nemiver/">
+]>
+<!--
+(Do not remove this comment block.)
+Maintained by the GNOME Documentation Project
+http://developer.GNOME.org/projects/gdp
+Template version: 2.0 beta
+Template last modified Jan 30, 2002
+
+-->
+<!-- =============Document Header ============================= -->
+<?chunk-depth 2?>
+<article id="index" lang="cs">
+  <!-- please do not change the id; for translations, change lang to -->
+  <!-- appropriate code -->
+  <articleinfo>
+    <title>Příručka k aplikaci Nemiver</title>
+    <copyright><year>2008</year> <holder>Jonathon Jongsma</holder></copyright>
+    <!-- translators: uncomment this:
+
+    <copyright>
+      <year>2003</year>
+      <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+    </copyright>
+
+    -->
+    <publisher role="maintainer">
+      <publishername>Projekt Nemiver</publishername>
+    </publisher>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <authorgroup>
+      <author><firstname>Jonathon</firstname> <surname>Jongsma</surname> <affiliation> <orgname>GNOME</orgname> </affiliation></author>
+      <!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+      <othercredit role="translator">
+        <firstname>Latin</firstname>
+        <surname>Translator 1</surname>
+        <affiliation>
+          <orgname>Latin Translation Team</orgname>
+          <address> <email>translator@gnome.org</email> </address>
+        </affiliation>
+        <contrib>Latin translation</contrib>
+      </othercredit>
+      -->
+    </authorgroup>
+    <!-- According to GNU FDL, revision history is mandatory if you are -->
+    <!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+    <revhistory>
+      <!-- Remember to remove the &manrevision; entity from the revision entries other
+      than the current revision. -->
+      <revision><revnumber>1.0</revnumber> <date>2007</date> <revdescription>
+          <para>Počáteční verze</para>
+        </revdescription></revision>
+      <revision><revnumber>2.0</revnumber> <date>2008</date> <revdescription>
+          <para>Aktualizováno pro vydání 0.5.0</para>
+        </revdescription></revision>
+    </revhistory>
+    <releaseinfo>Tato příručka popisuje aplikaci Nemiver ve verzi 0.5.0</releaseinfo>
+    <legalnotice>
+      <title>Ohlasy</title>
+      <para>Pokud chcete oznámit chybu nebo navrhnout vylepšení vztahující se k aplikaci <application>Nemiver</application> nebo této příručce, postupujte dle instrukcí na <ulink url="http://www.gnome.org/projects/nemiver/" type="http">webových stránkách Nemiver</ulink>.</para>
+      <!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+    <abstract role="description">
+      <para>Nemiver je grafický ladicí program pro pracovní prostředí GNOME.</para>
+    </abstract>
+  
+    <othercredit class="translator">
+      <personname>
+        <firstname>Marek Černocký</firstname>
+      </personname>
+      <email>marek@manet.cz</email>
+    </othercredit>
+    <copyright>
+      
+        <year>2010</year>
+      
+        <year>2013</year>
+      
+      <holder>Marek Černocký</holder>
+    </copyright>
+  </articleinfo>
+  <indexterm><primary>Nemiver</primary></indexterm>
+  <indexterm><primary>ladicí program</primary></indexterm>
+  <indexterm><primary>gdb</primary></indexterm>
+  <!-- ============= Document Body ============================= -->
+  <!-- ============= Introduction ============================== -->
+  <sect1 id="nemiver-sect-intro">
+    <title>Přehled</title>
+    <para>Aplikace Nemiver je trvalou snahou o napsání samostatného grafického ladicího programu, který je dobře integrován s pracovním prostředím GNOME. V současné době funkčně podporuje dobře známý ladicí program GNU gdb sloužící k ladění programů v C / C++.</para>
+    <sect2 id="nemiver-sect-perspectives">
+      <title>Vyhlídky do budoucna</title>
+      <para>Nemiver je navržen jako obecný grafický <interface>pracovní nástroj</interface> a systém zásuvných modulů, který může sloužit několika různým účelům. V současnosti slouží pouze pro účely ladění, ale do budoucna může výhledově přidat podporu pro ladění paměti pomocí nástroje <application>valgrind</application> nebo profilovací nástroje, jako je <application>oprofile</application>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-getting-started">
+    <title>Začínáme</title>
+    <para>Tento oddíl vysvětluje, jak aplikaci Nemiver spustit a podává o aplikaci základní přehled.</para>
+    <sect2 id="nemiver-sect-starting">
+      <title>Spuštění aplikace Nemiver</title>
+      <para>Aplikaci Nemiver můžete spustit následujícími způsoby:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Nabídka <guimenu>Aplikace</guimenu></term>
+          <listitem>
+            <para>Zvolte <menuchoice><guisubmenu>Programování</guisubmenu><guimenuitem>Ladicí program Nemiver</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Příkazový řádek</term>
+          <listitem>
+            <para>Napište <command>nemiver</command> a stiskněte <keycap>Enter</keycap>.</para>
+            <tip>
+              <title>Doplňující přepínače příkazového řádku</title>
+              <para>Přehled přepínačů, které můžete aplikaci Nemiver na příkazovém řádku předat, získáte napsáním <command>nemiver --help-all</command>.</para>
+            </tip>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="nemiver-sect-window">
+      <title>Okno aplikace Nemiver</title>
+      <para>Když aplikaci Nemiver spustíte, uvidíte okno, které vypadá podobně jako na následujícím obrázku:</para>
+      <figure id="nemiver-window">
+        <title>Okno aplikace Nemiver</title>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/main-window.png" format="PNG"/> </imageobject> <textobject> <phrase>Ukazuje hlavní okno aplikace Nemiver.</phrase> </textobject></mediaobject>
+        </screenshot>
+      </figure>
+      <para>Okno aplikace <application>Nemiver</application> obsahuje následující prvky:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Panel nabídek</term>
+          <listitem>
+            <para>Nabídky v panelu nabídek obsahují všechny příkazy, které potřebujete k používání aplikace <application>Nemiver</application>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Panel nástrojů</term>
+          <listitem>
+            <para>Panel nástrojů obsahuje základní ladicí činnosti, které mohou být použity ke spuštění nebo krokování programu, který je laděn.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Sešit zdrojových kódů</term>
+          <listitem>
+            <para>Když se otevřou soubory se zdrojovými kódy laděného programu, zobrazí se v právě tomto místě.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Sešit stavů</term>
+          <listitem>
+            <para>Sešit stavů obsahuje několik karet, které zobrazují informace o laděném programu. Jsou to následující:</para>
+            <variablelist>
+              <varlistentry>
+                <term>Zásobník volání</term>
+                <listitem>
+                  <para>Zobrazuje současný stav zásobníku volání programu, který je právě laděn.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Proměnné</term>
+                <listitem>
+                  <para>Zobrazuje seznam lokálních proměnných a argumentů funkcí a navíc i jejich hodnotu a typ.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Cílový terminál</term>
+                <listitem>
+                  <para>Když laděný program vypisuje nějaké výstupy na terminál, zobrazí se právě na této kartě.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Body přerušení</term>
+                <listitem>
+                  <para>Tato karta zobrazuje seznam všech bodů přerušení, které jsou nastavené. Dvojitým kliknutím na položku v seznamu, případně volbou <menuchoice><guimenuitem>Přejít do zdrojového kódu</guimenuitem></menuchoice> z nabídky, si můžete zobrazit místo ve zdrojovém kódu, kde se bod přerušení nachází. Na kartě můžete body přerušení také mazat a zakazovat nebo povolovat. Více informací o bodech přerušení viz <xref linkend="nemiver-sect-breakpoints"/>.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Registry</term>
+                <listitem>
+                  <para>Tato karta zobrazuje seznam všech registrů CPU a jejich hodnoty. Více informací viz <xref linkend="nemiver-sect-registers"/>.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Paměť</term>
+                <listitem>
+                  <para>Tato karta zobrazuje současný stav zadaného místa v paměti. Více informací viz <xref linkend="nemiver-sect-memory"/>.</para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="nemiver-sect-loading-program">
+      <title>Výběr laděného programu</title>
+      <para>Existuje několik způsobů, jak program ladit. Nemiver umožňuje načíst místní spustitelný soubor, načíst obraz paměti, napojit se na běžící proces a nebo se připojit ke vzdálenému ladicímu serveru.</para>
+      <sect3 id="nemiver-sect-starting-executable">
+        <title>Ladění spustitelného programu</title>
+        <sect4>
+          <title>Použití pracovního nástroje</title>
+          <para>Když chcete vybrat spustitelný program k ladění, zvolte <menuchoice><guimenu>Soubor</guimenu><guimenuitem>Načíst spustitelný soubor…</guimenuitem></menuchoice>, čímž by se mělo zobrazit následující dialogové okno:</para>
+          <figure id="nemiver-execute-dialog">
+            <title>Dialogové okno Výběr programu ke spuštění</title>
+            <screenshot>
+              <mediaobject><imageobject> <imagedata fileref="figures/execute-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Ukazuje dialogové okno pro výběr spustitelného souboru, který poběží</phrase> </textobject></mediaobject>
+            </screenshot>
+          </figure>
+          <para>V tomto dialogovém okně můžete vybrat program, který se má ladit, zadat argumenty nebo přepínače, které se mají spustitelnému souboru předat na příkazové řádce, vybrat pracovní složku, ve kterém má spustitelný soubor běžet a nadefinovat proměnné prostředí, které by se měli nastavit, když se spustitelný soubor začne ladit.</para>
+        </sect4>
+        <sect4>
+          <title>Použití příkazového řádku</title>
+          <para>Spustitelný soubor, který chcete ladit, spustíte z příkazové řádky jednoduše tak, že zadáte název spustitelného souboru. Můžete uvést buď absolutní cestu ke spustitelnému programu nebo, pokud se nachází v prohledávané cestě, pouze základní název spustitelného souboru. Například, pokud patří cesta <filename>/usr/bin</filename> mezi prohledávané, jsou platné oba následující případy:</para>
+          <itemizedlist>
+            <listitem>
+              <para><command>nemiver /usr/bin/nazev_programu</command></para>
+            </listitem>
+            <listitem>
+              <para><command>nemiver nazev_programu</command></para>
+            </listitem>
+          </itemizedlist>
+          <tip>
+            <title>Předávání argumentů v příkazovém řádku</title>
+            <para>Pokud byste potřebovali předat argumenty příkazového řádku programu, který ladíte, měli byste je uzavřít do uvozovek, abyste předešli jejich zpracování aplikací Nemiver: <command>nemiver "prognam --arg1 --arg2"</command>.</para>
+          </tip>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-attach">
+        <title>Napojování na běžící program</title>
+        <sect4>
+          <title>Použití pracovního nástroje</title>
+          <para>Zvolte položku nabídky <menuchoice><guimenu>Soubor</guimenu><guimenuitem>Napojit na běžící program…</guimenuitem></menuchoice>, která by měla zobrazit následující dialogové okno:</para>
+          <figure id="nemiver-attach-dialog">
+            <title>Dialogové okno Napojení na běžící program</title>
+            <screenshot>
+              <mediaobject><imageobject> <imagedata fileref="figures/attach-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Ukazuje dialogové okno pro napojení na již běžící program</phrase> </textobject></mediaobject>
+            </screenshot>
+          </figure>
+          <para>Vyberte ze seznamu proces a kliknutím na <guibutton>OK</guibutton> započněte ladění vybraného programu. V dialogovém okně může být procesů vypsáno hodně, takže máte možnost si vyfiltrovat jen ten, který vás zajímá, tak, že napíšete text do textového pole umístěného pod seznamem.</para>
+        </sect4>
+        <sect4>
+          <title>Použití příkazového řádku</title>
+          <para>Pokud se chcete napojit na běžící program z příkazového řádku, použijte přepínač <option>--attach</option>. Přepínač <option>--attach</option> přijímá buď PID procesu nebo jeho název. Takže když například chcete ladit běžící proces <command>pokus</command>, který má PID 1121, můžete napsat buď <command>nemiver --attach pokus</command> nebo <command>nemiver --attach 1121</command>.</para>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-core-file">
+        <title>Načítání obrazu paměti</title>
+        <sect4>
+          <title>Použití pracovního nástroje</title>
+          <para>Zvolte položku nabídky <menuchoice><guimenu>Soubor</guimenu><guimenuitem>Načíst soubor s obrazem paměti…</guimenuitem></menuchoice> a tím se zobrazí dialogové okno, které vám umožní soubor s obrazem paměti načíst:</para>
+          <figure id="nemiver-load-core-dialog">
+            <title>Dialogové okno Výběr obrazu paměti k ladění</title>
+            <screenshot>
+              <mediaobject><imageobject> <imagedata fileref="figures/load-core-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Ukazuje dialogové okno pro načtení obrazu paměti</phrase> </textobject></mediaobject>
+            </screenshot>
+          </figure>
+        </sect4>
+        <sect4>
+          <title>Použití příkazového řádku</title>
+          <para>Soubory s obrazem paměti nelze načíst z příkazového řádku.</para>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-remote">
+        <title>Vzdálené ladění</title>
+        <para>Aplikace Nemiver umožňuje připojení ke vzdálenému ladicímu serveru.</para>
+        <sect4>
+          <title>Použití pracovního nástroje</title>
+          <para>Když se chcete připojit ke vzdálenému ladicímu serveru, zvolte <menuchoice><guimenu>Soubor</guimenu><guimenuitem>Připojit ke vzdálenému cíli…</guimenuitem></menuchoice></para>
+          <screenshot>
+            <mediaobject><imageobject> <imagedata fileref="figures/connect-remote-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Dialogové okno vzdáleného ladění</phrase> </textobject></mediaobject>
+          </screenshot>
+          <para>Vyberte spustitelný soubor, který se má načíst a umístění, kde se nachází případné sdílené knihovny, a potom vyplňte údaje pro připojení ke vzdálenému serveru.</para>
+        </sect4>
+        <sect4>
+          <title>Použití příkazového řádku</title>
+          <para>Nemiver nenabízí žádný způsob, jak se připojit ke vzdálenému serveru pomocí příkazového řádku.</para>
+        </sect4>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-using">
+    <title>Používání aplikace Nemiver</title>
+    <para>Tento oddíl popisuje, jak použít aplikaci Nemiver k ladění vaší aplikace.</para>
+    <sect2 id="nemiver-sect-basic-debugging">
+      <title>Základní ladicí činnosti</title>
+      <para>Základní ladicí činnosti jsou dostupné na hlavním panelu nástrojů, v nabídce <guimenu>Ladit</guimenu> a přes klávesové zkratky. Většina běžných činností je uvedena níže:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Pokračovat</term>
+          <listitem>
+            <para>Spustí program. Program poběží dokud nenarazí na bod přerušení nebo dokud program neskončí, ledaže bude přerušen ručně uživatelem kliknutím na <action>Zastavit</action>. Tuto činnost lze vyvolat z klávesnice pomocí <keycap>F5</keycap>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Následující</term>
+          <listitem>
+            <para>Provede následující příkaz a zastaví se, jakmile dosáhne následujícího řádku v souboru. V některých ladicích programech je to nazýváno „Step Over“ („Krok přes“). Tuto činnost lze vyvolat z klávesnice pomocí <keycap>F6</keycap>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Krokovat</term>
+          <listitem>
+            <para>Provede následující příkaz, přičemž se zanoří do funkce, pokud je to možné. V některých ladicích programech je to nazýváno „Step in“ („Krok dovnitř“). Tuto činnost lze vyvolat z klávesnice pomocí <keycap>F7</keycap>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Krokovat ven</term>
+          <listitem>
+            <para>Dokončí provádění současné funkce a zastaví se hned po návratu z této funkce. Tuto činnost lze vyvolat z klávesnice pomocí <keycombo><keycap>Shift</keycap><keycap>F7</keycap></keycombo>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Restartovat</term>
+          <listitem>
+            <para>Znovu načte současný spustitelný soubor a začne provádění od začátku. Tuto činnost lze vyvolat z klávesnice pomocí <keycombo><keycap>Shift</keycap><keycap>F5</keycap></keycombo>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Zastavit</term>
+          <listitem>
+            <para>Ručně přeruší provádění programu. Tato činnost je přístupná jen v případě, že v ladicím programu běží spustitelný soubor (např. po té, co uživatel klikne na <action>Pokračovat</action>). Tuto činnost lze vyvolat z klávesnice pomocí <keycap>F9</keycap>.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Po načtení spustitelného souboru vytvoří Nemiver výchozí bod přerušení ve funkci <function>main()</function>, takže když provádění dojde k funkci <function>main()</function>, zastaví se běh a čeká se na vstup. V tu chvíli můžete program krokovat, zkoumat proměnné (viz <xref linkend="nemiver-sect-inspecting-variables"/>) nebo nastavit další body přerušení (viz <xref linkend="nemiver-sect-breakpoints"/>).</para>
+    </sect2>
+    <sect2 id="nemiver-sect-inspecting-variables">
+      <title>Prohlížení proměnných</title>
+      <para>Aplikace Nemiver zobrazuje seznam lokálních proměnných na kartě <interface>Proměnné</interface> v <interface>sešitu stavů</interface>. Když chcete studovat jinou proměnnou (nebo i jakýkoliv výraz), můžete použít <interface>Prohlížeč proměnných</interface>. Ten zobrazíte tak, že vyberete <menuchoice><guimenu>Ladit</guimenu><guimenuitem>Prohlédnout proměnnou</guimenuitem></menuchoice>. Objeví se prohlížeč proměnných, který vypadá nějak následovně:</para>
+      <screenshot>
+        <mediaobject><imageobject> <imagedata fileref="figures/variable-inspector.png" format="PNG"/> </imageobject> <textobject> <phrase>Dialogové okno sloužící k prohlížení proměnných</phrase> </textobject></mediaobject>
+      </screenshot>
+      <para>Do vstupního pole můžete zapsal název libovolné proměnné nebo jednoduchý výraz (jako <literal>pZbozi-&gt;Skladem</literal> a pokud bude proměnná platná a v rozsahu působnosti, zobrazí se podrobné údaje daného výrazu.</para>
+      <para>Můžete také proměnnou vybrat v <interface>editoru zdrojového kódu</interface> a potom spustit <interface>Prohlížeč proměnné</interface>. Ten se pak pokusí zobrazit informace vztahující se k vybranému názvu proměnné.</para>
+      <tip>
+        <title>Klávesová zkratka</title>
+        <para><interface>Prohlížeč proměnných</interface> můžete spustit rovněž stiskem klávesy <keycap>F12</keycap>.</para>
+      </tip>
+      <para>Nemiver vám také umožňuje zobrazit seznam všech globálních proměnných aplikace ve zvláštním okně. Dialogové okno <interface>Globální proměnné</interface> zobrazíte výběrem <menuchoice><guimenu>Ladit</guimenu><guimenuitem>Zobrazit globální proměnné</guimenuitem></menuchoice> nebo stiskem <keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo>.</para>
+      <screenshot>
+        <mediaobject><imageobject> <imagedata fileref="figures/global-variables-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Dialogové okno s globálními proměnnými</phrase> </textobject></mediaobject>
+      </screenshot>
+      <warning>
+        <para>U některých programů (zvláště programů v C++) může vypsání všech globálních proměnných zabrat dlouhou dobu.</para>
+      </warning>
+    </sect2>
+    <sect2 id="nemiver-sect-breakpoints">
+      <title>Nastavení bodu přerušení</title>
+      <para>V aplikaci Nemiver je několik různých způsobů, jak nastavit body přerušení.  Nemiver automaticky nastavuje bod přerušení ve funkci <function>main()</function>, když poprvé začnete ladit nový spustitelný soubor. Pokud chcete nastavit další body přerušení, můžete to udělat následovně:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Klikněte na okraj vedle řádku, na kterém chcete bod přerušení nastavit.</para>
+        </listitem>
+        <listitem>
+          <para>Umístěte kurzor na řádek, kde chcete bod přerušení nastavit a v nabídce vyberte <menuchoice><guimenu>Ladit</guimenu><guimenuitem>Nastavit bod přerušení</guimenuitem></menuchoice> nebo zmáčkněte klávesu <keycap>F8</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>Nastavte bod přerušení uvedením názvu funkce nebo místa v souboru tím, že vyberete <menuchoice><guimenu>Ladit</guimenu><guimenuitem>Nastavit bod přerušení…</guimenuitem></menuchoice> nebo zmáčknete <keycombo><keycap>Ctrl</keycap><keycap>B</keycap></keycombo>. Zobrazí se dialogové okno, které vypadá nějak následovně:</para>
+          <screenshot>
+            <mediaobject><imageobject> <imagedata fileref="figures/set-breakpoint-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Dialogové okno pro nastavení bodu přerušení</phrase> </textobject></mediaobject>
+          </screenshot>
+          <para>Bod přerušení můžete zadat jako konkrétní místo v souboru nebo jako název funkce. V případě, že existuje více než jedna funkce se stejným názvem, zobrazí aplikace Nemiver seznam všech odpovídajících funkci a požádá vás o výběr jedné z nich.</para>
+        </listitem>
+      </itemizedlist>
+      <sect3>
+        <title>Zakázané body přerušení</title>
+        <para>Body přerušení mohou být buď povolené nebo zakázané. Ladicí program zastaví provádění vždy, když dosáhne povoleného bodu přerušení, ale zakázaný bod přerušen se nijak neprojeví. Díky tomu můžete bod přerušení dočasně odstranit, aniž byste jej museli smazat.</para>
+        <para>Když chcete bod přerušení zakázat nebo povolit, klikněte na zaškrtávací políčko vedle čísla bodu přerušení na kartě <interface>Body přerušení</interface> v <interface>sešitě stavů</interface>. Jinou možností, jak povolit nebo zakázat bod přerušení na řádku, kde se právě nachází kurzor, je zmáčknout <keycombo><keycap>Shift</keycap><keycap>F8</keycap></keycombo>.</para>
+        <para>Následující obrázky ukazují ve zdrojovém kódu rozdíl mezi povoleným a zakázaným bodem přerušení</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/enabled-breakpoint.png" format="PNG"/> </imageobject> <textobject> <phrase>Ukázka povoleného bodu přerušení</phrase> </textobject> <caption><para>Povolený bod přerušení</para></caption></mediaobject>
+        </screenshot>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/disabled-breakpoint.png" format="PNG"/> </imageobject> <textobject> <phrase>Ukázka zakázaného bodu přerušení</phrase> </textobject> <caption><para>Zakázaný bod přerušení</para></caption></mediaobject>
+        </screenshot>
+      </sect3>
+      <sect3>
+        <title>Otevření zdrojových souborů</title>
+        <para>Někdy se může stát, že neznáte přesný název funkce nebo číslo řádku, kde chcete nastavit bod přerušení, takže musíte otevřít zdrojový soubor. Můžete sice otevřít jakýkoliv soubor nacházející se v souborovém systému, ale aplikace Nemiver vám také umí nabídnout seznam zdrojových souborů, které byly použité k sestavení spustitelného souboru a vy si můžete jednoduše vybrat z nich. Když zvolíte <menuchoice><guimenu>Soubor</guimenu><guimenuitem>Otevřít zdrojový soubor…</guimenuitem></menuchoice>, zobrazí se následující:</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/open-files-target.png" format="PNG"/> </imageobject> <textobject> <phrase>Ukazuje dialogové okno pro otevření souboru se zdrojovým kódem</phrase> </textobject></mediaobject>
+        </screenshot>
+        <para>Pokud chcete vybírat v souborovém systému jakýkoliv soubor, použijte volbu <guilabel>Vybrat v souborovém systému</guilabel>. Pokud chcete vybírat v seznamu souborů použitých k vytvoření spustitelného souboru, použijte volbu <guilabel>Vybrat v cílovém spustitelném souboru</guilabel>.</para>
+        <warning>
+          <title>Určování zdrojových souborů pro dynamicky načítané moduly</title>
+          <para>V případě, že cílový spustitelný soubor načte moduly za běhu (např. pomocí <function>dlopen()</function>), nebude Nemiver schopen určit, které soubory byly použity k sestavení těchto modulů, pokud nebudou zrovna načtené.</para>
+        </warning>
+      </sect3>
+    </sect2>
+    <sect2 id="nemiver-sect-advanced">
+      <title>Pokročilé ladění</title>
+      <sect3 id="nemiver-sect-registers">
+        <title>Registry</title>
+        <para>Widget na úpravu registrů se nachází na kartě <interface>Registry</interface> v <interface>sešitě stavů</interface>. Případně můžete zmáčknout <keycombo><keycap>Alt</keycap><keycap>F5</keycap></keycombo> a tím se přímo dostanete na tuto kartu.</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/registers-view.png" format="PNG"/> </imageobject> <textobject> <phrase>Widget pro úpravu registrů</phrase> </textobject></mediaobject>
+        </screenshot>
+        <para>Tento widget zobrazuje současné hodnoty všech registrů CPU. Můžete hodnoty registru upravit kliknutím ve sloupci <interface>Hodnota</interface> a zadáním nové hodnoty. V případě, že se hodnota registru změnila od posledního zastavení ladění, bude zvýrazněná červeně.</para>
+      </sect3>
+      <sect3 id="nemiver-sect-memory">
+        <title>Paměť</title>
+        <para>Widget Paměť umožňuje zobrazit přímo část paměti. Díky tomu můžete získat na nižší úrovni zobrazení toho, co se děje, když váš program běží.</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/memory-view.png" format="PNG"/> </imageobject> <textobject> <phrase>Widget pro úpravu paměti</phrase> </textobject></mediaobject>
+        </screenshot>
+        <para>Do pole <interface>Adresa</interface> ve widgetu Paměť zadejte adresu paměťového segmentu, který chcete zobrazit. Pokud bude adresa platná pro laděný program, zobrazí se hodnoty v paměti od zadané adresy. Mohou být zobrazeny jako bajty, slova (2 bajty) nebo dlouhá slova (4 bajty), podle volby ve vyskakovací nabídce <interface>Seskupovat podle</interface>. Během krokování programu se hodnoty automaticky aktualizují.</para>
+        <para>Widget můžete používat nejenom k prohlížení hodnot v paměti, ale i k jejich úpravě. Můžete je upravovat jak v podobě šestnáctkových čísel (v levé části widgetu Paměť), tak v podobě znaků ASCII (v pravé části widgetu Paměť). Všechny změny se projeví ihned.</para>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-sessions">
+    <title>Uložení a obnovení sezení</title>
+    <para>Nemiver umí uložit vaše ladicí sezení, takže si jej později můžete obnovit. Součástí je ukládání takových informací, jako je laděný spustitelný soubor, nastavené proměnné prostředí, argumenty příkazového řádku předané laděnému programu, seznam otevřených souborů a nastavené body přerušení. Díky tomu všemu se můžete vrátit zpět do stavu, kde jste naposledy skončili, tak rychle, jak jen to je možné.</para>
+    <sect2 id="nemiver-sect-saving-sessions">
+      <title>Ukládání sezení</title>
+      <para>Aplikace Nemiver ukládá vaše sezení automaticky při ukončení, takže se o to nemusíte starat. Pokud však chcete sezení výslovně uložit před zavřením aplikace Nemiver, můžete tak učinit výběrem <menuchoice><guimenu>Soubor</guimenu><guimenuitem>Uložit sezení na disk</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <sect2 id="nemiver-sect-resuming-sessions">
+      <title>Obnovení uloženého sezení</title>
+      <sect3>
+        <title>Použití pracovního nástroje</title>
+        <para>Zvolte <menuchoice><guimenu>Soubor</guimenu><guimenuitem>Obnovit uložené sezení…</guimenuitem></menuchoice> a vyberte sezení ze seznamu.</para>
+        <figure id="nemiver-sessions-dialog">
+          <title>Dialogové okno Uložená sezení</title>
+          <screenshot>
+            <mediaobject><imageobject> <imagedata fileref="figures/sessions-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Ukazuje dialogové okno pro obnovení uloženého sezení</phrase> </textobject></mediaobject>
+          </screenshot>
+        </figure>
+      </sect3>
+      <sect3>
+        <title>Z příkazového řádku</title>
+        <para>Pokud znáte ID sezení, které chcete provozovat, můžete spustit ladicí sezení z příkazového řádku. Například, pokud chcete spustit sezení číslo 3, můžete tak učinit následujícím příkazem: <command>nemiver --session 3</command>.</para>
+      </sect3>
+    </sect2>
+  </sect1>
+  <!-- This should be the last section in the manual -->
+  <sect1 id="nemiver-sect-about">
+    <title>O aplikaci Nemiver</title>
+    <para>Aplikaci <application>Nemiver</application> napsali Dodji Seketeli a Jonathon Jongsma za přispění mnoha dalších. Pokud se chcete o aplikaci Nemiver dovědět více, navštivte <ulink url="http://www.gnome.org/projects/nemiver/" type="http">webové stránky projektu Nemiver</ulink>.</para>
+    <para>Pokud chcete oznámit chybu nebo navrhnout vylepšení vztahující se k této aplikaci nebo této příručce, podívejte se na oddíl Ohlasy v <ulink url="ghelp:user-guide?feedback-bugs" type="help">Uživatelské příručce GNOME</ulink>.</para>
+    <para>Tento program je šířen podle ustanovení GNU General Public License, vydávané Free Software Foundation; a to buď verze 2 této licence anebo (podle vlastního uvážení) kterékoliv pozdější verze. Kopii této licence naleznete pod tímto <ulink url="ghelp:gpl" type="help">odkazem</ulink> nebo v souboru COPYING přiloženém ke zdrojovým kódům tohoto programu. </para>
+  </sect1>
+</article>
+<!--
+vim: ts=2 sw=2 et
+-->

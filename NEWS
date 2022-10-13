@@ -1,0 +1,1661 @@
+0.9.6 Release
+=============
+Akom Chotiphantawanon:
+      Updated Thai translation
+
+Andika Triwidada:
+      Updated Indonesian translation
+
+Ask H. Larsen:
+      Updated Danish translation
+
+Aurimas Černius:
+      Updated Lithuanian translation
+
+Balázs Úr:
+      Updated Hungarian translation
+
+Benjamin St:
+      Updated German translation
+
+Chao-Hsiung Liao:
+      Updated Traditional Chinese translation(Hong Kong and Taiwan)
+      Updated Chinese (Taiwan) translation
+
+Claude Paroz:
+      Updated French translation
+
+Daniel Mustieles:
+      Updated FSF's address
+      Updated Spanish translation
+
+Debarshi Ray:
+      730243 Consolidate GErrorSafePtr definitions
+      730243 Port to vte-2.91 API
+
+Dirgita:
+      Updated Indonesian translation
+
+Dodji Seketeli:
+      Use c++11 when we use glibmm24 version >= 2.46
+      Consolidate NativeGObjectSafePtr definitions
+      Make all dialogs transient on top of the workbench root window
+      Support vte 2.90 alongside 2.91
+      Misc code & build system cleanup
+
+Dušan Kazik:
+      Updated Slovak translation
+
+Fabien Parent:
+      710828 Fix a condition in UString::is_integer
+      Import new boost M4 files from upstream
+      Use BOOSTLIBDIR instead of harcoded path to find boost
+
+Fran Diéguez:
+      Updated Galician translations
+
+Gil Forcada:
+      [l10n] Update Catalan translation
+
+Inaki Larranaga Murgoitio:
+      Added Basque language\nAdded 'eu' (Basque) to LINGUAS
+
+Jakub Steiner:
+      icon: provide a symbolic variant of the app icon
+
+Josef Andersson:
+      Updated Swedish translation
+
+Juan R. García Blanco:
+      Fix compilation issue in tests/ due to wrong type
+      Fix tr1 and pty.h compilation issues
+
+Kjartan Maraas:
+      Updated Norwegian bokmål translation
+
+Kristjan SCHMIDT:
+      Updated Esperanto translation
+
+Lasse Liehu:
+      Finnish translation update
+
+Marek Černocký:
+      Updated Czech translation
+
+Maria  Mavridou:
+      Updated Greek translation
+
+Matej Urbančič:
+      Updated Slovenian translation
+
+Michael Catanzaro:
+      configure.ac: don't fail if gconf is missing
+
+Milo Casagrande:
+      [l10n] Updated Italian translation.
+
+Muhammet Kara:
+      Updated Turkish translation
+
+Necdet Yücel:
+      Updated Turkish translation
+
+Nilamdyuti Goswami:
+      Added Assamese translation
+      Updated Assamese translation
+
+Olav Vitters:
+      doap category apps
+
+Pedro Albuquerque:
+      Updated Portuguese translation
+
+Piotr Drąg :
+      Add a trailing semicolon to keywords in Russian translation
+      Revert "Updated FSF's address"
+      Updated Polish translation
+      doap: add <programming-language>
+      Updated Polish translation
+
+Rafael Ferreira:
+      Updated Brazilian Portuguese translation
+      Updated Brazilian Portuguese translation for help files
+
+Richard Hughes:
+      Added translatable AppData file
+
+Rūdolfs Mazurs:
+      Updated Latvian translation
+
+Samir Ribic:
+      Added Bosnian translation
+
+Sebastian Rasmussen:
+      Updated Swedish translation
+
+Seong-ho Cho:
+      Updated Korean translation
+
+Tiagosdot:
+      Updated Portuguese translation
+
+Timo Jyrinki:
+      Change Finnish translation team web page to l10n.gnome.org
+
+William Jon McCann:
+      Update project homepage url
+
+Wylmer Wang:
+      Fix a mistake in Chinese simplified translation that may block compiling
+      Updated Chinese (China) translation
+
+Yuri Myasoedov:
+      Updated Russian translation
+
+marablack3:
+      Updated Greek translation
+
+Мирослав Николић:
+      Updated Serbian translation
+
+甘露(Gan  Lu):
+      Update Chinese simplified translation
+
+0.9.5 Release
+=============
+
+Aleksej Kabanov:
+      Updated Russian translation
+
+Alexandre Franke:
+      Update French translation
+
+Andika Triwidada:
+      Updated Indonesian translation
+
+Anish A:
+      Updated Malayalam Localization
+
+Ask H. Larsen:
+      Updated Danish translation
+
+Aurimas Černius:
+      Updated Lithuanian translation
+
+Balázs Úr:
+      Updated Hungarian translation
+
+Carles Ferrando:
+
+Chao-Hsiung Liao:
+      Updated Traditional Chinese translation(Hong Kong and Taiwan)
+
+Christian Kirbach:
+      Updated German translation
+
+Daniel Mustieles:
+      Fixed syntax in .desktop file
+      Updated Spanish translation
+
+Dimitris Spingos:
+      Updated Greek translation
+
+Dodji Seketeli:
+      680376 - Local variables in nested scopes don't get refreshed automatically
+      697992 - fail to restart a program wrapped in libtool shell script
+      687609 - nemiver should install a highcontrast app icon
+      561239 - UI to select and copy text from source editor
+      700248 - Support breakpoints with multiple locations
+      701480 - Correctly flag a breakpoint pending state
+      698371 - Run command is available even after detaching
+      Fix "restart loosing inferior argument" bug
+      Don't 'run' the inferior on startup when it has no 'main'
+      Continue execution upon (re)start with breakpoints set
+      Handle deleting all sub-breakpoints at once
+      Support modified-breakpoint async output from GDB
+      Allow disassembling from address 0
+      Fix continue action label
+      Fix menu typo
+      Remove useless typedef
+      Fix -Wunused-local-typedefs triggered by GCC 4.8
+      Use AM_CPPFLAGS instead of INCLUDE
+      Misc fixes for autoconf 2.69 and automake 1.13.1
+      Don't use INCLUDE in Makefile.am anymore
+
+Duarte Loreto:
+      Updated Portuguese translation and converted to New Spelling (Novo AO)
+
+Enrico Nicoletto:
+      Updated Brazilian Portuguese translation
+      Updated partial Brazilian Portuguese translation
+      Updated Brazilian Portuguese translation for manual
+
+Fabien Parent:
+      Remove usage of deprecated API
+
+Fran Diéguez:
+      Updated Galician translations
+
+Gheyret Kenji:
+      Updated Uyghur translation
+
+Gil Forcada :
+      [l10n] Updated Catalan translation
+
+Joan Duran:
+      [l10n] Updated Catalan translation
+
+Joe Hansen:
+      Updated Danish translation
+
+Kjartan Maraas:
+      Updated Norwegian bokmål translation
+
+Marek Černocký:
+      Updated Czech translation
+
+Mario Blättermann:
+      [l10n]Updated German translation
+
+Matej Urbančič:
+      Updated Slovenian translation
+
+Milo Casagrande:
+      [l10n] Added Italian translation.
+
+Muhammet Kara:
+      [l10n] Added Turkish translation
+
+OKANO Takayoshi:
+      l10n: Update Japanese translation
+
+Pavol Klačanský:
+      Updated slovak translation
+
+Piotr Drąg:
+      Updated Polish translation
+      Remove markup from translatable string
+
+Rafael Ferreira:
+      Updated Brazilian Portuguese Translation
+
+Richard Stanislavský:
+      Updated slovak translation
+
+Rūdolfs Mazurs:
+      Updated Latvian translation
+
+Seong-ho Cho:
+      Updated Korean translation
+
+Timo Jyrinki:
+      Finnish translation update
+
+Victor Ibragimov:
+      [l10n] Added Tadjik translation
+
+Wylmer Wang:
+      update Simplified Chinese (zh_CN) translation
+
+Yuri Myasoedov:
+      Updated Russian translation
+
+Мирослав Николић:
+      Updated Serbian translation
+
+0.9.4 Release
+=============
+
+Alexandre Franke:
+      Update French translation
+
+Ask H. Larsen:
+      Updated Danish translation
+
+Bruce Cowan:
+      Updated British English translation
+
+Carles Ferrando:
+      Added Catalan (Valencian) translation
+
+Cheng-Chia Tseng:
+      Updated Traditional Chinese translation(Hong Kong and Taiwan)
+
+Daniel Mustieles:
+      Updated Spanish translation
+      Added search keywords to .desktop file
+
+Dimitris Spingos:
+      Updated Greek translation help
+
+Dodji Seketeli:
+      689338 - Sometimes current frame is wrongly set
+      689458 - Crash when copying variable value
+      684046 - nemiver.desktop conformance fix
+      670439 - Nemiver doesn't handle well multi-threaded apps
+      689575 - Freeze when local variable values are refreshed
+      Fix well form-ness of gl.po
+      Fix help browser launching
+      Fix French translation markup
+      Ensure workbench body is shown
+      Added a README.release.txt file
+      Various code cleanups
+
+Duarte Loreto:
+      Updated Portuguese translation
+
+Fran Diéguez:
+      Updated Galician translations
+
+Gabor Kelemen:
+      Added hu to LINGUAS
+      Added Hungarian translation
+
+Gabriel Speckhahn:
+      Updated Brazilian Portuguese translation
+
+Gheyret Kenji:
+      Uyghur translation added.
+
+Gil Forcada:
+      Updated Catalan translation
+
+Javier Jardón:
+      Use new documentation infrastructure
+
+Kjartan Maraas:
+      Updated Norwegian bokmål translation
+
+Marek Černocký:
+      Updated Czech translation
+
+Mario Blättermann:
+      Updated German doc translation
+      Updated German translation
+
+Matej Urbančič:
+      Updated Slovenian translation
+
+OKANO Takayoshi:
+      Updated Japanese translation
+
+Piotr Drąg:
+      Updated Polish translation
+
+Rajesh Ranjan:
+      hindi update
+
+Richard Stanislavský:
+      Added Slovak translation
+
+Rūdolfs Mazurs:
+      Added Latvian translation
+
+Seong-ho Cho:
+      Updated Korean translation
+
+Takeshi AIHANA:
+      Updated Japanese translation.
+
+Wolfgang Stoeggl:
+      Updated German translation
+
+Yuri Myasoedov:
+      Updated Russian translation
+
+lainme:
+      update Simplified Chinese (zh_CN) translation
+
+
+0.9.3 Release
+=============
+
+Andika Triwidada:
+      Added Indonesian translation
+
+Antoine Jacoutot:
+      don't hardcode path to false.
+      build: unbreak on OpenBSD by including iostream
+      Terminal portability fixes for BSDs
+
+Aurimas Černius:
+      Added Lithuanian translation
+
+Bruno Brouard:
+      Updated French translation
+
+Chao-Hsiung Liao:
+      Updated Traditional Chinese translation(Hong Kong and Taiwan)
+
+Cheng-Chia Tseng:
+      Updated Traditional Chinese translation(Hong Kong and Taiwan)
+
+Daniel Mustieles:
+      Updated Spanish translation
+
+Dimitris Spingos:
+      Added Greek translation
+
+Dodji Seketeli:
+      542503 - Initial support for monitoring expressions
+      665274 - Support --just-load command line
+      680934 - Fix --enable-debuggeronly
+      Various code cleanups
+
+Dustin Polke:
+      Fix XML validation.
+
+Fabien Parent:
+      Code cleanups
+
+Fran Diéguez:
+      Updated Galician translations
+
+Jiro Matsuzawa:
+      Update Japanese translation
+
+Joe Hansen:
+      Updated Danish translation
+
+Kjartan Maraas:
+      Updated Norwegian bokmål translation
+
+Matej Urbančič:
+      Updated Slovenian translation
+
+Piotr Drąg:
+      Added Polish translation
+      Spell check translatable strings
+      Fix typos in translatable strings
+      Remove markup from translatable strings
+
+Seong-ho Cho:
+      Add Korean translation
+
+Tom Hughes:
+      Save and restore tty attributes
+
+Мирослав Николић:
+      Added Serbian translation
+
+0.9.2 Release
+=============
+
+Daniel Mustieles
+      Updated Spanish translation
+
+Dodji Seketeli
+      664463 - cannot debug the same software twice
+      665498 - Assertion failure on program launch
+      667723 - can't load core dump
+      670464 - Make breakpoint ignore count persistent
+      Add a --load-core command line switch
+      Better default directory in core loading dialog
+      Tie life time of IDebugger::Variable and varobjs
+      Fix offscreen -> onscreen locals rendering
+      Support GDB/MI properties displayint, dynamic, has_more
+      Support 'new_children' property of GDB/MI changelist LIST
+      Code maintainability enhancements
+      Test suite fixes
+      Update the 'release' target for gz -> xz change
+
+Fabien Parent
+      543488 Support renaming of sessions
+      672409 - activate correct views in static layouts
+      672409 - activate correct views in static layouts
+      Code maintainability enhancements
+
+Fran Diéguez
+      Updated Galician translations
+
+Jiro Matsuzawa
+      667677 - Fix broken tags.
+      Updated Japanese translation
+
+Joe Hansen
+      Updated Danish translation
+
+Kristjan SCHMIDT
+      Add Esperanto translation
+
+Marek Černocký
+      Updated Czech translation
+
+Matej Urbančič
+      Updated Slovenian translation
+
+Romain Tartière
+      641595 - Add configure option for default GDB path
+
+Takeshi AIHANA
+      Updated Japanese translation.
+
+0.9.1 Release
+=============
+
+Andrej Žnidaršič
+      Updated Slovenian translation
+
+Daniel Mustieles
+      Updated Spanish translation
+
+Dodji Seketeli
+      Handle deprecated functions on glibmm-2.4 2.30.0 and glib-2.0 2.31.0
+      Bye bye gziped tarballs, welcome xz
+      #664385 - Source code tab label completely ellipsized
+      Allow shrinking of the memory view widget
+      Relax the fixed minimum sizes preventing shrinking
+      Allow selecting current frame twice consecutively
+
+Fabien Parent
+      #646698 Add cmd line option to choose the gdb binary
+      #659462 Handle plural form of a string
+      Use local time instead of UTC time
+
+Jorge González
+      Updated Spanish translation
+
+Marek Černocký
+      Updated Czech translation
+
+Mario Blättermann
+      Updated German translation
+
+Martin Srebotnjak
+      Updated Slovenian translation
+
+Matej Urbančič:
+      Updated Slovenian translation
+
+Takeshi AIHANA
+      Updated Japanese translation.
+
+dmustieles
+      Updated Spanish translation
+
+0.9.0 Release
+=============
+
+Andrej Žnidaršič
+      Updated Slovenian translation
+
+Daniel Mustieles
+      Updated Spanish translation
+
+Dodji Seketeli
+      Ignore 'current-thread-id' in thread list
+      Fix a crash in previous commit
+      Fix configury when gsettings is not present
+      Update the INSTALL file.
+      Update HACKING documentation
+      Style cleanup
+      Emit one IDebugger::breakpoint_set_signal per BP
+      Introduce Loc (code location) type
+      Fix memory corruption in SourceEditor
+      Avoid reading freed memory
+      Fix a crash in confmgr
+      Fixlets in setbreakpointdialog.ui
+      Fix gsettings configure test error
+      Use Automake GSettings magic to support DESTDIR
+      Fix configuration keys' description wording
+      Add a description to Nemiver's doap file
+      Update Makefile.am's release text.
+      Fix update-changelog for building out of srcdir
+      Properly mark the GDB line as busy
+      Add some logging to nmv-gdb-engine.cc
+      Avoid gratuitously resetting the dbg command queue
+      Handle breakpoints added via GDB scripts
+      Reference the local var inspector view
+      Restore layout for variable inspector widget
+      Fix VarsTreeView memory management
+      657021 Wrong behaviour enlarging var inspector
+      Backend support for GDB/MI variable format
+      Enable GDB pretty printers by default
+      Fix tests that got broken a while ago
+      Initialize IDebugger dynmods with gconf in tests
+      Add preferences for GDB pretty printing
+      Support pretty printing instantly applied
+      Avoid emitting useless -enable-pretty-printing
+      Avoid over reacting to pretty printing key changes
+      657834 Properly un-escape '\"' sequence
+      658097 Fix hovering over pointer dereference expression
+      Add comment to is_word_delimiter
+      Fix a typo in the coding style
+      644823 Cannot set BP in files with space in path
+      Fix tests/pointer-deref.c regression
+      658143 Fails to support multiple breakpoints
+      Use DBGPerspective::append_breakpoints
+      Don't forget to Gtk::Widget::show_all source views
+      constify IDebugger::Breakpoint::is_pending
+      632305 Avoid disassembling location of pending breakpoint
+      Don't append the disassembly editor multiple times
+      Misbehaving vertically enlarging var inspector
+
+Fabien Parent
+      Add a GSettings implementation for IConfMgr
+      Remove not implemented constructor
+      Uniformize the header guard name.
+      Fix typo
+      Apply the GNOME 3 style on the toolbar
+      Expand session's treeview
+      Replace NULL symbol with 0
+      Support user defined assembly syntax
+      Add GUI to change the assembly syntax
+      Remove unused status widgets
+      New Layout Manager and 3 additionals new layouts
+      577496 561100 533437 656093 564992 Support Copy/Paste/Reset on target terminal
+      Use ATT for disassembly flavor to avoid a glade bug
+
+Fran Dieguez
+      Updated Galician translations
+
+Kalev Lember
+      Fix header guard name in nmv-hex-document.h
+      Fixed includes to match GTK+'s single include policy
+      Avoid using gtkmm deprecated API
+      Dropped ifdefs for gtkmm 2.16
+      Use GDK_KEY_* enums, not the deprecated GDK_* ones
+      Dropped ifdefs for GTK+ 2.10
+      Removed gnome-vfs compat code
+      Dropped compat code with gtksourceviewmm < 2.10
+      Removed an unused forward declaration
+      Removed has-separator property
+      Popup var inspector size requisition code rework
+      Port to gtkmm 3.0 and gtksourceviewmm 3.0
+      Fix build with ghex 2.90.0
+
+Lele Long
+      Update Simplified Chinese translaton
+
+Marek Černocký
+      Updated Czech translation
+
+Mario Blättermann
+      [l10n] Updated German translation
+
+Piotr Drąg
+      Updated POTFILES.in
+
+Takeshi AIHANA
+      Updated Japanese translation.
+
+Yuri Kozlov
+      Updated Russian translation
+
+0.8.2 Release
+=============
+
+Andrej Žnidaršič:
+      Updated Slovenian translation
+
+Daniel Mustieles:
+      Updated Spanish translation
+
+Dodji Seketeli:
+      Update boost m4 macro definitions
+      Detect boost when in /usr/lib64
+      Style/comments cleanups
+      Remove useless includes
+      Catch more exceptions at low level
+      Centralize conf keys decls/defs to src/confmgr
+      Initialize IDebugger dynmods with gconf in tests
+      640919 Fix build for autoconf < 2.64
+      640921 Pass absolute file paths to the compiler
+      NMV_DEFAULT_LOG_DOMAIN is always file base name
+      Pass full tests file paths to the compiler
+      Move null slots to nmv-debugger-utils.[h|cc]
+      Return a signal of IDebugger by reference
+      Avoid needless work when selecting a frame
+      643700 Function arguments are duplicated
+      Reset command queue on restart GDB after a crash
+      644114 Update the call stack again
+      644569 Ensure last expr becomes last history item
+      Update the commit log guidelines
+      Don't list frame args twice
+      Fix 'set-but-unused' warning from GCC 4.6
+      Fix tests linking with boost 1.46
+      Don't loose commands sent down the wire
+      Ignore 'current-thread-id' in thread list
+      Introduce Loc (code location) type
+      Emit one IDebugger::breakpoint_set_signal per BP
+      Fix memory corruption in SourceEditor
+      Fix a crash in confmgr
+      Avoid reading freed memory
+      Fixlets in setbreakpointdialog.ui
+      560235 Initial support of "jump to"
+      Fix gsettings configure test error
+      Use Automake GSettings magic to support DESTDIR
+      Fix configuration keys' description wording
+      Add a description to Nemiver's doap file
+      Update Makefile.am's release text
+
+Fabien Parent:
+      Add a GSettings implementation for IConfMgr
+
+Joe Hansen:
+      Updated Danish translation
+
+Kalev Lember:
+      598444 Use Gtk::Spinner instead of custom spinner widget
+
+Luca Bruno:
+      Import Debian packaging meta-data into Nemiver's Git
+
+Lucian Adrian Grijincu:
+      Updated Romanian translation
+
+Marek Černocký:
+      Updated Czech translation
+
+Mario Blättermann:
+      [l10n] Updated German translation
+
+Takeshi AIHANA:
+      Updated Japanese translation
+
+lainme:
+      Update Simplified Chinese translation
+
+0.8.1 Release
+=============
+
+Andrej Žnidaršič:
+      Updated Slovenian translation
+
+Bruno Brouard:
+      Updated French translation
+      Updated French translation
+
+Dodji Seketeli:
+      Fix string typo (Close #633445)
+      Fix buffer setting in SourceEditor (Closes: #633561)
+      Handle BP setting w/o debug info (Closes: #634224)
+      Better BP re-setting on restart (Closes: #634227)
+      Safer session data clearing (Closes: #634228)
+      Don't boldify file path in locate dialog (Closes: #633563)
+      Show asm in the right SourceEditor (Closes #633565)
+      Restart without exception (Closes: #634406)
+      Treat GDB communication as raw data (Closes: #634834)
+      Fix count-point toggling thinko (Close: #635935)
+      Ignore GDB init file on restart (Closes: #635928)
+      Allow restarting after GDB dies (Closes: #635956)
+      Remove dead code
+
+Jakob Kramer:
+      [l10n] Updated German translation
+
+Joe Hansen:
+      Updated Danish translation
+
+Jorge González:
+      Updated Spanish translation
+
+Marek Černocký:
+      Updated Czech translation
+
+Mario Blättermann:
+      [l10n] Updated German translation
+
+Matej Urbančič:
+      Added Slovenian translation
+      Added sl for Slovenian translation
+
+Petr Kovar:
+      Update Czech translation by Marek Cernocky
+
+Takeshi AIHANA:
+      Updated Japanese translation.
+
+lainme:
+      Add Chinese (China) help translation.
+
+0.8.0 Release
+=============
+
+Andrej Žnidaršič:
+      Updated Slovenian translation
+
+Bruno Brouard:
+      Updated French translation
+      New french doc translation
+
+Christian Kirbach:
+      Updated German translation
+
+Christophe Augier:
+      Properly initialize RegistersView (Closes: #622796)
+
+Claude Paroz:
+      Add gettext/glade prefix to .ui files in POTFILES.in
+      Fix glade prefix in POTFILES.in
+
+Dodji Seketeli:
+      Support integrated disassembling
+      Support Countpoints
+      Support "filename:linenum" in the set breakpoints dialog
+      Support breaking on fork/exec syscalls
+      Support --remote=HOST:PORT (#624630)
+      Support Lookup source files in inferior's directory
+      Support GDB/MI original-location attribute on pending breakpoints
+      Find dialog is no more modal
+      Skip unknown GDB/MI output records during parsing
+      Fix inferior restarting
+      Add a "Debug" preference dialog
+      Better handling of pending breakpoints
+      Avoid printing unnecessary error messages
+      Better handling of frame setting
+      Fix compilation with gcc 4.5
+      Fix clicking in the gutter with gsv >= 2.10
+      Ask the user to locate a given file only once
+      Set breakpoint view columns resizable
+      Append (not prepend) exprs to call function history
+      Don't go crazy when removing a source view tab
+      Better handling of continguous out-of-band-records
+      Don't forget the CWD when restarting a session
+      Allow breaking on events again (Closes: #631925)
+      Don't try to look for frame on exit (Closes: #630615)
+      Support follow-fork-mode setting (Closes: #581377)
+      Display "source file not found" error msg only once (Closes: #604436)
+      Disallow impossible breakpoint related actions (Closes: #607782)
+      Avoid READY state once detached (Closes: #419504)
+      Support multibytes string parsing (Closes: #62730)
+      Mark more strings for translation (Closes: 626079)
+      String thinko (Closes: #625706)
+      Search from current insert point (Closes: #628886)
+      Lots of code refactoring and cleanup
+      Miscellaneous bug fixes
+
+Dominique Leuenberger:
+      GCC 4.5 fixes, #611588
+
+Henrique P. Machado:
+      Updated Brazilian Portuguese Translation
+
+Hubert Figuiere:
+      Remove libglademm dependency and replace with GtkBuilder (Closes: #590817)
+      Merge the Call Stack and Variables into one tab: Context. (Closes: #424060)
+      Cleanup nmv-gdbmi-parser.cc (Bug #574072)
+
+Javier Jardón:
+      Use upstream gettext instead the Glib one
+      Update autotools configuration
+      Use PACKAGE_URL for project webpage
+      autogen.sh: remove unneded call to autopoint
+
+Joe Hansen:
+      Added Danish translation
+
+Jonathon Jongsma:
+      Fix the sourceview configure check for breakpoint setting
+
+Jorge González:
+      Updated Spanish translation
+
+Kenneth Nielsen:
+      Added da to list of languages
+
+Konstantinos Poulios:
+      Unnecessary scrollbars in variable popup, #610808
+
+Leonid Kanter:
+      added Russian translation from Alex 'mainframe' Z
+
+Marek Černocký:
+      Update Czech translation
+
+Mario Blättermann:
+      Updated German translation
+      Updated German doc translation
+
+Matej Urbančič:
+      Added sl for Slovenian translation
+
+Olav Vitters:
+      Fix doap file
+
+Petr Kovar:
+      Add Czech translation by Marek Cernocky
+      Add Czech help translation by Marek Cernocky
+
+Prema:
+      CorrectDesktopFile (Closes: #618506)
+
+Romain Tartière:
+      Remove useless header utmp.h
+
+Seemanta Dutta:
+      Adding a popup when quitting nemiver. (Closes: #553217)
+
+Takeshi AIHANA:
+      pdated Japanese translation.
+
+Thorsten Vollmer:
+      Require and properly detect gtkmm24 version 2.16
+
+Yinghua Wang:
+      Add Simplified Chinese translation.
+
+0.7.3 Release
+=============
+
+Claude Paroz
+      Updated French translation
+
+Dodji Seketeli
+      Support editing breakpoint condition
+      Use -break-after to set ignore count
+      Support ignore count at breakpoint setting time
+      Update breakpoint saving into session (Closes: #595083)
+      Preselect process to attach to (Closes: #595667)
+      Fix command line parsing (Closes: #591327)
+      Restore call stack initial window (Closes: #599768)
+      Update call stack on thread selection (Closes: #601199)
+      Do not update variables twice (closes: #601819)
+      Properly handle empty command line
+      Cleanup long command line switches
+      Escape strings saved in sessions (Closes: #579569)
+      Handle ":" in pending bp attrs (Closes: #603627)
+
+Hans Vercammen
+      Small typo causing test build failure
+
+Mario Blättermann
+      Updated German translation
+
+Takeshi AIHANA
+      2009-10-17 Updated Japanese translation.
+
+Tom Hughes
+      Let inferior use launch terminal (Closes: #602072)
+      Do not blindly truncate types (Closes: #602074)
+
+0.7.2 Release
+=============
+
+Dodji Seketeli
+      Support breakpoint ignore counts (Closes: #588251)
+      Display no msg dialog when gconf is down
+      Create varobjs for a given frame (Closes: #590833)
+      Don't ignore "thread-selected" async records
+      Change IDebugger::thread_selected_signal signature
+      Update state when thread id changes.
+      Don't clobber cmdline arguments (Close: #591327)
+
+Jonh Wendell (1):
+      Updated Brazilian Portuguese translation
+
+0.7.1 Release
+=============
+
+Dodji Seketeli
+      Support multiple address breakpoints (Closes: #587697)
+      Support original-location in breakpoints (Closes: #588256)
+      Support restarting when GDB dies (Closes: #588313)
+      Don't fall appart when gconfd is down
+      Keep default conf values when gconf is down
+      Fix variable popup tip size issues
+      Var popup tip shouldn't be too small by default
+      Support "text besides icons" visual setting
+
+Mario Blättermann
+      Updated German translation
+      Added German doc translation
+
+Takeshi AIHANA
+      Updated Japanese translation.
+
+0.7.0 Release
+=============
+
+David Planella:
+      Updated Catalan translation
+
+Dodji Seketeli:
+      Support GDB Variable Objects (Closes: #573678)
+      Properly show reference variable (Closes: #585466)
+      Make pointer dereferencing more intuitive (Closes: #530902)
+      Support variable value editing in variable inspector (Closes: #581169)
+      Add watchpoint support (Closes: #386450)
+      Support copying variables to the clipboard (Closes: #547329)
+      Hide var tooltip appropriatly (Closes: #545596)
+      Don't overrun frames vector (Closes: #585516)
+      Keep popup tip under control (Closes: #585657)
+      Awesome up variable popup tip
+      New nmv_abort_on_throw environment variable
+      Allow the ',' separator in NMV_LOG_DOMAINS env var
+
+Javier Jardon:
+      Use AM_SILENT_RULES for nicer compilation output
+
+Jonathon Jongsma:
+      Fix unused variable warning
+
+Takeshi AIHANA:
+      Updated Japanese translation
+
+0.6.7 Release
+==============
+
+Claude Paroz:
+      Updated French translation
+
+Dodji Seketeli:
+      Don't clear session when restarting with different args (Closes: 568822)
+      GDB/MI parsing fixes
+      Debugger API improvements
+      Implement call stack paging (Closes: #544116)
+      Kill automake warnings when building tests
+
+Hubert Figuiere:
+      Header inclusion cleanup (Closes: #581047)
+      Fix compilation breakage when builing without gtkhex
+
+Jonathon Jongsma:
+      Performance improvements
+      Fix critical warnings when closing a file (Closes: #578736)
+      Quote arguments passed to gdb (Closes: #575889)
+
+Landry Breuil:
+      On going OpenBSD build fixes
+
+0.6.6 Release
+=============
+
+Dodji Seketeli:
+      Update ephy-spinner widget (Closes: #574915)
+      Fix tests to work with Boost.Test 1.37
+      Fix MI parsing error with Archer (Closes: #575660)
+
+Hans Vercammen:
+      Fix build with gcc 4.1.2 (Closes: #572704)
+
+Jonathon Jongsma:
+      Update all of the screenshots for the manual
+      Change serial input to a FileChooserButton (Closes: #436057)
+      Enable re-ordering of source file tabs (Closes: #545246)
+      Make the 'View > Memory' conditionally used (Closes: #564832)
+      Give indication of activity in the 'open file' dialog (Closes #564294)
+      Fix File list so keyboard navigation scrolls list again (Closes: #564294)
+      Scroll 'File Open' list to starting source file (Closes: #525512)
+      Ellipsize filename in tab (Closes: #565645)
+      Sort columns of process selection dialog displays warning (Closes: #534700)
+      Improve global variable listing (Bug #573709)
+      Check for empty before isspace in UString::chomp() (Closes: #574214)
+      Don't split member vars incorrectly if value has comma (Closes: #527947)
+      Save session when switching debugging contexts (Fixes: #575912)
+
+Landry Breuil:
+      Many build fixes for OpenBSD
+
+0.6.5 Release
+=============
+
+Fixes
+-----
+
+Jonathon Jongsma :
+      Enlarge the default size of the variable inspector dialog
+      #526151 - Change the 'restart' icon
+      #554405 - Fix libtool wrapper detection for files with dashes
+      #530910 – View -> "Show Errors" and "Show Output" should not be displayed
+      #536259 - Remember history in var inspector dialog
+      #553213 – tabs are in different order to Alt-1,2,3,4,5
+      #564301 – Assertion when trying to open variable inspector
+      Add a preference for sourceview color theme
+      Hook up the color theme preference
+      Don't link fooprog test program against libnemivercommon, etc.
+
+Dodji Seketeli:
+      #560662 Refactor the parser and create GDBMParser
+      #560662 - Support singular RESULT parsing.
+      #564113 - GDB/MI parsing error
+      #567175 - Listing Source files from target executable is broken
+      #570029 – Print a message on the terminal when the user calls a function
+      #568821 - "Call function" dialog should remember history
+      #571036 - Random crash
+      #571099 - nemiver crashes on startup in GtkHex
+      Remove config.h.in from Source Control Manamagement.
+      Fix compilation breakage with gtksourceviewmm-1
+      Make Nemiver compile on gtkmm 2.12
+      Better pretty print when calling functions.
+      Avoid duplicates in call function dialog history.
+      Persist the Variable inspector dialog history
+      Fix compilation with gcc 4.3.3
+
+Vincent Untz:
+      #568785 - Add Debugger category to desktop file
+
+Romain Tartière:
+      #569168 – Cannot locate source with a full file name
+
+Luca Bruno:
+      #562925 - Shorten compilation lines
+
+Translations
+------------
+
+Daniel Nylander:
+      Updated Swedish translation
+
+Gil Forcada Codinachs:
+      Updated Catalan translation by David Planella
+
+Jorge Gonzalez Gonzalez:
+      Updated Spanish translation
+
+0.6.4 Release
+=============
+
+Bug fixes
+---------
+
+    [Dodji Seketeli]
+    * #555733 - "Assertion failed: editor" when trying to open a new binary
+    * #560377 - support new running async output record in GDB trunk
+    * #561287 - crash when doing nemiver --purgesessions
+    * #562024 - cannot set breakpoint sometimes
+
+    [Jonathon Jongsma]
+     * Re-arrange columns in call stack view
+
+    [Christophe Fergeau]
+    * #555732 - Use font specified in the preferences for the output terminal
+
+Translations
+------------
+
+    * [ja] Takeshi AIHANA
+
+0.6.3 Release
+==============
+
+Bug fixes
+----------
+
+    * various cleanups: move to new tooltip API, migrate from
+      deprecated TreePath APIs. [Saleem Abdulrasool]
+    * #553780 - Status notebook disapearing sometimes. [Dodji Seketeli]
+    * #553780 - Compilation speedups and remove __gnu::cxx deprecated
+      usage. [Benoit Dejean]
+
+Translations
+------------
+
+    * [th] Theppitak Karoonboonyanan
+    * [ca] Gil Forcada
+
+0.6.2 Release
+==============
+
+Bug fixes
+---------
+
+    [Dodji Seketeli]
+
+    * #548121 - String search not available when program is not running
+    * #548118 - Select new node on dereferencing
+    * #523377 - first-run prints sql-related errors to console
+    * #545842 - Missing shortcut to set a breakpoint in current file
+    * #547169 - Set breakpoint to selected function name by default
+
+    [Jonathon Jongsma]
+
+    * fix boost unit test static library detection
+
+    [Stéphane Wirtel]
+
+    * fix a configure help string
+
+    [Robert-André Mauchin]
+
+    * Update website references to point to the new location
+
+Translations
+------------
+
+    * [ar] Djihed Afifi
+    * [fr] Robert-André Mauchin
+    * [fi] Ilkka Tuohela
+
+
+0.6.1 Release
+==============
+
+    * add missing nmv-conf-keys.h file to tarball
+
+0.6.0 Release
+==============
+
+New Features
+------------
+
+[Dodji Seketeli]
+
+    * conditional breakpoints
+    * arbitrary function calls
+
+Fixes
+-----
+
+[Dodji Seketeli]
+
+    * various code cleanups
+    * add --version command line switch
+    * support running autogen.sh from other directories dans srcdir
+    * #515525 - Arrow keys don't work to navigate through source file
+    * #396277 - implement lazy evaluation of status widgets
+    * #543798 - don't pop up 'reload file' dialog all the time
+    * #543797 - display a meaningful error when inferior is not found
+    * #545211 - Bad index management when closing a tab
+
+[Jonathon Jongsma]
+
+    * on going HIG compliance assurance
+    * add preferences for controlling behaviour or reloading source files
+
+[Luca Bruno]
+
+    * #540934 - documentation docbook XML compliance
+
+Translations
+------------
+
+    * [ja] Takeshi AIHANA
+    * [es] Jorge Gonzalez
+    * [nb] Kjartan Maraas
+
+0.5.3 Release
+
+Fixes
+-----
+
+[Dodji Seketeli]
+
+    * #526696 – "Detach from the running program" not properly unsensitived"
+    * #526866 – breakpoint parsing failures
+    * #526826 – missing dependency in .pc file
+    * #527696 – nemiver --help only shows libgnome related help messages
+    * #526863 – Parsing error leaves nemiver in unusable state
+    * #527796 – remove libgnome dependency
+    * #482806 – Debugger state and Menu item sensitivity problems
+    * #534619 – Once detached of a program, you're not sure you're really disconnected
+    * add -Wl,--as-needed link flag for DSOs
+
+[Jonathon Jongsma]
+
+    * properly set memory editor sensitivity when debugger is running
+
+[Luca Bruno]
+
+    * remove obsolete fields from nemiver.desktop file
+
+New ports
+---------
+
+[Romain Tartière]
+
+    * Port nemiver to FreeBSD.
+
+
+0.5.2 Release
+=============
+
+Fixes
+-------
+    * unplug some immature non regression tests for now
+    * fix an infinite loop when parsing an output record having a line starting
+      with '='
+    * support setting breakpoints on functions that are in not-yet-loaded shared
+      libraries.
+    * fix #526291 – Nemiver doesn't propose to stop the debugging application
+
+Translations
+-------------
+    * [ja] Takeshi AIHANA
+
+
+0.5.1 Release
+=============
+
+New Features
+-------------
+
+[Dodji Seketeli]
+
+    * ability to debug programs that are actually libtool wrapper shell scripts.
+      In that case, nemiver analyses the wrapper script and launches
+      the actual binary wrapped by the script.
+
+Fixes
+--------------
+
+[Peter Gordon]
+
+     * fix build for gcc 4.3
+
+[Sven Arvidsson]
+
+    * add StartupNotify to desktop file
+
+Translations
+--------------
+
+    * [es] Jorge Gonzalez
+
+0.5.0 Release
+=============
+
+New features
+------------
+
+[Jonathon Jongsma]
+
+    * support for CPU registers editing
+    * support for memory editing
+
+[A Gordon]
+
+   * preliminary work on the global variables listing support
+
+[Dodji Seketeli]
+
+    * support for remote (cross) debugging.
+      This still needs some UI love though.
+    * support for listing the global variables of the inferior
+    * support for refreshing the list of local variables "on demand"
+
+Fixes, cleanup and improvements
+-------------------------------
+
+[Jonathon Jongsma]
+
+    * many UI improvements here and there
+    * better breakpoints management
+    * added the --last command line option to quickly reload
+      the last saved session
+    * show frame address when their line/filename info is not available
+    * switch to GtkSourceView2 (optional)
+    * switch to GIO (optional)
+    * #447890 – "File path info is missing for function foo" popup is too
+      intrusive
+    * #465263 – error parsing breakpoint table
+    * #502526 – gdbmi parsing error
+    * #515454 - Remove total number of lines information
+    * #515541 - 'Debug -> Show Global Variables'  active even not debugging
+    * #515271 – position of the cursor is wrong just after opening a file
+    * #515287 - disable breakpoint setting when not debugging
+
+[Baptiste Mille-Mathias]
+
+    * many many HIG fixes and hassling ;-)
+    * #499263 – make check fail
+
+[Emre Turkay]
+
+    * code cleanup of the main.cc file
+
+[Dodji Seketeli]
+
+    * switch to libboost 1.34
+    * better (more reliable, faster) local variables management
+    * speed optimisations
+    * numerous low level fixes and cleanups
+    * #442213 – Limit number of frames in the call stack
+    * #503887 – start nemiver with wrongs args throws error
+    * #502634 – problem with running nemiver under compiz
+    * #504473 – Variable parsing failure on quoted '}' character
+    * #436374 – Error output when debugging an gtkmm example
+    * #514134 – gdbmi member variable parsing error
+
+Translations
+-------------
+    * [ja] Takeshi AIHANA
+    * [sv] Daniel Nylander
+    * [dz] Pema Geyleg
+    * [ca] Jordi Mas, Josep Puigdemont i Casamajó, Gil Forcada
+    * [es] Jorge Gonzalez
+    * [fi] Ilkka Tuohela
+    * [fr] Claude Paroz
+    * [ar] Djihed Afifi
+    * [oc] Yannig Marchegay
+
+0.4.0 Release
+=============
+
+New features
+-------------
+
+    [Jonathon Jongsma]
+
+    * enable/disable breakpoints
+    * enable refresh of breakpoints view at will
+    * enable filtering of process list
+    * added a user manual
+    * set breakpoints by typing function name or file location
+    * added a font selection settings
+    * switch mouse pointer to busy cursor when gdb is running
+
+    [Dodji Seketeli]
+
+    * added a --env option as in nemiver --env "foo=bar foobar=baz" prog-to-debug
+    * handle methods overload choosing when setting freeform breakpoints.
+    * allow remote processes debugging using gdbserver.
+
+    [Andreas Nilsson]
+
+    * new nemiver icons set
+
+Bug fixes, improvements
+-----------------------
+
+    [Jonathon Jongsma]
+
+    * #401249 Use icon list for window icon
+    * save and restore status pane position between sessions
+    * many UI related fixes an improvements
+
+    [Dodji Seketeli]
+
+    * #414334 nemiver not internationalized filename friendly
+    * #423846 GDBMI parsing fails in nemiver::parse_member_variable()
+    * #424069 Crashed
+    * #417775 nemiver doesn't detect new versions of source files
+    * improved dynmods API
+    * better gdb flow control.
+    * many gdbmi parsing fixes
+    * better variables management
+    * better breakpoints handling
+    * fixed a couple of crashers
+    * lots of internal refactoring
+
+Translations
+------------
+
+     * fr  [Stephane Raimbault]
+     * en_GB [David Lodge]
+     * ja [Takeshi AIHANA]
+
+
+
+
+0.3.0 Release
+============ 
+
+    features
+============
+
+    [Dodji Seketeli]
+
+    * added a "detach from target" functionality
+    * added a basic "find text in source file" functionality
+
+    [Jonathon Jongsma]
+
+    * added a "list source files that make up the current executable"
+      functionality. Integrate it into the "open source file" dialog
+
+    [Steven Brown]
+
+    * new set of Nemiver icons
+
+Bug fixes/improvements
+======================
+
+    [Dodji Seketeli]
+
+    * better spinner model
+    * better debugger engine state management
+    * better handling of targets not compiled with -g
+    * properly clear the status notebook when target is no more being debugged
+    * massive gdb controlling interface performance speedup (> 7X speedup)
+    * show hidden directories in the "Run program" dialog
+    * better detection of variables in the "hover on variable" workflow
+    * set the LD_BIND_NOW environment variable to prevent slow stepping into
+      functions that are in DSOs.
+    * make ctrl-c (SIGINT) triggers a graceful shutdown
+    * better pointer dereferencing behaviour
+    * #386473 deleting a breakpoint greys out all actions
+    * #381703 Close all open files when switching to a new debug session
+    * #386594 update dereferenced pointers during stepping
+    * #394485 Variable line-height too high for some variables
+    * #384427 breakpoints are not shown on newly open files
+
+    [Jonathon Jongsma]
+
+    * HIG fixes
+    * update translation credits in the About dialog
+    * make the window title show information about the target being debugged
+    * mark more strings as being translatable
+    * better management of the nemiver.desktop file
+    * #386806 Use placeholder strings (%s) for filenames in messages
+    * #396773 call stack widget does not show the frame number
+
+    [Bob Mauchin]
+
+    * #389177 String misleading in nmv-call-stack.cc
+    * #389175 Typos in nmv-dbg-perspective.cc
+
+    [Marko Anastasov]
+
+    * 394469 – Quicker access to source files
+
+Translations
+=============
+    * [nl] Reinout Van Shouwen
+    * [de] Carsten Reith
+    * [es] Juan
+    * [fr] Dodji Seketeli, Bob Mauchin
+
+
+0.2.0 Release
+==============
+
+new features
+============
+
+    [Dodji Seketeli]
+
+    * highlight the last changed variable (in the local variables tab)
+    * new variable inspector targeted at global variables
+    * added a --attach <pid|prog-nam> option
+
+    [Jonathon Jongmas]
+
+    * new dialog to locate files when no full path debugging information is available
+
+    [Ruben Vermeersch]
+
+    * remember last nemiver window geometry (makes nemiver 'spatial')
+
+bug fixes/improvements
+======================
+
+    [Jonathon Jongsma]
+
+    * don't let the target executable run after quitting nemiver.
+    * when opening a source file start filechooser in the working dir
+      specified in session settings.
+    * restart gconfd (instead of sending the HUP signal) upon schemas install
+    * fixed typos in NEWS file
+    * fixed typos in dialogs
+    * hook the windown 'delete-event' to the normal shutdown procedure
+    * #378294 gdb 6.4debian sometimes doesn't provide full path to source file info
+    * #381702 double-clicking breakpoint list when there are no breakpoints causes an error
+
+    [Dodji Seketeli]
+
+    * don't redraw the local variables widget at each stop
+    * don't assert when hover on empty space
+    * sync each log line to disk
+    * in the breakpoint workflow, lookup files in already opened files first
+    * fix target terminal scrolling issues
+    * update local variables when selecting frames
+    * fix utf8 paths issues
+    * fix gdbmi frame data parsing
+    * code cleanup and refactoring here and there
+    * allow target restart only from the READY state
+    * better plugins lifetime management
+    * #377623 Local variables parsing error on multi-parameter template types
+    * #381912 stopping the targets fails when runned without break
+    * #381402 variables content in popup tip on hover very invisible
+    * #383170 segfault at startup on EM64T archictecture
+    * #381694 disable the continue and step buttons when target program exits
+    * #384057 Target executable still runs after nemiver shuts down
+    * #384406 nemiver crashed when activating line numbers
+    * #384456 Close button on tab is truncated
+    * #384474 Bottom widget could disappeared under gtkvsperator
+    * #385186 Tab too high
+    * #385195 toolbar widgets to clean
+
+    [Ruben Vermeersch]
+
+    * fix typos in some dialogs
+    * fix bad support of 'current working directory'
+    * update README file
+
+    [Remi Cardonna]
+
+    * make libworkbenchmod.so link with the --as--needed option of GNU ld
+
+    [Guillaume Desmottes]
+
+    * #383886 Preferences dialog should not appear in the windows list
+
+    [Jean-Francois Rameau]
+
+    * #384172 Clicking on "Target terminal" tab makes the top window very large
+
+
+translations
+=============
+
+fr [Dodji Seketeli]
+sv [Daniel Nylander]
+
+|||||||||||||||||||||||||||||||||||||||||||||||||
+
+Initial 0.1.0 release
+========================
+
+Disclaimer:
+============
+This it the first official release, so remember that it could eat your cat or
+make your landlord divorce. In any case, let us know the problems you encounter so that
+we can fix them in coming releases.
+
+Features
+================================
+* basic target control (stepping)
+* breakpoint management
+* debugging session management
+* local variables inspection
+* call stack management
+
+languages:
+==========
+[fr]
+[en]
+
+homepage: http://www.gnome.org/projects/nemiver/
+tarball: ftp://ftp.gnome.org/pub/GNOME/sources/nemiver/
+

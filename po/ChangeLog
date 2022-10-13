@@ -1,0 +1,263 @@
+2009-05-03  Takeshi AIHANA <takeshi.aihana@gmail.com>
+
+	* ja.po: Updated Japanese translation.
+
+2009-02-13  Gil Forcada  <gforcada@gnome.org>
+
+	* ca.po: Updated Catalan translation by David Planella.
+
+2009-02-11  Daniel Nylander <po@danielnylander.se>
+
+	* sv.po: Updated Swedish translation.
+
+2008-12-28  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
+
+	* es.po: Updated Spanish translation.
+
+2008-12-17  Leonardo Ferreira Fontenelle  <leonardof@gnome.org>
+
+	* pt_BR.po: Improvements to the Brazilian Portuguese translation.
+
+2008-12-17  Leonardo Ferreira Fontenelle  <leonardof@gnome.org>
+
+	* LINGUAS: Added pt_BR.
+	* pt_BR.po: Added Brazilian Portuguese translation by Richardo Ichizo,
+	Enrico Nicoletto and Leonardo Ferreira Fontentelle. Thanks to Bruno
+	Boaventura for some clarifications.
+
+2008-09-19  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
+
+	* es.po: Updated Spanish translation 
+
+2008-10-05  Takeshi AIHANA <takeshi.aihana@gmail.com>
+
+	* ja.po: Updated Japanese translation.
+
+2008-09-16  Theppitak Karoonboonyanan  <thep@linux.thai.net>
+
+	* LINGUAS: Added 'th'.
+	* th.po: Added Thai translation by Piya Wanishsujit.
+
+2008-09-15  Gil Forcada  <gforcada@gnome.org>
+
+	* ca.po: Minor fix to Catalan translation by David Planella.
+
+2008-09-10  Gil Forcada  <gforcada@gnome.org>
+
+	* ca.po: Updated Catalan translation by David Planella.
+
+2008-08-27  Ilkka Tuohela <hile@iki.fi>
+
+	* fi.po: Updated Finnish translation.
+
+2008-08-25  Robert-André Mauchin  <zebob.m@pengzone.org>
+
+	* fr.po: Updated French translation.
+
+2008-07-31  Djihed Afifi <djihed@gmail.com> 
+
+	* ar.po: Updated Arabic Translation by Djihed Afifi.
+
+2008-07-13  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
+
+	* es.po: Updated Spanish translation
+
+2008-07-09  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* LINGUAS: Add nb
+	* POTFILES.in: Fix missing files.
+	* nb.po: Add Norwegian bokmål translation
+
+2008-06-27  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
+
+	* es.po: Updated Spanish translation                         
+
+2008-06-22  Takeshi AIHANA <takeshi.aihana@gmail.com>
+
+	* ja.po: Updated Japanese translation.
+
+2008-06-15  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
+
+	* es.po: Updated Spanish translation  
+
+2008-06-15  Yannig Marchegay <yannig@marchegay.org>
+
+	* oc.po: Updated Occitan translation.
+
+2008-03-16  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
+
+	* es.po: Updated Spanish translation by Alberto Caso
+
+2008-03-11  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
+
+	* es.po: Updated Spanish translation by Alberto Caso
+
+2008-02-19  Ilkka Tuohela <hile@iki.fi>
+
+	* fi.po: Updated Finnish translation.
+
+2008-02-14  Gil Forcada  <gforcada@gnome.org>
+
+	* ca.po: Updated Catalan translation by David Planella.
+
+2008-02-12  Claude Paroz  <claude@2xlibre.net>
+
+	* fr.po: Updated French translation by Robert-André Mauchin.
+
+2008-02-09 Dodji Seketeli <dodji@gnome.org>
+
+	* POTFILES.in: added files
+	  src/persp/dbgperspective/glade/globalvarsinspector.glade
+	  src/persp/dbgperspective/nmv-global-vars-inspector-dialog.cc
+	  src/persp/dbgperspective/nmv-set-breakpoint-dialog.cc
+	  src/persp/dbgperspective/nmv-vars-treeview.cc
+
+2008-02-08  Claude Paroz  <claude@2xlibre.net>
+
+	* fr.po: Updated French translation by Robert-André Mauchin.
+
+2008-01-25  Gil Forcada  <gforcada@gnome.org>
+
+	* ca.po: Updated Catalan translation by David Planella.
+
+2007-12-31  Yannig Marchegay <yannig@marchegay.org>
+
+	* oc.po: Updated Occitan translation.
+
+2007-12-26  Djihed Afifi <djihed@gmail.com> 
+
+	* ar.po: Added Arabic Translation.
+	* LINGUAS: Added ar.
+
+2007-11-29  Claude Paroz  <claude@2xlibre.net>
+
+	* fr.po: Updated French translation.
+
+2007-10-31  Ilkka Tuohela  <hile@iki.fi>
+
+	* fi.po: Updated Finnish translation.
+
+2007-10-22  Daniel Nylander <po@danielnylander.se>
+
+	* sv.po: Updated Swedish translation.
+
+2007-09-25  Gil Forcada  <gforcada@svn.gnome.org>
+
+	* ca.po: Updated Catalan translation by David Planella.
+
+2007-09-09  Daniel Nylander <po@danielnylander.se>
+
+	* sv.po: Updated Swedish translation.
+
+2007-09-07  Ilkka Tuohela  <hile@iki.fi>
+
+	* fi.po: Updated Finnish translation.
+
+2007-08-27  Josep Puigdemont i Casamajó  <josep.puigdemont@gmail.com>
+
+	* ca.po: Updated Catalan translation by
+	David Planella <david.planella@googlemail.com>.
+
+2007-08-25  Daniel Nylander <po@danielnylander.se>
+
+	* sv.po: Updated Swedish translation.
+
+2007-08-01  Jorge Gonzalez <jorgegonz@svn.gnome.org>
+
+	* es.po: Updated Spanish translation by Alberto Caso.
+
+2007-07-27  Daniel Nylander <po@danielnylander.se>
+
+	* sv.po: Updated Swedish translation.
+
+2007-06-23  Daniel Nylander <po@danielnylander.se>
+
+	* sv.po: Updated Swedish translation.
+
+2007-06-19  Jordi Mas <jmas@softcatala.org>
+
+	* ca.po: Added Catalan translation.
+	* LINGUAS: Added ca to the list
+
+2007-06-14  Pema Geyleg <pema.geyleg@gmail.com>
+
+	* dz.po: Added dzongkha translation.
+	* LINGUAS: Added dz to the list
+
+2007-06-07  Daniel Nylander <po@danielnylander.se>
+
+	* sv.po: Updated Swedish translation.
+
+2007-06-05  Takeshi AIHANA <takeshi.aihana@gmail.com>
+
+	* ja.po: Updated Japanese translation.
+
+2007-05-20  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* fr.po: Updated French translation.
+
+2007-05-17  Stéphane Raimbault  <stephane.raimbault@gmail.com>
+
+	* fr.po: Updated French translation by Robert-André Mauchin,
+	Claude Paroz and Stéphane Raimbault.
+
+2007-05-15  David Lodge <dave@cirt.net>
+
+	* en_GB.po: Added British English translation.
+	* LINGUAS: Added en_GB and resorted the file
+
+2007-04-28 Jonathon Jongsma
+
+	* po/fr.po: Added a missing closing parentheses
+
+2007-03-27 Dodji Seketeli
+
+	* po/fr.po: fixed a typo.
+
+2007-01-26  Jonathon Jongsma  <jonathon.jongsma@gmail.com>
+
+	* ja.po: new Japanese translation from Takeshi AIHANA <takeshi.aihana@gmail.com>
+
+Tue, 23 Jan 2007 08:37:17 +0100 Dodji Seketeli
+
+	* fr.po: update by Robert-André Mauchin <zebob.m@gmail.com>
+
+Sun, 17 Dec 2006 18:17:52 +0100 Dodji Seketeli
+
+	* nemiver.pot, nl.po: apply patch to add "nl" support, by Reinout van
+	  Schouwen.
+
+Sun, 17 Dec 2006 18:16:22 +0100 Dodji Seketeli
+
+	* reverted bad nl.po patch application. file impacted are (LINGUAS and
+	  nl.po)
+
+Sat, 16 Dec 2006 20:30:19 +0100 Dodji Seketeli
+
+	* po/de.po: Initial "de" translation by Carsten Reith <carsten.reith@arcor.de>
+
+Sat, 16 Dec 2006 10:51:12 +0100 Dodji Seketeli
+
+	* po/es.po: initial "es" translation by Juan <jmi-debian@telefonica.net>
+
+Sat, 16 Dec 2006 01:45:48 +0100 Dodji Seketeli
+
+	* po/fr.po:  updated french translation.
+	* po/POTFILES.in: added src/persp/dbgperspective/nmv-call-stack.cc,
+	  and src/persp/dbgperspective/nmv-source-editor.cc.
+
+Mon, 11 Dec 2006 19:23:18 +0100 Dodji seketeli
+
+	* po/sv.po: Daniel Nylander sent the initial swedish translation
+
+Mon, 11 Dec 2006 10:26:09 +0100 Dodji Seketeli
+
+	* po/fr.po: updated French translation.
+
+Mon, 20 Nov 2006 09:50:45 +0100 Dodji Seketeli
+
+	* fr.po: updated French translation.
+
+Sat, 04 Nov 2006 01:18:24 +0100 Dodji Seketeli
+
+	* fr.po: initial version of french translations.

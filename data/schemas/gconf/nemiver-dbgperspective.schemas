@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/layout</key>
+      <applyto>/apps/nemiver/dbgperspective/layout</applyto>
+      <owner>nemiver</owner>
+      <type>string</type>
+      <default>default-layout</default>
+      <locale name="C">
+	<short>Layout of the perspective</short>
+	<long>The layout that is loaded by the debugging perspective</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/source-search-dirs</key>
+      <applyto>/apps/nemiver/dbgperspective/source-search-dirs</applyto>
+      <owner>nemiver</owner>
+      <type>string</type>
+      <default>.</default>
+      <locale name="C">
+	<short>source directory dirs</short>
+	<long>The list of directories where to search for source files. This is used only when there is not enough information in the binary to locate the file.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/show-dbg-error-dialogs</key>
+      <applyto>/apps/nemiver/dbgperspective/show-dbg-error-dialogs</applyto>
+      <owner>nemiver</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+	<short>Show or don't show errors coming from the debugger engine</short>
+	<long>If set to yes, popups error message dialogs showing errors coming from the underlying debugger engine</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/show-source-line-numbers</key>
+      <applyto>/apps/nemiver/dbgperspective/show-source-line-numbers</applyto>
+      <owner>nemiver</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+	<short>Show or don't show source lines numbers</short>
+	<long>If set to yes, show the source code line number on the left hand side of each line</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/confirm-before-reload-source</key>
+      <applyto>/apps/nemiver/dbgperspective/confirm-before-reload-source</applyto>
+      <owner>nemiver</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+	<short>Ask the user before reloading a source file</short>
+	<long>When a source file needs to be reloaded, if this key is set to yes, ask the user before reloading</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/allow-auto-reload-source</key>
+      <applyto>/apps/nemiver/dbgperspective/allow-auto-reload-source</applyto>
+      <owner>nemiver</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+	<short>Do not automatically reload the source file</short>
+	<long>If the user chooses not to be asked about re-loading changed
+        source files and if this key is set to true, re-load the source file
+        automatically.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/highlight-source-code</key>
+      <applyto>/apps/nemiver/dbgperspective/highlight-source-code</applyto>
+      <owner>nemiver</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+	<short>Highlight source code</short>
+	<long>If set to yes, highlight source code</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/use-system-font</key>
+      <applyto>/apps/nemiver/dbgperspective/use-system-font</applyto>
+      <owner>nemiver</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Whether to use the system font for the source editor</short>
+        <long>Whether to use the system font for the source editor</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/custom-font-name</key>
+      <applyto>/apps/nemiver/dbgperspective/custom-font-name</applyto>
+      <owner>nemiver</owner>
+      <type>string</type>
+      <default>monospace 12</default>
+      <locale name="C">
+        <short>The custom font to use if we're not using the system font</short>
+        <long>The custom font to use for the source editor if we're not using the system font</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/use-launch-terminal</key>
+      <applyto>/apps/nemiver/dbgperspective/use-launch-terminal</applyto>
+      <owner>nemiver</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Whether to use the terminal we were launched from</short>
+        <long>Whether to use the terminal we were launched from as the debuggee's terminal, or to use our own embedded terminal.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/editor-style-scheme</key>
+      <applyto>/apps/nemiver/dbgperspective/editor-style-scheme</applyto>
+      <owner>nemiver</owner>
+      <type>string</type>
+      <default>classic</default>
+      <locale name="C">
+        <short>The style of the source editor</short>
+        <long>The name of the source editor color scheme</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/status-widget-minimum-width</key>
+      <applyto>/apps/nemiver/dbgperspective/status-widget-minimum-width</applyto>
+      <owner>nemiver</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+	<short>The minimum width of the status widget</short>
+	<long>The minimum width of the status widget</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/status-widget-minimum-height</key>
+      <applyto>/apps/nemiver/dbgperspective/status-widget-minimum-height</applyto>
+      <owner>nemiver</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+	<short>The minimum height of the status widget</short>
+	<long>The minimum height of the status widget</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/default-layout-status-pane-location</key>
+      <applyto>/apps/nemiver/dbgperspective/default-layout-status-pane-location</applyto>
+      <owner>nemiver</owner>
+      <type>int</type>
+      <default>-1</default>
+      <locale name="C">
+	<short>The location of the status pane for the default layout</short>
+	<long>The location of the status pane for the default layout</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/wide-layout-status-pane-location</key>
+      <applyto>/apps/nemiver/dbgperspective/wide-layout-status-pane-location</applyto>
+      <owner>nemiver</owner>
+      <type>int</type>
+      <default>-1</default>
+      <locale name="C">
+        <short>The location of the status pane for the wide layout</short>
+        <long>The location of the status pane for the wide layout</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/two-pane-layout-hpane-location</key>
+      <applyto>/apps/nemiver/dbgperspective/two-pane-layout-hpane-location</applyto>
+      <owner>nemiver</owner>
+      <type>int</type>
+      <default>-1</default>
+      <locale name="C">
+        <short>The location of the horizontal status pane for the two-pane layout</short>
+        <long>The location of the horizontal status pane for the two-pane layout</long>
+      </locale>
+    </schema>
+        <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/two-pane-layout-vpane-location</key>
+      <applyto>/apps/nemiver/dbgperspective/two-pane-layout-vpane-location</applyto>
+      <owner>nemiver</owner>
+      <type>int</type>
+      <default>-1</default>
+      <locale name="C">
+        <short>The location of the vertical status pane for the two-pane layout</short>
+        <long>The location of the vertical status pane for the two-pane layout</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/debugger-engine-dynmod</key>
+      <applyto>/apps/nemiver/dbgperspective/debugger-engine-dynmod</applyto>
+      <owner>nemiver</owner>
+      <type>string</type>
+      <default>gdbengine</default>
+      <locale name="C">
+	<short>The underlying debugger engine management module</short>
+	<long>The name of the debugger engine management module used</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/gdb-binary</key>
+      <applyto>/apps/nemiver/dbgperspective/gdb-binary</applyto>
+      <owner>nemiver</owner>
+      <type>string</type>
+      <default>default-gdb-binary</default>
+      <locale name="C">
+	<short>The path to the GDB binary</short>
+	<long>The absolute path to the GDB binary, otherwise, the default makes Nemiver pick the default system GDB</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/update-local-vars-at-each-stop</key>
+      <applyto>/apps/nemiver/dbgperspective/update-local-vars-at-each-stop</applyto>
+      <owner>nemiver</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+	<short>Whether to update the list of local variables at each stop</short>
+	<long>Updating the list of local variables lets the debugger show variables that are created way after the beginning of the function.  Disabling this option might speed up stepping but leads the debugger to miss local variables that are created after the beginning of the function.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/asm-style-pure</key>
+      <applyto>/apps/nemiver/dbgperspective/asm-style-pure</applyto>
+      <owner>nemiver</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+	<short>Show the assembly in pure form</short>
+	<long>If set to yes, pure assembly code is shown when switching to assembly view. Otherwise, source code mixed with assembly code is shown.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/default-num-asm-instrs</key>
+      <applyto>/apps/nemiver/dbgperspective/default-num-asm-instrs</applyto>
+      <owner>nemiver</owner>
+      <type>int</type>
+      <default>25</default>
+      <locale name="C">
+	<short>The number of assembly instructions to show by default</short>
+	<long>The number of instructions that are disassembled by default</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/context-pane-location</key>
+      <applyto>/apps/nemiver/dbgperspective/context-pane-location</applyto>
+      <owner>nemiver</owner>
+      <type>int</type>
+      <default>-1</default>
+      <locale name="C">
+	<short>The position of the splitter in the debug context tab</short>
+	<long>The position of the splitter in the debug context tab. This is saved by the UI automatically.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/follow-fork-mode</key>
+      <applyto>/apps/nemiver/dbgperspective/follow-fork-mode</applyto>
+      <owner>nemiver</owner>
+      <type>string</type>
+      <default>parent</default>
+      <locale name="C">
+	<short>Which process to follow upon a fork</short>
+	<long>If a fork happen, follow the parent parent process if the key is set to 'parent', or follow the child process if the key is set to 'child'</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/disassembly-flavor</key>
+      <applyto>/apps/nemiver/dbgperspective/disassembly-flavor</applyto>
+      <owner>nemiver</owner>
+      <type>string</type>
+      <default>att</default>
+      <locale name="C">
+        <short>Which instruction set to use for the assembly</short>
+        <long>Can be either att or intel (Apply only for the x86 family CPU)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/pretty-printing</key>
+      <applyto>/apps/nemiver/dbgperspective/pretty-printing</applyto>
+      <owner>nemiver</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+	<short>Activate GDB pretty printing</short>
+	<long>Activate the GDB printing feature. Under that mode the
+content of many types of containers is displayed in a human friendly
+manner</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/callstack-expansion-chunk</key>
+      <applyto>/apps/nemiver/dbgperspective/callstack-expansion-chunk</applyto>
+      <owner>nemiver</owner>
+      <type>int</type>
+      <default>25</default>
+      <locale name="C">
+	<short>The size of the call stack to display</short>
+	<long>Do not automatically display call stack wider than this value</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nemiver/dbgperspective/source-file-encoding-list</key>
+      <applyto>/apps/nemiver/dbgperspective/source-file-encoding-list</applyto>
+      <owner>nemiver</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[UTF-8,ISO-8859,ISO-8859-1,ISO-8859-15]</default>
+      <locale name="C">
+	<short>The list of of file encodings supported by nemiver</short>
+	<long>When nemiver opens a file, it will assume the encoding of the file is one of the encodings listed here. Please bear in mind that Nemiver works internally with files in the UTF-8 encoding. So when it loads a file, it must convert the file encoding into UTF-8. Therefore, Nemiver needs to know the possible set of encodings of the source files it has to open</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>
+

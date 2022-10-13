@@ -1,0 +1,40 @@
+Source: nemiver
+Section: gnome
+Priority: optional
+Vcs-Git: https://salsa.debian.org/debian/nemiver.git
+Vcs-Browser: https://salsa.debian.org/debian/nemiver
+Maintainer: Luca Bruno <lucab@debian.org>
+Build-Depends: debhelper (>= 11),
+               gdb,
+               libxml2-utils,
+               gsettings-desktop-schemas-dev,
+               intltool (>= 0.40),
+               pkg-config (>= 0.9),
+               libboost-dev,
+               libglib2.0-dev (>= 2.8.5),
+               libglibmm-2.4-dev (>= 2.25.1),
+               libgtkmm-3.0-dev (>= 3.0.0),
+               libgtksourceviewmm-3.0-dev (>= 3.0.0),
+               libgtkhex-3-dev (>= 3.0.0),
+               libgtop2-dev (>= 2.14),
+               libsqlite3-dev (>= 3.0),
+               libvte-2.91-dev (>= 0.38.1-2),
+               libxml2-dev (>= 2.6.22),
+               libxml-parser-perl,
+               yelp-tools
+Standards-Version: 3.9.6
+Homepage: https://wiki.gnome.org/Apps/Nemiver
+
+Package: nemiver
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, gdb, gsettings-desktop-schemas
+Description: Standalone graphical debugger for GNOME
+ Nemiver is a project to write a standalone graphical debugger that
+ integrates in the GNOME desktop. It features a backend which uses
+ the well known GNU Debugger gdb to debug C/C++ programs.
+ .
+ Nemiver is built with a plugin system that can offer several different
+ perspectives. Currently the only perspective provided is a debugging
+ perspective, but it could be expanded with perspectives added for
+ valgrind, or for profiling tools such as oprofile.
+

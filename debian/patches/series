@@ -1,0 +1,4 @@
+# List of currently applied Debian patches
+missing-files.patch
+bool-conversion.patch
+use-bool-operator-in-the-condition.patch

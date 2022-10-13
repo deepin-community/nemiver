@@ -1,0 +1,11 @@
+<moduleconfig>
+    <module>
+        <name>gconfmgr</name>
+        <!-- Remember, Interface name is IGConfMgr-->
+        <libraryname>gconfmgrmod</libraryname>
+    </module>
+    <customsearchpaths>
+        <path>@NEMIVER_LIBDIR@/nemiver/modules</path>
+    </customsearchpaths>
+</moduleconfig>
+

@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "0.5.0">
+<!ENTITY manrevision "2.0">
+<!ENTITY date "February 2008">
+<!ENTITY app "Nemiver">
+<!ENTITY appcmd "nemiver">
+<!ENTITY website "http://www.gnome.org/projects/nemiver/">
+]>
+<!--
+(Do not remove this comment block.)
+Maintained by the GNOME Documentation Project
+http://developer.GNOME.org/projects/gdp
+Template version: 2.0 beta
+Template last modified Jan 30, 2002
+
+-->
+<!-- =============Document Header ============================= -->
+<?chunk-depth 2?>
+<article id="index" lang="de">
+  <!-- please do not change the id; for translations, change lang to -->
+  <!-- appropriate code -->
+  <articleinfo>
+    <title>Nemiver-Handbuch</title>
+    <copyright><year>2008</year> <holder>Jonathon Jongsma</holder></copyright>
+    <!-- translators: uncomment this:
+
+    <copyright>
+      <year>2003</year>
+      <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+    </copyright>
+
+    -->
+    <publisher role="maintainer">
+      <publishername>Nemiver-Projekt</publishername>
+    </publisher>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <authorgroup>
+      <author><firstname>Jonathon</firstname> <surname>Jongsma</surname> <affiliation> <orgname>GNOME</orgname> </affiliation></author>
+      <!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+      <othercredit role="translator">
+        <firstname>Latin</firstname>
+        <surname>Translator 1</surname>
+        <affiliation>
+          <orgname>Latin Translation Team</orgname>
+          <address> <email>translator@gnome.org</email> </address>
+        </affiliation>
+        <contrib>Latin translation</contrib>
+      </othercredit>
+      -->
+    </authorgroup>
+    <!-- According to GNU FDL, revision history is mandatory if you are -->
+    <!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+    <revhistory>
+      <!-- Remember to remove the &manrevision; entity from the revision entries other
+      than the current revision. -->
+      <revision><revnumber>1.0</revnumber> <date>2007</date> <revdescription>
+          <para>Erste Version</para>
+        </revdescription></revision>
+      <revision><revnumber>2.0</revnumber> <date>2008</date> <revdescription>
+          <para>Aktualisierung für die Version 0.5.0</para>
+        </revdescription></revision>
+    </revhistory>
+    <releaseinfo>Dieses Handbuch beschreibt Version 0.5.0 von Nemiver.</releaseinfo>
+    <legalnotice>
+      <title>Rückmeldungen</title>
+      <para>Um einen Fehler zu melden oder einen Vorschlag zu <application>Nemiver</application> oder zu diesem Handbuch zu machen, besuchen Sie bitte die <ulink url="http://www.gnome.org/projects/nemiver/" type="http">Nemiver-Projektwebseite</ulink>.</para>
+      <!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+    <abstract role="description">
+      <para>Nemiver ist ein grafischer Debugger für die GNOME-Arbeitsumgebung.</para>
+    </abstract>
+  
+    <othercredit class="translator">
+      <personname>
+        <firstname>Mario Blättermann</firstname>
+      </personname>
+      <email>mario.blaettermann@gmail.com</email>
+    </othercredit>
+    <copyright>
+      
+        <year>2009</year>
+      
+        <year>2010</year>
+      
+        <year>2012</year>
+      
+      <holder>Mario Blättermann</holder>
+    </copyright>
+  </articleinfo>
+  <indexterm><primary>Nemiver</primary></indexterm>
+  <indexterm><primary>debugger</primary></indexterm>
+  <indexterm><primary>gdb</primary></indexterm>
+  <!-- ============= Document Body ============================= -->
+  <!-- ============= Introduction ============================== -->
+  <sect1 id="nemiver-sect-intro">
+    <title>Überblick</title>
+    <para>Nemiver wird ständig weiterentwickelt, um einen unabhängig arbeitenden grafischen Debugger zur Verfügung zu stellen, der sich nahtlos in die GNOME-Arbeitsumgebung einfügt. Das gegenwärtige Backend benutzt den wohlbekannten GNU-Debugger <application>gdb</application> zum Debuggen von in C oder C++ geschriebenen Programmen.</para>
+    <sect2 id="nemiver-sect-perspectives">
+      <title>Ansichten</title>
+      <para>Nemiver wurde als universeller grafischer <interface>Arbeitsplatz</interface> entworfen, der über ein Plugin-System verschiedene Ansichten darstellen kann. Gegenwärtig ist die einzige bereitgestellte Ansicht die Debugging-Ansicht. In der Zukunft aber könnten Ansichten für das Speicher-Debugging mit <application>valgrind</application> oder für Profiling-Werkzeuge wie <application>oprofile</application> möglich sein.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-getting-started">
+    <title>Erste Schritte</title>
+    <para>Dieser Abschnitt beschreibt den Start von Nemiver und gibt einen grundlegenden Überblick über die Anwendung.</para>
+    <sect2 id="nemiver-sect-starting">
+      <title>Nemiver starten</title>
+      <para>Sie können <application>Nemiver</application> auf folgende Arten starten:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Menü <guimenu>Anwendungen</guimenu></term>
+          <listitem>
+            <para>Wählen Sie <menuchoice><guisubmenu>Entwicklung</guisubmenu><guimenuitem>Nemiver Debugger</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Befehlszeile</term>
+          <listitem>
+            <para>Geben Sie <command>nemiver</command> ein und drücken Sie anschlieẞend die <keycap>Eingabetaste</keycap>.</para>
+            <tip>
+              <title>Zusätzliche Optionen für die Befehlszeile</title>
+              <para>Durch Eingabe des Befehls <command>nemiver --help-all</command> erhalten Sie eine Liste aller Optionen, die Sie an Nemiver in einer Befehlszeile übergeben können.</para>
+            </tip>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="nemiver-sect-window">
+      <title>Das Nemiver-Fenster</title>
+      <para>Beim Start von Nemiver erscheint ein Fenster, welches wie folgt aussieht:</para>
+      <figure id="nemiver-window">
+        <title>Nemiver-Fenster</title>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/main-window.png" format="PNG"/> </imageobject> <textobject> <phrase>Zeigt das Hauptfenster von Nemiver.</phrase> </textobject></mediaobject>
+        </screenshot>
+      </figure>
+      <para>Das <application>Nemiver</application>-Fenster enthält die folgenden Elemente:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Menüleiste</term>
+          <listitem>
+            <para>Die Menüs in der Menüleiste enthalten alle Befehle, die Sie für die Arbeit mit <application>Nemiver</application> benötigen.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Werkzeugleiste</term>
+          <listitem>
+            <para>Die Werkzeugleiste enthält grundlegende Debugging-Aktionen, die Sie zur Ausführung oder schrittweisen Ausführung des zu debuggenden Programms benötigen.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Quellansicht-Reitermappe</term>
+          <listitem>
+            <para>Wenn Quelldateien geöffnet sind, dann zeigt dieser Bereich die Quelldateien des zu debuggenden Programms.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Status-Reitermappe</term>
+          <listitem>
+            <para>Die Status-Reitermappe enthält folgende Reiter zur Anzeige von Informationen über das zu debuggende Programm:</para>
+            <variablelist>
+              <varlistentry>
+                <term>Aufruf-Stack</term>
+                <listitem>
+                  <para>Zeigt den aktuellen Status des Aufruf-Stacks im zu debuggenden Programm an.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Variablen</term>
+                <listitem>
+                  <para>Zeigt eine Liste aller lokalen Variablen und Funktionsparameter an, zusätzlich zu deren Werten und Typen.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Ziel-Terminal</term>
+                <listitem>
+                  <para>Falls das zu debuggende Programm irgendetwas im Terminal ausgibt, dann wird die Ausgabe in diesem Reiter angezeigt.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Haltepunkte</term>
+                <listitem>
+                  <para>Dieser Reiter zeigt eine Liste aller gesetzten Haltepunkte an. Sie können den Quellcode eines bestimmten Haltepunkts betrachten, indem Sie auf den Listeneintrag doppelklicken. Wahlweise können Sie mit der rechten Maustaste auf einen der Einträge klicken und <menuchoice><guimenuitem>Gehe zu Quelldatei</guimenuitem></menuchoice> im Kontextmenü wählen. Außerdem können in diesem Reiter Haltepunkte gelöscht, aktiviert oder deaktiviert werden. Weitere Informationen über Haltepunkte finden Sie in <xref linkend="nemiver-sect-breakpoints"/>.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Register</term>
+                <listitem>
+                  <para>Dieser Reiter zeigt alle Register des Prozessors und deren Werte an. Weitere Informationen finden Sie in <xref linkend="nemiver-sect-registers"/>.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Speicher</term>
+                <listitem>
+                  <para>Dieser Reiter zeigt den gegenwärtigen Status eines bestimmten Speicherbereichs an. Weitere Informationen finden Sie in <xref linkend="nemiver-sect-memory"/>.</para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="nemiver-sect-loading-program">
+      <title>Auswahl eines Programms zum Debuggen</title>
+      <para>Es gibt verschiedene Wege, mit dem Debuggen eines Programms zu beginnen. Nemiver ermöglicht Ihnen das Laden einer ausführbaren Datei oder einer Core-Datei, das Anhängen an einen laufenden Prozess oder die Verbindung zu einem entfernten Debugging-Server.</para>
+      <sect3 id="nemiver-sect-starting-executable">
+        <title>Debuggen eines ausführbaren Programms</title>
+        <sect4>
+          <title>Benutzung des Arbeitsplatzes</title>
+          <para>Um ein ausführbares Programm zum Debuggen auszuwählen, wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Ausführen</guimenuitem></menuchoice>. Der folgende Dialog wird angezeigt:</para>
+          <figure id="nemiver-execute-dialog">
+            <title>Ausführen-Dialog</title>
+            <screenshot>
+              <mediaobject><imageobject> <imagedata fileref="figures/execute-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Zeigt den Dialog zur Auswahl einer ausführbaren Datei</phrase> </textobject></mediaobject>
+            </screenshot>
+          </figure>
+          <para>In diesem Dialog können sie Folgendes auswählen: das zu debuggende Programm, eventuelle in der Befehlszeile an das auszuführende Programm zu übergebende Argumente, den Arbeitsordner, in welchem sich das auszuführende Programm befindet, sowie einige Umgebungsvariablen, die beim Debuggen des auszuführenden Programms gesetzt werden sollen.</para>
+        </sect4>
+        <sect4>
+          <title>Verwendung der Befehlszeile</title>
+          <para>Um ein zu debuggendes ausführbares Programm in der Befehlszeile zu starten, geben Sie einfach dessen Namen an. Sie können einen absoluten Pfad angeben, oder falls es sich bereits in Ihrer Pfad-Variable befindet, geben Sie den Basisnamen der ausführbaren Datei an. Wenn sich beispielsweise <filename>/usr/bin</filename> in Ihrem Pfad befindet, dann sind beide der folgenden Aufrufe gültig:</para>
+          <itemizedlist>
+            <listitem>
+              <para><command>nemiver /usr/bin/Programmname</command></para>
+            </listitem>
+            <listitem>
+              <para><command>nemiver Progammname</command></para>
+            </listitem>
+          </itemizedlist>
+          <tip>
+            <title>Übergabe von Optionen in der Befehlszeile</title>
+            <para>Falls Sie dem zu debuggenden Programm Befehlszeilenoptionen übergeben wollen, sollten Sie diese in Anführungszeichen setzen. So verhindern Sie, dass Nemiver diese verarbeitet: <command>nemiver "prognam --arg1 --arg2"</command>.</para>
+          </tip>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-attach">
+        <title>Anhängen an ein laufendes Programm</title>
+        <sect4>
+          <title>Benutzung des Arbeitsplatzes</title>
+          <para>Wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>An laufendes Programm anhängen</guimenuitem></menuchoice>, wodurch der folgende Dialog angezeigt wird:</para>
+          <figure id="nemiver-attach-dialog">
+            <title>Anhängen-Dialog</title>
+            <screenshot>
+              <mediaobject><imageobject> <imagedata fileref="figures/attach-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Zeigt den Dialog zum Anhängen an ein laufendes Programm</phrase> </textobject></mediaobject>
+            </screenshot>
+          </figure>
+          <para>Wählen Sie einen Prozess in der Liste aus und klicken Sie auf <guibutton>OK</guibutton>, um mit dem Debuggen des gewählten Programms zu beginnen. Die Anzeige in der Liste kann sehr umfangreich sein, deswegen können Sie die Ansicht filtern, um nur die für Sie interessanten einträge anzuzeigen. Geben Sie hierzu etwas Text in das Textfeld unterhalb der Liste ein.</para>
+        </sect4>
+        <sect4>
+          <title>Verwendung der Befehlszeile</title>
+          <para>Um aus einer Befehlszeile an ein laufendes Programm anzuhängen, verwenden Sie die Option <option>--attach</option>. Diese Option akzeptiert entweder eine Prozesskennung oder einen Prozessnamen. Um beispielsweise den laufenden Prozess <command>foo</command> mit der Prozessnummer 1121 zu debuggen, geben Sie entweder <command>nemiver --attach foo</command> oder <command>nemiver --attach 1121</command> ein.</para>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-core-file">
+        <title>Laden einer Core-Datei</title>
+        <sect4>
+          <title>Benutzung des Arbeitsplatzes</title>
+          <para>Wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Core-Datei laden</guimenuitem></menuchoice>, um folgenden Dialog zu öffnen, in welchem Sie eine Core-Datei laden können:</para>
+          <figure id="nemiver-load-core-dialog">
+            <title>Dialog zum Laden einer Core-Datei</title>
+            <screenshot>
+              <mediaobject><imageobject> <imagedata fileref="figures/load-core-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Zeigt den Dialog zum Laden einer Core-Datei</phrase> </textobject></mediaobject>
+            </screenshot>
+          </figure>
+        </sect4>
+        <sect4>
+          <title>Verwendung der Befehlszeile</title>
+          <para>Core-Dateien können nicht über die Befehlszeile geladen werden.</para>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-remote">
+        <title>Entferntes Debuggen</title>
+        <para>Nemiver ermöglicht Ihnen die Verbindung zu einem entfernten Debugging-Server.</para>
+        <sect4>
+          <title>Benutzung des Arbeitsplatzes</title>
+          <para>Um eine Verbindung zu einem entfernten Debugging-Server herzustellen, wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Zum entfernten Ziel verbinden</guimenuitem></menuchoice></para>
+          <screenshot>
+            <mediaobject><imageobject> <imagedata fileref="figures/connect-remote-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Dialog zum entfernten Debuggen</phrase> </textobject></mediaobject>
+          </screenshot>
+          <para>Wählen Sie das zu ladende ausführbare Programm und den Ort der gemeinsamen Bibliotheken und geben Sie die Details zur Verbindung mit dem entfernten Server ein.</para>
+        </sect4>
+        <sect4>
+          <title>Verwendung der Befehlszeile</title>
+          <para>Nemiver stellt keinen Weg bereit, eine Verbindung zu einem entfernten Server in einer Befehlszeile aufzubauen.</para>
+        </sect4>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-using">
+    <title>Benutzung von Nemiver</title>
+    <para>Dieser Abschnitt beschreit, wie Sie Nemiver zum Debuggen Ihrer Anwendung einsetzen können.</para>
+    <sect2 id="nemiver-sect-basic-debugging">
+      <title>Grundlegende Debugging-Aktionen</title>
+      <para>Die grundlegenden Debugging-Aktionen sind über die Werkzeugleiste, im Menü <guimenu>Debug</guimenu> oder als Tastenkürzel verfügbar. Die am häufigsten benutzten Aktionen werden nachfolgend aufgelistet:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Fortsetzen</term>
+          <listitem>
+            <para>Startet das Programm. Das Programm wird bis zum nächsten Haltepunkt oder bis zum Programmende ausgeführt, es sei denn, es wird manuell vom Benutzer durch Anklicken von <action>Stop</action> unterbrochen. Diese Aktion kann auf der Tastatur mit <keycap>F5</keycap> aktiviert werden.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Weiter</term>
+          <listitem>
+            <para>Führt die nächste Anweisung aus und stoppt, wenn die nächste Zeile in dieser Datei erreicht ist. Einige Debugger nennen diese Aktion »Step Over«. Diese Aktion kann auf der Tastatur mit <keycap>F6</keycap> aktiviert werden.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Einzelschritt</term>
+          <listitem>
+            <para>Führt die nächste Anweisung aus und springt in die Funktion, wenn möglich. Einige Debugger nennen diese Anweisung »Step in«. Diese Aktion kann auf der Tastatur mit <keycap>F7</keycap> aktiviert werden.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Herausspringen</term>
+          <listitem>
+            <para>Beendet die Ausführung der aktuellen Funktion und stoppt, wenn es zur aufgerufenen Fenktion zurückkehrt. Diese Aktion kann auf der Tastatur mit <keycombo><keycap>Umschalttaste</keycap><keycap>F7</keycap></keycombo> aktiviert werden.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Neustart</term>
+          <listitem>
+            <para>Lädt die aktuelle Ausführung neu und beginnt die Ausführung wieder am Ausgangspunkt. Diese Aktion kann auf der Tastatur mit <keycombo><keycap>Umschalttaste</keycap><keycap>F5</keycap></keycombo> aktiviert werden.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Anhalten</term>
+          <listitem>
+            <para>Unterbricht die Ausführung des Programms manuell. Diese Aktion ist nur verfügbar, wenn der Debugger gerade ausführt, beispielsweise wenn der Benutzer <action>Fortsetzen</action> angeklickt hat. Diese Aktion kann auf der Tastatur mit <keycap>F9</keycap> aktiviert werden.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Standardmäßig erzeugt Nemiver einen Haltepunkt bei <function>main()</function> nach dem Laden eines ausführbaren Programms. Sobald die Ausführung <function>main()</function> erreicht hat, wird die Ausführung angehalten und wartet auf eine Eingabe. Sie können durch das Programm springen, Variablen prüfen (siehe <xref linkend="nemiver-sect-inspecting-variables"/>), oder zusätzliche Haltepunkte hinzufügen (siehe <xref linkend="nemiver-sect-breakpoints"/>).</para>
+    </sect2>
+    <sect2 id="nemiver-sect-inspecting-variables">
+      <title>Untersuchen von Variablen</title>
+      <para>Nemiver zeigt eine Liste aller lokalen Variablen im <interface>Variablen</interface>-Reiter der <interface>Status-Reitermappe</interface> an. Falls Sie eine bestimmte Variable (oder auch einen bestimmten Ausdruck) untersuchen wollen, können Sie die <interface>Variablen-Untersuchung</interface> verwenden. Um die <interface>Variablen-Untersuchung</interface> zu öffnen, wählen Sie <menuchoice><guimenu>Debug</guimenu><guimenuitem>Eine Variable untersuchen</guimenuitem></menuchoice>. Wenn die Variablen-Untersuchung geöffnet ist, dann wird folgendes Fenster angezeigt:</para>
+      <screenshot>
+        <mediaobject><imageobject> <imagedata fileref="figures/variable-inspector.png" format="PNG"/> </imageobject> <textobject> <phrase>Dialog der Variablenuntersuchung</phrase> </textobject></mediaobject>
+      </screenshot>
+      <para>Sie können in das Eingabefeld einen beliebigen Variablennamen (wie <literal>pFoo-&gt;bar</literal>) eingeben. Wenn die Variable gültig ist und im aktuellen Bereich liegt, werden Einzelheiten über diesen Ausdruck angezeigt.</para>
+      <para>Alternativ können Sie den Variablennamen im <interface>Quelleditor</interface> markieren und dann die <interface>Variablen-Untersuchung</interface> aufrufen. Es wird dann versucht, Informationen über den markierten Variablennamen anzuzeigen.</para>
+      <tip>
+        <title>Tastenkürzel</title>
+        <para>Sie können die <interface>Variablen-Untersuchung</interface> auch auf der Tastatur mit <keycap>F12</keycap> aufrufen.</para>
+      </tip>
+      <para>Nemiver zeigt Ihnen auch eine Liste der globalen Variablen einer Anwendung in einem separaten Dialog an. Um den Dialog <interface>Globale Variable</interface> anzuzeigen, wählen Sie <menuchoice><guimenu>Debug</guimenu><guimenuitem>Globale Variablen anzeigen</guimenuitem></menuchoice> oder drücken Sie <keycombo><keycap>Strg</keycap><keycap>G</keycap></keycombo>.</para>
+      <screenshot>
+        <mediaobject><imageobject> <imagedata fileref="figures/global-variables-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Dialog zu Globalen Variablen</phrase> </textobject></mediaobject>
+      </screenshot>
+      <warning>
+        <para>Bei einigen Programmen (insbesondere C++) kann das Auflisten aller globalen Variablen sehr lange Zeit in Anspruch nehmen.</para>
+      </warning>
+    </sect2>
+    <sect2 id="nemiver-sect-breakpoints">
+      <title>Festlegen von Haltepunkten</title>
+      <para>Es gibt verschiedene Wege, in Nemiver Haltepunkte zu setzen. Nemiver setzt eine Haltepunkt automatisch bei <function>main()</function>, wenn Sie mit dem Debuggen eines ausfphrbaren Programms neu beginnen. Um zusätzliche Haltepunkte zu setzen, können Sie folgendermaßen vorgehen:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Klicken Sie auf den Rand neben der Zeile, wo Sie den Haltepunkt setzen wollen.</para>
+        </listitem>
+        <listitem>
+          <para>Platzieren Sie den Cursor auf einer Zeile, in der Sie einen Haltepunkt hinzufügen wollen. Wählen Sie <menuchoice><guimenu>Debug</guimenu><guimenuitem>Haltepunkt am Cursor setzen/entfernen</guimenuitem></menuchoice>, oder drücken Sie <keycap>F8</keycap></para>
+        </listitem>
+        <listitem>
+          <para>Setzen Sie einen Haltepunkt an einem specifischen Funktionsnamen oder an einem specifischen Ort in einer Datei. Wählen Sie hierzu <menuchoice><guimenu>Debug</guimenu><guimenuitem>Haltepunkt setzen</guimenuitem></menuchoice> oder drücken Sie <keycombo><keycap>Strg</keycap><keycap>B</keycap></keycombo>. Daraufhin wird folgender Dialog angezeigt:</para>
+          <screenshot>
+            <mediaobject><imageobject> <imagedata fileref="figures/set-breakpoint-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Dialog zum Setzen von Haltepunkten</phrase> </textobject></mediaobject>
+          </screenshot>
+          <para>Sie können einen Haltepunkt an einem bestimmten Ort einer Datei oder anhand eines Funktionsnamens setzen. Wenn es mehrere Funktionen gleichen Namens gibt, zeigt Nemiver eine Liste aller passenden Funktionen an und bittet Sie um die Auswahl der gewünschten Funktion.</para>
+        </listitem>
+      </itemizedlist>
+      <sect3>
+        <title>Deaktivierte Haltepunkte</title>
+        <para>Haltepunkte können aktiviert oder deaktiviert werden. Der Debugger hält die Ausführung an, sobald ein aktivierter Haltepunkt erreicht ist und kein deaktivierter Haltepunkt diesen beeinflusst. Dadurch wird Ihnen ermöglicht, vorübergehend einen Haltepunkt zu deaktivieren, ohne ihn gleich löschen zu müssen.</para>
+        <para>Um einen Haltepunkt zu aktivieren oder zu deaktivieren, klicken Sie in das Ankreuzfeld neben der Nummer des gewünschten Haltepunkts im Reiter <interface>Haltepunkte</interface> der <interface>Status-Reitermappe</interface>. Alternativ drücken Sie <keycombo><keycap>Umschalttaste</keycap><keycap>F8</keycap></keycombo>, um den Haltepunkt in der Zeile zu aktivieren oder zu daktivieren, in der sich der Cursor befindet.</para>
+        <para>Die folgenden Abbildungen verdeutlichen den Unterschied zwischen aktivierten und deaktivierten Haltepunkten im Quelltexteditor.</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/enabled-breakpoint.png" format="PNG"/> </imageobject> <textobject> <phrase>Ansicht eines aktivierten Haltepunkts</phrase> </textobject> <caption><para>Aktivierter Haltepunkt</para></caption></mediaobject>
+        </screenshot>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/disabled-breakpoint.png" format="PNG"/> </imageobject> <textobject> <phrase>Ansicht eines deaktivierten Haltepunkts</phrase> </textobject> <caption><para>Deaktivierter Haltepunkt</para></caption></mediaobject>
+        </screenshot>
+      </sect3>
+      <sect3>
+        <title>Öffnen von Quelldateien</title>
+        <para>Gelegentlich kennen Sie den exakten Funktionsnamen oder die Zeilennummer nicht, wo Sie einen Haltepunkt setzen wollen. Um dies herauszufinden, müssen Sie eine Quelldatei öffnen. Sie können hierzu einfach bestimmte Dateien im System öffnen, aber Nemiver stellt Ihnen auch eine Liste der Quelldateien bereit, aus denen die ausführbare Datei erstellt wurde. Sie können aus dieser Liste eine Datei wählen. Wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Quelldatei öffnen</guimenuitem></menuchoice>, woraufhin folgendes Fenster angezeigt wird:</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/open-files-target.png" format="PNG"/> </imageobject> <textobject> <phrase>Zeigt den Dialog zum Öffnen von Quelldateien</phrase> </textobject></mediaobject>
+        </screenshot>
+        <para>Um eine bestimmte Datei im Dateisystem zu öffnen, wählen Sie die Option <guilabel>Im Dateisystem auswählen</guilabel>. Um aus einer Liste von Dateien zu wählen, aus denen die ausführbare Datei erstellt wurde, wählen Sie <guilabel>Aus ausführbarem Ziel wählen</guilabel>.</para>
+        <warning>
+          <title>Bestimmen von Quelldateien für dynamisch geladene Module</title>
+          <para>Falls das ausführbare Ziel Module zur Laufzeit lädt (z.B. mit der Funktion <function>dlopen()</function>), wird Nemiver vor dem Laden dieser Module nicht in der Lage sein zu bestimmen, welche Dateien verwendet wurden.</para>
+        </warning>
+      </sect3>
+    </sect2>
+    <sect2 id="nemiver-sect-advanced">
+      <title>Fortgeschrittenes Debuggen</title>
+      <sect3 id="nemiver-sect-registers">
+        <title>Register</title>
+        <para>Die Bearbeitung von Registern ist im Reiter <interface>Register</interface> der <interface>Status-Reitermappe</interface> möglich. Alternativ drücken Sie <keycombo><keycap>Alt</keycap><keycap>F5</keycap></keycombo>, um direkt zu diesem Reiter zu springen.</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/registers-view.png" format="PNG"/> </imageobject> <textobject> <phrase>Das Widget zum Bearbeiten der Speicherregister</phrase> </textobject></mediaobject>
+        </screenshot>
+        <para>Hier werden die aktuellen Wert aller Register des Prozessors angezeigt. Klicken Sie zum Bearbeiten der Registerwerte auf die Spalte <interface>Wert</interface> und geben Sie einen neuen Wert ein. Falls sich der Registerwert seit dem letzten Anhalten des Debuggers geändert hat, wird er in roter Farbe hervorgehoben.</para>
+      </sect3>
+      <sect3 id="nemiver-sect-memory">
+        <title>Speicher</title>
+        <para>Die Speicherbearbeitung ermöglicht Ihnen die direkte Auswahl eines Speichersegments. Dadurch erhalten Sie einen detaillierteren Blick auf die Vorgänge während der Ausführung Ihres Programms.</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/memory-view.png" format="PNG"/> </imageobject> <textobject> <phrase>Das Widget zum Bearbeiten des Speichers</phrase> </textobject></mediaobject>
+        </screenshot>
+        <para>Um ein Speichersegment anzuzeigen, geben Sie eine Speicheradresse im Feld <interface>Adresse</interface> ein. Falls die Adresse für das zu debuggende Programm gültig ist, dann werden die Speicherwerte beginnend bei der angegebenen Adresse angezeigt. Speicherwerte können Im Byte-Format, im Wort-Format (2 Byte) oder im langen Wort-Format (4 Byte) angezeigt werden. Wählen Sie hierzu die entsprechende Option in der Auswahlliste <interface>Gruppieren nach</interface>. Die Speicherwerte werden beim Springen durch das Programm automatisch aktualisiert.</para>
+        <para>Neben dem reinen Betrachten der Speicherwerte können Sie auch Speicherwerte verändern. Sie können entweder die hexadezimale Byte-Darstellung bearbeiten (im linken Bereich) oder die ASCII-Darstellung (im rechten Bereich). Alle Änderungen werden unmittelbar angewendet.</para>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-sessions">
+    <title>Speichern und Wiederherstellen von Sitzungen</title>
+    <para>Nemiver kann Ihre Debugging-Sitzungen speichern, so dass Sie diese später wiederaufnehmen können. Hierbei werden Informationen wie das zu debuggende Programm, die Umgebungsvariablen. die übergebenen Befehlszeilenoptionen, die geöffneten Dateien und die Haltepunkte gespeichert. Auf diese Weise können Sie jederzeit wieder dahin zurückkehren, wo Sie Nemiver beendet haben.</para>
+    <sect2 id="nemiver-sect-saving-sessions">
+      <title>Speichern von Sitzungen</title>
+      <para>Nemiver speichert Ihre Sitzung automatisch beim Beenden, so dass Sie darüber nicht nachdenken müssen. Wenn Sie jedoch die Sitzung explizit speichern wollen, bevor Sie Nemiver schließen, wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Sitzung auf Platte speichern</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <sect2 id="nemiver-sect-resuming-sessions">
+      <title>Wiederaufnehmen gespeicherter Sitzungen</title>
+      <sect3>
+        <title>Benutzung des Arbeitsplatzes</title>
+        <para>Wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Gespeicherte Sitzung wiederherstellen</guimenuitem></menuchoice> und wählen Sie eine Sitzung in der Liste aus.</para>
+        <figure id="nemiver-sessions-dialog">
+          <title>Sitzungsdialog</title>
+          <screenshot>
+            <mediaobject><imageobject> <imagedata fileref="figures/sessions-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Zeigt den Dialog zum Wiederaufnehmen einer gespeicherten Sitzung</phrase> </textobject></mediaobject>
+          </screenshot>
+        </figure>
+      </sect3>
+      <sect3>
+        <title>In der Befehlszeile</title>
+        <para>Falls Ihnen die Sitzungskennung der auszuführenden Sitzung bekannt ist, können Sie die Debugging-Sitzung aus der Befehlszeile starten. Wenn Sie beispielsweise die Sitzung mit der Nummer 3 starten wollen, rufen Sie folgenden Befehl auf: <command>nemiver --session 3</command>.</para>
+      </sect3>
+    </sect2>
+  </sect1>
+  <!-- This should be the last section in the manual -->
+  <sect1 id="nemiver-sect-about">
+    <title>Info zu Nemiver</title>
+    <para><application>Nemiver</application> wurde von Dodji Seketeli und Jonathon Jongsma geschrieben, mit zusätzlichen Beiträgen von vielen anderen. Weitere Informationen über Nemiver finden Sie auf der <ulink url="http://www.gnome.org/projects/nemiver/" type="http">Nemiver-Projektwebseite</ulink>.</para>
+    <para>Um einen Fehler zu melden oder einen Vorschlag zu dieser Anwendung oder zu diesem Handbuch zu machen, ziehen Sie den Abschnitt »Rückmeldungen« des <ulink url="ghelp:user-guide?feedback-bugs" type="help">GNOME Desktop-Benutzerhandbuchs</ulink> zu Rate.</para>
+    <para>Dieses Programm ist freie Software. Sie können es unter den Bedingungen der <citetitle>GNU General Public License</citetitle>, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 2 der Lizenz oder (nach Ihrer Option) jeder späteren Version. Eine Kopie der <citetitle>GNU General Public License</citetitle> finden Sie in der <ulink url="ghelp:gpl" type="help">GPL</ulink>, oder in der Datei COPYING, die im Quellcode dieses Programms enthalten ist.</para>
+  </sect1>
+</article>
+<!--
+vim: ts=2 sw=2 et
+-->

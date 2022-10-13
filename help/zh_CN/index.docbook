@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "0.5.0">
+<!ENTITY manrevision "2.0">
+<!ENTITY date "February 2008">
+<!ENTITY app "Nemiver">
+<!ENTITY appcmd "nemiver">
+<!ENTITY website "http://www.gnome.org/projects/nemiver/">
+]>
+<!--
+(Do not remove this comment block.)
+Maintained by the GNOME Documentation Project
+http://developer.GNOME.org/projects/gdp
+Template version: 2.0 beta
+Template last modified Jan 30, 2002
+
+-->
+<!-- =============Document Header ============================= -->
+<?chunk-depth 2?>
+<article id="index" lang="zh-CN">
+  <!-- please do not change the id; for translations, change lang to -->
+  <!-- appropriate code -->
+  <articleinfo>
+    <title>Nemiver 手册</title>
+    <copyright lang="en">
+      <year>2008</year>
+      <holder>Jonathon Jongsma</holder>
+    </copyright>
+    <!-- translators: uncomment this:
+
+    <copyright>
+      <year>2003</year>
+      <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+    </copyright>
+
+    -->
+    <publisher role="maintainer">
+      <publishername>Nemiver 项目</publishername>
+    </publisher>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <authorgroup>
+      <author lang="en">
+        <firstname>Jonathon</firstname>
+        <surname>Jongsma</surname>
+        <affiliation>
+          <orgname>GNOME</orgname>
+        </affiliation>
+      </author>
+      <!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+      <othercredit role="translator">
+        <firstname>Latin</firstname>
+        <surname>Translator 1</surname>
+        <affiliation>
+          <orgname>Latin Translation Team</orgname>
+          <address> <email>translator@gnome.org</email> </address>
+        </affiliation>
+        <contrib>Latin translation</contrib>
+      </othercredit>
+      -->
+    </authorgroup>
+    <!-- According to GNU FDL, revision history is mandatory if you are -->
+    <!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+    <revhistory>
+      <!-- Remember to remove the &manrevision; entity from the revision entries other
+      than the current revision. -->
+      <revision lang="en">
+        <revnumber>1.0</revnumber>
+        <date>2007</date>
+        <revdescription>
+          <para lang="en">Initial version</para>
+        </revdescription>
+      </revision>
+      <revision lang="en">
+        <revnumber>2.0</revnumber>
+        <date>2008</date>
+        <revdescription>
+          <para lang="en">Updated for 0.5.0 Release</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+    <releaseinfo>本手册介绍 Nemiver 0.5.0 版本。</releaseinfo>
+    <legalnotice>
+      <title>反馈</title>
+      <para>要报告关于 <application>Nemiver</application> 应用程序或者本手册的错误或提建议，参见 <ulink url="http://www.gnome.org/projects/nemiver/" type="http">Nemiver 项目网站</ulink>。</para>
+      <!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+    <abstract role="description">
+      <para>Nemiver 是 GNOME 桌面环境的图形化调试器。</para>
+    </abstract>
+  </articleinfo>
+  <indexterm lang="en">
+    <primary>Nemiver</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>debugger</primary>
+  </indexterm>
+  <indexterm lang="en">
+    <primary>gdb</primary>
+  </indexterm>
+  <!-- ============= Document Body ============================= -->
+  <!-- ============= Introduction ============================== -->
+  <sect1 id="nemiver-sect-intro">
+    <title>概述</title>
+    <para>Nemiver 不断致力于编写一个可以和 GNOME 桌面环境良好整合的独立图形化调试器。它目前采用著名的 GNU 调试器 gdb 来调试 C / C++ 程序。</para>
+    <sect2 id="nemiver-sect-perspectives">
+      <title>视图</title>
+      <para>Nemiver 被设计成一个通用的图形化<interface>工作台</interface>与插件系统，可以提供多种不同视图。目前仅提供调试视图，但在将来，可能为使用<application>valgrind</application>的内存调试或者类似<application>oprofile</application>这样的分析工具增加视图。</para>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-getting-started">
+    <title>入门 </title>
+    <para>本节解释如何启动 Nemiver 并给出程序的一个概述。</para>
+    <sect2 id="nemiver-sect-starting">
+      <title>启动 Nemiver</title>
+      <para>您可以用以下方式启动 Nemiver：</para>
+      <variablelist>
+        <varlistentry>
+          <term><guimenu>应用程序</guimenu>菜单</term>
+          <listitem>
+            <para>选择<menuchoice><guisubmenu>编程</guisubmenu><guimenuitem>Nemiver 调试器</guimenuitem></menuchoice>。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>命令行</term>
+          <listitem>
+            <para>键入 <command>nemiver</command>，然后按<keycap>回车</keycap>。</para>
+            <tip>
+              <title>额外的命令行选项</title>
+              <para>您可以通过键入 <command>nemiver --help-all</command> 来得到可以用命令行传给 Nemiver 的选项列表。</para>
+            </tip>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="nemiver-sect-window">
+      <title>Nemiver 窗口</title>
+      <para>当您启动 Nemiver，您会看到和下图很像的窗口：</para>
+      <figure id="nemiver-window">
+        <title>Nemiver 窗口</title>
+        <screenshot>
+          <mediaobject lang="en">
+            <imageobject>
+              <imagedata fileref="figures/main-window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Shows Nemiver main window.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <para><application>Nemiver</application> 窗口包含下列元素：</para>
+      <variablelist>
+        <varlistentry>
+          <term>菜单栏</term>
+          <listitem>
+            <para>菜单栏中的菜单包含您使用 <application>Nemiver</application> 所需的所有命令。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>工具栏</term>
+          <listitem>
+            <para>工具栏包含基本的调试动作，可以用来运行或单步运行被调试的程序。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>源代码视图区域</term>
+          <listitem>
+            <para>当打开源代码文件时，这个区域将显示被调试的程序的源代码。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>状态区域</term>
+          <listitem>
+            <para>状态区域包含多个标签页，用来显示被调试的程序的信息。它们包括下列内容：</para>
+            <variablelist>
+              <varlistentry>
+                <term>调用堆栈</term>
+                <listitem>
+                  <para>显示被调试的程序的调用堆栈状态。</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>变量</term>
+                <listitem>
+                  <para>显示所有局部变量和函数参数列表，此外还有它们的值和类型。</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>目标终端</term>
+                <listitem>
+                  <para>如果被调试的程序向终端输出任何内容，它会显示在这个标签页中。</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>断点</term>
+                <listitem>
+                  <para>这个标签页显示所有设置的断点列表。您可以查看特定断点的源代码，双击列表中的项目或者点击右键并从菜单选择<menuchoice><guimenuitem>转到源代码</guimenuitem></menuchoice>。此外，可以在这个标签页删除、激活或者禁用断点。更多关于断点的信息请参考<xref linkend="nemiver-sect-breakpoints"/>。</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>寄存器</term>
+                <listitem>
+                  <para>这个标签页显示所有的 CPU 寄存器和它们的值。更多信息请参考<xref linkend="nemiver-sect-registers"/>。</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>内存</term>
+                <listitem>
+                  <para>这个标签页显示特定内存位置的当前状态视图。更多信息请参考<xref linkend="nemiver-sect-memory"/>。</para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="nemiver-sect-loading-program">
+      <title>选择要调试的程序</title>
+      <para>有多种开始调试程序的方式。Nemiver 允许您载入本地可执行文件、载入核心文件、附到运行的程序中或者连接到远程调试服务器。</para>
+      <sect3 id="nemiver-sect-starting-executable">
+        <title>调试一个可执行程序</title>
+        <sect4>
+          <title>使用工作台</title>
+          <para>要选择一个可执行程序来调试，选择<menuchoice><guimenu>文件</guimenu><guimenuitem>执行...</guimenuitem></menuchoice>，这会显示下列对话框：</para>
+          <figure id="nemiver-execute-dialog">
+            <title>执行对话框</title>
+            <screenshot>
+              <mediaobject lang="en">
+                <imageobject>
+                  <imagedata fileref="figures/execute-dialog.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>Shows dialog for selecting an executable to run</phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+          <para>在这个对话框中，您可以选择要调试的程序、任何要通过命令行传给可执行程序的参数或选项、要运行可执行程序的工作目录以及可执行程序在调试时需要设置的任何环境变量。</para>
+        </sect4>
+        <sect4>
+          <title>使用命令行</title>
+          <para>要从命令行开始一个准备调试的可执行程序，只需指名可执行程序的名字。您可以给出可执行程序的绝对路径；或者若它在系统路径中，可以仅给出前缀名。例如，如果 <filename>/usr/bin</filename> 在您的系统路径中，下面两种均有效：</para>
+          <itemizedlist>
+            <listitem>
+              <para lang="en">
+                <command>nemiver /usr/bin/progname</command>
+              </para>
+            </listitem>
+            <listitem>
+              <para lang="en">
+                <command>nemiver progname</command>
+              </para>
+            </listitem>
+          </itemizedlist>
+          <tip>
+            <title>在命令行传递选项</title>
+            <para>如果您希望向调试的程序传递命令行选项，您应将它们放入引号中，以防 Nemiver 运行它们：<command>nemiver "prognam --arg1 --arg2"</command>。</para>
+          </tip>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-attach">
+        <title>附到运行中的程序</title>
+        <sect4>
+          <title>使用工作台</title>
+          <para>选择菜单项目<menuchoice><guimenu>文件</guimenu><guimenuitem>附到运行中的程序...</guimenuitem></menuchoice>，将会显示下面的对话框：</para>
+          <figure id="nemiver-attach-dialog">
+            <title>附加对话框</title>
+            <screenshot>
+              <mediaobject lang="en">
+                <imageobject>
+                  <imagedata fileref="figures/attach-dialog.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>Shows dialog for attaching to a running program</phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+          <para>从列表着那个选择一个进程并点击<guibutton>确定</guibutton>以开始调试所选的程序。对话框中可能列出了很多进程，您可以在列表下方的文本框中输入一些文字来过滤出感兴趣的列表。</para>
+        </sect4>
+        <sect4>
+          <title>使用命令行</title>
+          <para>要从命令行附加到一个运行中的程序，使用 <option>--attach</option> 选项。<option>--attach</option> 选项接受一个 pid 或者进程名。因此，例如要调试运行中的 <command>foo</command> 进程，其 pid 为 1121，您可以键入 <command>nemiver --attach foo</command> 或者 <command>nemiver --attach 1121</command>。</para>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-core-file">
+        <title>载入核心文件</title>
+        <sect4>
+          <title>使用工作台</title>
+          <para>选择菜单项目<menuchoice><guimenu>文件</guimenu><guimenuitem>载入核心文件...</guimenuitem></menuchoice>来调出下面的对话框，这将让您加载一个核心文件：</para>
+          <figure id="nemiver-load-core-dialog">
+            <title>载入核心文件对话框</title>
+            <screenshot>
+              <mediaobject lang="en">
+                <imageobject>
+                  <imagedata fileref="figures/load-core-dialog.png" format="PNG"/>
+                </imageobject>
+                <textobject>
+                  <phrase>Shows dialog for loading a core file</phrase>
+                </textobject>
+              </mediaobject>
+            </screenshot>
+          </figure>
+        </sect4>
+        <sect4>
+          <title>使用命令行</title>
+          <para>核心文件不能从命令行载入。</para>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-remote">
+        <title>远程调试</title>
+        <para>Nemiver 允许您连接到一个远程调试服务器。</para>
+        <sect4>
+          <title>使用工作台</title>
+          <para>要连接到一个远程调试服务器，选择<menuchoice><guimenu>文件</guimenu><guimenuitem>连接到远程目标...</guimenuitem></menuchoice></para>
+          <screenshot>
+            <mediaobject lang="en">
+              <imageobject>
+                <imagedata fileref="figures/connect-remote-dialog.png" format="PNG"/>
+              </imageobject>
+              <textobject>
+                <phrase>Remote Debugging Dialog</phrase>
+              </textobject>
+            </mediaobject>
+          </screenshot>
+          <para>选择要载入的可执行程序以及任何共享库的位置，然后填写关于连接到远程服务器的详细信息。</para>
+        </sect4>
+        <sect4>
+          <title>使用命令行</title>
+          <para>Nemiver 不提供用命令行连接到远程服务器的方法</para>
+        </sect4>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-using">
+    <title>使用 Nemiver</title>
+    <para>本节介绍如何使用 Nemiver 来调试您的程序。</para>
+    <sect2 id="nemiver-sect-basic-debugging">
+      <title>基本的调试动作</title>
+      <para>基本的调试动作可以在主工具栏、<guimenu>调试</guimenu>菜单和键盘快捷键找到。最常用的动作如下：</para>
+      <variablelist>
+        <varlistentry>
+          <term>继续</term>
+          <listitem>
+            <para>启动程序。程序会一直运行直到遇到断点或者程序结束，除非被用户通过点击<action>停止</action>来手动中断。这个动作可以通过 <keycap>F5</keycap> 键激活。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>下一步</term>
+          <listitem>
+            <para>执行下一条语句，并当到达文件的下一行时停止。一些调试器会称这个动作为“单步执行”。这个动作可以通过 <keycap>F6</keycap> 键激活。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>进入</term>
+          <listitem>
+            <para>执行下一条语句，如果可能则进入到函数中。一些调试器会称这个动作为“逐步跳入”。这个动作可以通过 <keycap>F7</keycap> 键激活。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>跳出</term>
+          <listitem>
+            <para>结束执行当前函数，并在返回到调用函数时停止。这个动作从可以通过 <keycombo><keycap>Shift</keycap><keycap>F7</keycap></keycombo> 键激活。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>重新启动</term>
+          <listitem>
+            <para>重新载入当前可执行程序并从开头开始执行。这个动作可以通过 <keycombo><keycap>Shift</keycap><keycap>F5</keycap></keycombo> 键激活。</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>停止</term>
+          <listitem>
+            <para>手动中断程序的执行。这个动作仅在调试器运行可执行程序时能够使用(例如，在用户点击<action>继续</action>之后)。这个动作可以通过 <keycap>F9</keycap> 键激活。</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>默认情况下，Nemiver 在载入可执行程序后会在 <function>main()</function> 创建断点。因此，当执行到 <function>main()</function>，它会停下来并等待输入。然后您可以逐步运行程序、检查变量(参考<xref linkend="nemiver-sect-inspecting-variables"/>)或者设置额外的断点(参考<xref linkend="nemiver-sect-breakpoints"/>)。</para>
+    </sect2>
+    <sect2 id="nemiver-sect-inspecting-variables">
+      <title>检查变量</title>
+      <para>Nemiver 在<interface>状态区域</interface>的<interface>变量</interface>标签页显示所有局部变量的一个列表。如果您想检查一个不同的变量(甚或任意一个表达式)，您可以使用<interface>变量检查器</interface>。要调出<interface>变量检查器</interface>，选择<menuchoice><guimenu>调试</guimenu><guimenuitem>检查一个变量</guimenuitem></menuchoice>。当变量检查器出现时，您会看到类似下图的窗口：</para>
+      <screenshot>
+        <mediaobject lang="en">
+          <imageobject>
+            <imagedata fileref="figures/variable-inspector.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Variable Inspector Dialog</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <para>您可以在输入框输入任何变量名或一个简单的表达式(例如 <literal>pFoo-&gt;bar</literal>)。如果变量是有效的并在作用域内，它会显示出表达式的详细信息。</para>
+      <para>或者，如果您在<interface>源代码编辑器</interface>中选择一个变量的名字，然后运行<interface>变量检查器</interface>，它会尝试显示所选变量名的信息。</para>
+      <tip>
+        <title>键盘快捷键</title>
+        <para>您也可以通过按 <keycap>F12</keycap> 来启动<interface>变量检查器</interface>。</para>
+      </tip>
+      <para>Nemiver 会允许您在一个单独的对话框中显示一个应用程序中所有全局变量的列表。要显示<interface>全局变量</interface>对话框，选择<menuchoice><guimenu>调试</guimenu><guimenuitem>显示全局变量</guimenuitem></menuchoice>或者按 <keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo>。</para>
+      <screenshot>
+        <mediaobject lang="en">
+          <imageobject>
+            <imagedata fileref="figures/global-variables-dialog.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Global Variables Dialog</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+      <warning>
+        <para>对于一些程序(特别是 C++ 程序)，列出所有全局变量可能会花费很长时间。</para>
+      </warning>
+    </sect2>
+    <sect2 id="nemiver-sect-breakpoints">
+      <title>设置断点</title>
+      <para>在 Nemiver 中有多种不同方法来设置断点。当您首次开始调试一个新的可执行程序，Nemiver 自动在 <function>main()</function> 设置断点。如果您想设置额外的断点，可以执行下列操作之一：</para>
+      <itemizedlist>
+        <listitem>
+          <para>点击您要设置断点的行的左边界</para>
+        </listitem>
+        <listitem>
+          <para>将光标放到您要设置断点的行，通过选择<menuchoice><guimenu>调试</guimenu><guimenuitem>在光标处设置断点</guimenuitem></menuchoice>，或者按 <keycap>F8</keycap>。</para>
+        </listitem>
+        <listitem>
+          <para>通过选择<menuchoice><guimenu>调试</guimenu><guimenuitem>设置断点...</guimenuitem></menuchoice>或者按 <keycombo><keycap>Ctrl</keycap><keycap>B</keycap></keycombo> 以在特定函数名或者位置设置断点。这会调出类似下面的对话框：</para>
+          <screenshot>
+            <mediaobject lang="en">
+              <imageobject>
+                <imagedata fileref="figures/set-breakpoint-dialog.png" format="PNG"/>
+              </imageobject>
+              <textobject>
+                <phrase>Set Breakpoint Dialog</phrase>
+              </textobject>
+            </mediaobject>
+          </screenshot>
+          <para>您可以在文件的特定位置或通过函数名指定断点。如果多个函数有相同的名字，Nemiver 会显示所有匹配的函数的列表并询问您挑出想要的那个。</para>
+        </listitem>
+      </itemizedlist>
+      <sect3>
+        <title>禁用的断点</title>
+        <para>断点可以激活或者禁用。调试器在遇到激活的断点时会停止执行，但不会被任何处于禁用状态的断点影响。这允许您临时移除一个断点而不用实际删除它。</para>
+        <para>要禁用或激活一个断点，在<interface>状态区域</interface>的<interface>断点</interface>标签页中，点击您要激活或禁用的断点标号旁的选框。或者，您可以按 <keycombo><keycap>Shift</keycap><keycap>F8</keycap></keycombo> 来激活或禁用当前光标所在行的断点。</para>
+        <para>下面的图显示源代码编辑器中激活的断点和禁用的断点之间的区别。</para>
+        <screenshot>
+          <mediaobject lang="en">
+            <imageobject>
+              <imagedata fileref="figures/enabled-breakpoint.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Illustration of an enabled breakpoint</phrase>
+            </textobject>
+            <caption><para lang="en">Enabled Breakpoint</para></caption>
+          </mediaobject>
+        </screenshot>
+        <screenshot>
+          <mediaobject lang="en">
+            <imageobject>
+              <imagedata fileref="figures/disabled-breakpoint.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Illustration of a disabled breakpoint</phrase>
+            </textobject>
+            <caption><para lang="en">Disabled Breakpoint</para></caption>
+          </mediaobject>
+        </screenshot>
+      </sect3>
+      <sect3>
+        <title>打开源代码文件</title>
+        <para>有时您不能准确知道要设置断点的函数名或者行数，因此必须打开源文件来找出它。您可以从文件系统打开任意文件，但 Nemiver 也提供一个用来构建可执行程序的源文件列表并允许您从中选择。当您选择<menuchoice><guimenu>文件</guimenu><guimenuitem>打开源代码文件...</guimenuitem></menuchoice>，将显示下面的窗口：</para>
+        <screenshot>
+          <mediaobject lang="en">
+            <imageobject>
+              <imagedata fileref="figures/open-files-target.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Shows dialog for opening source files</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>要从文件系统选择任意文件，选择<guilabel>从文件系统中选择</guilabel>的选项。要从产生可执行程序的文件列表中选择，选<guilabel>从目标可执行程序选择</guilabel>。</para>
+        <warning>
+          <title>确定动态加载的模块的源文件 </title>
+          <para>如果目标可执行程序来运行时载入模块(例如，使用 <function>dlopen()</function>)，Nemiver 无法确定哪些文件被用来构建这些模块，直到它们实际载入。</para>
+        </warning>
+      </sect3>
+    </sect2>
+    <sect2 id="nemiver-sect-advanced">
+      <title>高级调试</title>
+      <sect3 id="nemiver-sect-registers">
+        <title>寄存器</title>
+        <para>寄存器编辑部件位于<interface>状态区域</interface>的<interface>寄存器</interface>标签页。或者，您可以按 <keycombo><keycap>Alt</keycap><keycap>F5</keycap></keycombo> 来直接跳到正确的标签页。</para>
+        <screenshot>
+          <mediaobject lang="en">
+            <imageobject>
+              <imagedata fileref="figures/registers-view.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>The Register Editing Widget</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>这个部件显示所有 CPU 寄存器的当前值。您可以通过点击<interface>值</interface>这一列并输入新值来编辑寄存器的值。如果从调试器最后一次停止以来寄存器的值有改变，它会以红色高亮显示。</para>
+      </sect3>
+      <sect3 id="nemiver-sect-memory">
+        <title>内存</title>
+        <para>内存部件允许您直接查看内存的一部分。这使您能对程序运行时所发生的情况得到一个更底层的视图。</para>
+        <screenshot>
+          <mediaobject lang="en">
+            <imageobject>
+              <imagedata fileref="figures/memory-view.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>The Memory Editing Widget</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+        <para>要在内存视图部件中显示一个内存段，在<interface>地址</interface>栏中输入一个内存地址。如果地址是对于正调试的程序是有效的，内存视图将显示从指定地址开始的内存值。通过在<interface>分组依据</interface>下拉菜单中选择选项，内存值可以以字节格式、字格式(2 个字节)，或者长字格式(4 字节)显示。内存值在您单步运行程序时会自动更新。</para>
+        <para>除了查看内存值，您也可以用内存部件来修改内存值。你可以编辑十六进制的字节表示(内存部件的左手部分)，或者 ASCII 表示(内存部件的右手部分)。所有变化都会立刻应用。</para>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-sessions">
+    <title>会话保存和恢复</title>
+    <para>Nemiver 可以保存您的调试会话，使您可以在以后恢复它们。这包括保存例如调试了哪个可执行程序、设置了什么环境变量、向可执行程序传递了哪些命令行选项、打开了哪些文件以及设置了哪些断点等信息。这样，您能尽快回到最后一次离开时位置。</para>
+    <sect2 id="nemiver-sect-saving-sessions">
+      <title>保存会话</title>
+      <para>Nemiver 在退出时会自动保存您的会话，所以您甚至不必为此担心。然而，如果您在关闭 Nemiver 前明确保存会话，可以选择<menuchoice><guimenu>文件</guimenu><guimenuitem>将会话保存到磁盘</guimenuitem></menuchoice>。</para>
+    </sect2>
+    <sect2 id="nemiver-sect-resuming-sessions">
+      <title>恢复已保存的会话</title>
+      <sect3>
+        <title>使用工作台</title>
+        <para>选择<menuchoice><guimenu>文件</guimenu><guimenuitem>恢复保存的会话...</guimenuitem></menuchoice>并从列表中选择一个会话。</para>
+        <figure id="nemiver-sessions-dialog">
+          <title>会话对话框</title>
+          <screenshot>
+            <mediaobject lang="en">
+              <imageobject>
+                <imagedata fileref="figures/sessions-dialog.png" format="PNG"/>
+              </imageobject>
+              <textobject>
+                <phrase>Shows dialog for resuming a saved session</phrase>
+              </textobject>
+            </mediaobject>
+          </screenshot>
+        </figure>
+      </sect3>
+      <sect3>
+        <title>从命令行</title>
+        <para>如果您知道想要运行的会话的 ID，您可以从命令行启动那个调试会话。例如，如果您想要运行编号为 3 的会话，可以从下面的命令：<command>nemiver --session 3</command>。</para>
+      </sect3>
+    </sect2>
+  </sect1>
+  <!-- This should be the last section in the manual -->
+  <sect1 id="nemiver-sect-about">
+    <title>关于 Nemiver</title>
+    <para><application>Nemiver</application> 由 Dodji Seketeli 和  Jonathon Jongsma 编写，还有很多其他人的贡献。要获取更多关于 Nemiver 的信息，请访问 <ulink url="http://www.gnome.org/projects/nemiver/" type="http">Nemiver 项目网站</ulink>。</para>
+    <para>要报告关于本应用程序或者本手册的错误或提建议，参见 <ulink url="ghelp:user-guide?feedback-bugs" type="help">GNOME 用户指南</ulink>的反馈部分。</para>
+    <para>这个程序在由自由软件基金会发布的 GNU 通用公共许可证协议下分发；可以是协议的第 2 版，或任何更高版本(自行选择)。协议副本可以在这个<ulink url="ghelp:gpl" type="help">链接</ulink>中找到，或在程序源代码包的 COPYING 文件中找到。</para>
+  </sect1>
+</article>
+<!--
+vim: ts=2 sw=2 et
+-->

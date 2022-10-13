@@ -1,0 +1,15 @@
+<plugindescriptor autoactivate="yes" candeactivate="no">
+    <name>dbgperspective</name>
+    <version>0.0.1</version>
+    <entrypoint>
+        <modulename>dbgperspective</modulename>
+        <interfacename>IDBGPerspective</interfacename>
+    </entrypoint>
+    <dependencies>
+        <plugin>
+            <name>dbgperspective</name>
+            <version>0.0.1</version>
+        </plugin>
+    </dependencies>
+</plugindescriptor>
+

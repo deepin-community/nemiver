@@ -1,0 +1,11 @@
+<moduleconfig>
+    <module>
+        <name>gdbengine</name>
+        <!-- Remember, Interface name is IDebugger -->
+        <libraryname>gdbmod</libraryname>
+    </module>
+    <customsearchpaths>
+        <path>@NEMIVER_LIBDIR@/nemiver/modules</path>
+    </customsearchpaths>
+</moduleconfig>
+

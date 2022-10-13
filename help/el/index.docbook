@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "0.5.0">
+<!ENTITY manrevision "2.0">
+<!ENTITY date "February 2008">
+<!ENTITY app "Nemiver">
+<!ENTITY appcmd "nemiver">
+<!ENTITY website "http://www.gnome.org/projects/nemiver/">
+]>
+<!--
+(Do not remove this comment block.)
+Maintained by the GNOME Documentation Project
+http://developer.GNOME.org/projects/gdp
+Template version: 2.0 beta
+Template last modified Jan 30, 2002
+
+-->
+<!-- =============Document Header ============================= -->
+<?chunk-depth 2?>
+<article id="index" lang="el">
+  <!-- please do not change the id; for translations, change lang to -->
+  <!-- appropriate code -->
+  <articleinfo>
+    <title>Εγχειρίδιο Nemiver</title>
+    <copyright><year>2008</year> <holder>Jonathon Jongsma</holder></copyright>
+    <!-- translators: uncomment this:
+
+    <copyright>
+      <year>2003</year>
+      <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+    </copyright>
+
+    -->
+    <publisher role="maintainer">
+      <publishername>Έργο Nemiver</publishername>
+    </publisher>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <authorgroup>
+      <author><firstname>Jonathon</firstname> <surname>Jongsma</surname> <affiliation> <orgname>GNOME</orgname> </affiliation></author>
+      <!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+      <othercredit role="translator">
+        <firstname>Latin</firstname>
+        <surname>Translator 1</surname>
+        <affiliation>
+          <orgname>Latin Translation Team</orgname>
+          <address> <email>translator@gnome.org</email> </address>
+        </affiliation>
+        <contrib>Latin translation</contrib>
+      </othercredit>
+      -->
+    </authorgroup>
+    <!-- According to GNU FDL, revision history is mandatory if you are -->
+    <!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+    <revhistory>
+      <!-- Remember to remove the &manrevision; entity from the revision entries other
+      than the current revision. -->
+      <revision><revnumber>1.0</revnumber> <date>2007</date> <revdescription>
+          <para>Αρχική έκδοση</para>
+        </revdescription></revision>
+      <revision><revnumber>2.0</revnumber> <date>2008</date> <revdescription>
+          <para>Ενημερωμένη για την έκδοση 0.5.0</para>
+        </revdescription></revision>
+    </revhistory>
+    <releaseinfo>Αυτό το εγχειρίδιο περιγράφει την έκδοση 0.5.0 του Nemiver.</releaseinfo>
+    <legalnotice>
+      <title>Ανατροφοδότηση</title>
+      <para>Για αναφορά σφάλματος ή για προτάσεις όσον αφορά την εφαρμογή <application>Nemiver</application> ή αυτό το εγχειρίδιο, δείτε την <ulink url="http://www.gnome.org/projects/nemiver/" type="http">ιστοσελίδα έργου Nemiver</ulink>.</para>
+      <!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+    <abstract role="description">
+      <para>Nemiver είναι ένας γραφικός αποσφαλματωτής για το περιβάλλον επιφάνειας εργασίας GNOME.</para>
+    </abstract>
+  
+    <othercredit class="translator">
+      <personname>
+        <firstname>Dimitris Spingos (Δημήτρης Σπίγγος)</firstname>
+      </personname>
+      <email>dmtrs32@gmail.com</email>
+    </othercredit>
+    <copyright>
+      
+        <year>2012</year>
+      
+      <holder>Dimitris Spingos (Δημήτρης Σπίγγος)</holder>
+    </copyright>
+  </articleinfo>
+  <indexterm><primary>Nemiver</primary></indexterm>
+  <indexterm><primary>αποσφαλματωτής</primary></indexterm>
+  <indexterm><primary>gdb</primary></indexterm>
+  <!-- ============= Document Body ============================= -->
+  <!-- ============= Introduction ============================== -->
+  <sect1 id="nemiver-sect-intro">
+    <title>Επισκόπηση</title>
+    <para>Nemiver είναι μια συνεχιζόμενη προσπάθεια για συγγραφή ενός αυτόνομου γραφικού αποσφαλματωτή που ενσωματώνεται καλά στο περιβάλλον επιφάνειας εργασίας GNOME. Χαρακτηρίζει προς το παρόν μια οπισθοφυλακή που χρησιμοποιεί τον γνωστό αποσφαλματωτή gdb του GNU για αποσφαλμάτωση προγραμμάτων C / C++.</para>
+    <sect2 id="nemiver-sect-perspectives">
+      <title>Προοπτικές</title>
+      <para>Το Nemiver σχεδιάστηκε ως ένας γενικός γραφικός <interface>πάγκος εργασίας</interface> και ένα πρόσθετο συστήματος που μπορεί να προσφέρει πολλές διαφορετικές προοπτικές. Προς το παρόν η μόνη παρεχόμενη προοπτική είναι η προοπτική αποσφαλμάτωσης, αλλά στο μέλλον, ίσως υπάρξουν πρόσθετες προοπτικές για αποσφαλμάτωση μνήμης με την <application>valgrind</application>, ή για εργαλεία κατατομής όπως <application>oprofile</application>.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-getting-started">
+    <title>Ξεκίνημα</title>
+    <para>Αυτή η ενότητα εξηγεί την έναρξη του Nemiver και δίνει μια βασική επισκόπηση της εφαρμογής.</para>
+    <sect2 id="nemiver-sect-starting">
+      <title>Ξεκινώντας το Nemiver</title>
+      <para>Μπορείτε να ξεκινήσετε το Nemiver με τους παρακάτω τρόπους:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Μενού <guimenu>εφαρμογές</guimenu></term>
+          <listitem>
+            <para>Επιλέξτε <menuchoice><guisubmenu>προγραμματισμός</guisubmenu><guimenuitem>αποσφαλματωτής Nemiver</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Γραμμή εντολών</term>
+          <listitem>
+            <para>Πληκτρολογήστε <command>nemiver</command>, έπειτα πατήστε <keycap>επιστροφή</keycap>.</para>
+            <tip>
+              <title>Πρόσθετες επιλογές γραμμής εντολών</title>
+              <para>Μπορείτε να βρείτε μια λίστα επιλογών που μπορεί να περάσει στο Nemiver στη γραμμή εντολών πληκτρολογώντας <command>nemiver --help-all</command>.</para>
+            </tip>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="nemiver-sect-window">
+      <title>Το παράθυρο Nemiver</title>
+      <para>Όταν ξεκινάτε το Nemiver, θα δείτε ένα παράθυρο που μοιάζει πάρα πολύ με το παρακάτω:</para>
+      <figure id="nemiver-window">
+        <title>Το παράθυρο Nemiver</title>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/main-window.png" format="PNG"/> </imageobject> <textobject> <phrase>Εμφανίζει το κύριο παράθυρο Nemiver.</phrase> </textobject></mediaobject>
+        </screenshot>
+      </figure>
+      <para>Το παράθυρο <application>Nemiver</application> περιέχει τα επόμενα στοιχεία:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Γραμμή μενού</term>
+          <listitem>
+            <para>Τα μενού στη γραμμή μενού περιέχουν όλες τις απαραίτητες εντολές για χρήση στο <application>Nemiver</application>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Εργαλειοθήκη</term>
+          <listitem>
+            <para>Η εργαλειοθήκη περιέχει τις βασικές ενέργειες αποσφαλμάτωσης που μπορούν να χρησιμοποιηθούν για εκτέλεση ή περιδιάβαση του αποσφαλματούμενου προγράμματος.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Σημειωματάριο προβολής πηγής</term>
+          <listitem>
+            <para>Όταν τα αρχεία πηγής είναι ανοικτά, αυτή η περιοχή θα εμφανίσει τα αρχεία πηγής του αποσφαλματούμενου προγράμματος.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Κατάσταση σημειωματαρίου</term>
+          <listitem>
+            <para>Η κατάσταση σημειωματάριου περιέχει πολλές καρτέλες για εμφάνιση πληροφοριών για το αποσφαλματούμενο πρόγραμμα. Αυτά περιλαμβάνουν τα παρακάτω:</para>
+            <variablelist>
+              <varlistentry>
+                <term>Κλήση στοίβας</term>
+                <listitem>
+                  <para>Εμφανίζει την τρέχουσα κατάσταση της στοίβας κλήσης του αποσφαλματούμενου προγράμματος.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Μεταβλητές</term>
+                <listitem>
+                  <para>Εμφανίζει μια λίστα όλων των τοπικών μεταβλητών και ορισμάτων συνάρτησης, πέρα από τις τιμές τους και τους τύπους.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Τερματικός στόχου</term>
+                <listitem>
+                  <para>Εάν το αποσφαλματούμενο πρόγραμμα εμφανίζει οποιαδήποτε έξοδο στο τερματικό, θα εμφανιστεί σε αυτήν την καρτέλα.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Σημεία διακοπής</term>
+                <listitem>
+                  <para>Αυτή η καρτέλα εμφανίζει μια λίστα όλων των σημείων διακοπής που έχουν οριστεί. Μπορείτε να δείτε τον πηγαίο κώδικα του συγκεκριμένου σημείου διακοπής με διπλό κλικ ενός στοιχείου στη λίστα ή με δεξί κλικ και επιλογή <menuchoice><guimenuitem>μετάβαση στην πηγή</guimenuitem></menuchoice> από το μενού. Επιπλέον, τα σημεία διακοπής μπορούν να διαγραφούν, να ενεργοποιηθούν ή να απενεργοποιηθούν σε αυτήν την καρτέλα. Για περισσότερες πληροφορίες σχετικά με τα σημεία διακοπής, δείτε <xref linkend="nemiver-sect-breakpoints"/>.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Καταχωριστές</term>
+                <listitem>
+                  <para>Αυτή η καρτέλα εμφανίζει όλους τους καταχωριστές CPU και τις τιμές τους. Για περισσότερες πληροφορίες, δείτε <xref linkend="nemiver-sect-registers"/>.</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term>Μνήμη</term>
+                <listitem>
+                  <para>Αυτή η καρτέλα εμφανίζει μια προβολή της τρέχουσας κατάστασης μιας συγκεκριμένης θέσης μνήμης. Για περισσότερες πληροφορίες, δείτε <xref linkend="nemiver-sect-memory"/>.</para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="nemiver-sect-loading-program">
+      <title>Επιλογή προγράμματος για αποσφαλμάτωση</title>
+      <para>Υπάρχουν πολλοί τρόποι για έναρξη αποσφαλμάτωσης ενός προγράμματος. Το Nemiver επιτρέπει τη φόρτωση τοπικού εκτελέσιμου αρχείου, την φόρτωση ενός αρχείου πυρήνα, προσάρτηση σε μια εκτελούμενη διεργασία, ή σύνδεση με έναν απομακρυσμένο εξυπηρετητή αποσφαλμάτωσης.</para>
+      <sect3 id="nemiver-sect-starting-executable">
+        <title>Αποσφαλμάτωση εκτελέσιμου προγράμματος</title>
+        <sect4>
+          <title>Χρήση του πάγκου εργασίας</title>
+          <para>Για επιλογή ενός εκτελέσιμου προγράμματος για αποσφαλμάτωση, επιλέξτε <menuchoice><guimenu>αρχείο</guimenu><guimenuitem>εκτέλεση... </guimenuitem></menuchoice>, που θα εμφανίσει τον παρακάτω διάλογο:</para>
+          <figure id="nemiver-execute-dialog">
+            <title>Εκτέλεση διαλόγου</title>
+            <screenshot>
+              <mediaobject><imageobject> <imagedata fileref="figures/execute-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Εμφανίζει διάλογο επιλογής για ένα εκτελέσιμο</phrase> </textobject></mediaobject>
+            </screenshot>
+          </figure>
+          <para>Σε αυτόν τον διάλογο, μπορείτε νε επιλέξετε το αποσφαλματούμενο πρόγραμμα, οποιαδήποτε ορίσματα ή επιλογές που θα περάσουν στο εκτελέσιμο στη γραμμή εντολών, τον κατάλογο εργασίας για τρέξιμο του εκτελέσιμου και οποιεσδήποτε μεταβλητές περιβάλλοντος που πρέπει να οριστούν όταν το εκτελέσιμο αποσφαλματώνεται.</para>
+        </sect4>
+        <sect4>
+          <title>Χρήση της γραμμής εντολών</title>
+          <para>Για έναρξη ενός εκτελέσιμου προγράμματος για αποσφαλμάτωση από τη γραμμή εντολών, ορίστε απλά το όνομα του εκτελέσιμου. Μπορείτε είτε να δώσετε μια απόλυτη διαδρομή στο εκτελέσιμο, ή εάν είναι στη διαδρομή, μπορείτε απλά να δώσετε το όνομα βάσης του εκτελέσιμου. Για παράδειγμα, εάν το <filename>/usr/bin</filename> είναι στη διαδρομή σας, και τα δυο από τα παρακάτω είναι έγκυρα:</para>
+          <itemizedlist>
+            <listitem>
+              <para><command>nemiver /usr/bin/progname</command></para>
+            </listitem>
+            <listitem>
+              <para><command>όνομα προγράμματος nemiver</command></para>
+            </listitem>
+          </itemizedlist>
+          <tip>
+            <title>Πέρασμα επιλογών στη γραμμή εντολών</title>
+            <para>Εάν θέλετε να περάσετε επιλογές στη γραμμή εντολών στο πρόγραμμα που αποσφαλματώνετε, πρέπει να τις περικλείσετε σε εισαγωγικά για να αποφύγετε την επεξεργασία τους από το Nemiver: <command>nemiver "prognam --arg1 --arg2"</command>.</para>
+          </tip>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-attach">
+        <title>Προσκόλληση σε εκτελούμενο πρόγραμμα</title>
+        <sect4>
+          <title>Χρήση του πάγκου εργασίας</title>
+          <para>Επιλογή του στοιχείου μενού <menuchoice><guimenu>αρχείο</guimenu><guimenuitem>προσάρτηση στο εκτελούμενο πρόγραμμα... </guimenuitem></menuchoice>, που θα εμφανίσει τον παρακάτω διάλογο:</para>
+          <figure id="nemiver-attach-dialog">
+            <title>Προσάρτηση διαλόγου</title>
+            <screenshot>
+              <mediaobject><imageobject> <imagedata fileref="figures/attach-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Εμφανίζειδιάλογο προσάρτησης σε εκτελούμενο πρόγραμμα</phrase> </textobject></mediaobject>
+            </screenshot>
+          </figure>
+          <para>Επιλέξτε μια διεργασία από τη λίστα και κλικ στο <guibutton>εντάξει</guibutton> για έναρξη αποσφαλμάτωσης του επιλεγμένου προγράμματος. Ίσως υπάρχουν πολλές διεργασίες που εμφανίζονται στον διάλογο, έτσι μπορείτε να φιλτράρετε την λίστα σε εκείνες μόνο που σας ενδιαφέρουν πληκτρολογώντας κάποιο κείμενο στην καταχώριση κειμένου που τοποθετείται ακριβώς κάτω από τη λίστα.</para>
+        </sect4>
+        <sect4>
+          <title>Χρήση της γραμμής εντολών</title>
+          <para>Για την προσάρτηση εκτελούμενου προγράμματος από τη γραμμή εντολών, χρησιμοποιήστε την επιλογή <option>--attach</option>. Η επιλογή <option>--attach</option> δέχεται είτε ένα pid ή όνομα διεργασίας. Έτσι, για παράδειγμα, για αποσφαλμάτωση της εκτελούμενης διεργασίας <command>foo</command> που έχει ένα pid 1121, θα μπορούσατε είτε να πληκτρολογήσετε <command>nemiver --attach foo</command> ή <command>nemiver --attach 1121</command>.</para>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-core-file">
+        <title>Φόρτωση ενός αρχείου πυρήνα</title>
+        <sect4>
+          <title>Χρήση του πάγκου εργασίας</title>
+          <para>Επιλέξτε το στοιχείο μενού <menuchoice><guimenu>αρχείο</guimenu><guimenuitem>φόρτωση αρχείου πυρήνα... </guimenuitem></menuchoice> για να παρουσιάσει τον παρακάτω διάλογο, που επιτρέπει τη φόρτωση ενός αρχείου πυρήνα:</para>
+          <figure id="nemiver-load-core-dialog">
+            <title>Φόρτωση διαλόγου αρχείου πυρήνα</title>
+            <screenshot>
+              <mediaobject><imageobject> <imagedata fileref="figures/load-core-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Εμφανίζει διάλογο φόρτωσης αρχείου πυρήνα</phrase> </textobject></mediaobject>
+            </screenshot>
+          </figure>
+        </sect4>
+        <sect4>
+          <title>Χρήση της γραμμής εντολών</title>
+          <para>Τα αρχεία πυρήνα δεν μπορούν να φορτωθούν από τη γραμμή εντολών.</para>
+        </sect4>
+      </sect3>
+      <sect3 id="nemiver-sect-remote">
+        <title>Απομακρυσμένη αποσφαλμάτωση</title>
+        <para>Το Nemiver επιτρέπει τη σύνδεση με έναν απομακρυσμένο εξυπηρετητή αποσφαλμάτωσης.</para>
+        <sect4>
+          <title>Χρήση του πάγκου εργασίας</title>
+          <para>Για σύνδεση με έναν απομακρυσμένο εξυπηρετητή αποσφαλμάτωσης, επιλέξτε <menuchoice><guimenu>αρχείο</guimenu><guimenuitem>σύνδεση με απομακρυσμένο στόχο...</guimenuitem></menuchoice></para>
+          <screenshot>
+            <mediaobject><imageobject> <imagedata fileref="figures/connect-remote-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>απομακρυσμένος διάλογος αποσφαλμάτωσης</phrase> </textobject></mediaobject>
+          </screenshot>
+          <para>Επιλογή του εκτελέσιμου για φόρτωση και της τοποθεσίας όπου οποιεσδήποτε κοινόχρηστες βιβλιοθήκες βρίσκονται και μετά συμπλήρωση των λεπτομερειών για τη σύνδεση με απομακρυσμένο εξυπηρετητή.</para>
+        </sect4>
+        <sect4>
+          <title>Χρήση της γραμμής εντολών</title>
+          <para>Το Nemiver δεν παρέχει τρόπο σύνδεσης με απομακρυσμένο εξυπηρετητή χρησιμοποιώντας τη γραμμή εντολών</para>
+        </sect4>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-using">
+    <title>Χρήση Nemiver</title>
+    <para>Αυτή η ενότητα περιγράφει τη χρήση του Nemiver στην αποσφαλμάτωση της εφαρμογή σας.</para>
+    <sect2 id="nemiver-sect-basic-debugging">
+      <title>Βασικές ενέργειες αποσφαλμάτωσης</title>
+      <para>Οι βασικές ενέργειες αποσφαλμάτωσης είναι διαθέσιμες στην κύρια εργαλειοθήκη, στο μενού <guimenu>αποσφαλμάτωση</guimenu> και ως συντομεύσεις πληκτρολογίου. Οι πιο κοινές ενέργειες εμφανίζονται παρακάτω:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Συνέχεια</term>
+          <listitem>
+            <para>Ξεκινά το πρόγραμμα. Το πρόγραμμα θα εκτελείται μέχρι να συναντήσει ένα σημείο διακοπής ή μέχρι να τελειώσει, εκτός και διακοπεί χειροκίνητα από τον χρήστη με κλικ στο <action>διακοπή</action>. Αυτή η ενέργεια μπορεί να ενεργοποιηθεί από το πληκτρολόγιο με <keycap>F5</keycap>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Επόμενο</term>
+          <listitem>
+            <para>Εκτελεί την επόμενη δήλωση και σταματά όταν φτάσει την επόμενη γραμμή σε αυτό το αρχείο. Μερικοί αποσφαλματωτές μπορεί να αποκαλούν αυτήν την ενέργεια "Step Over (υπερπήδηση)". Αυτή η ενέργεια μπορεί να ενεργοποιηθεί από το πληκτρολόγιο με <keycap>F6</keycap>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Βήμα</term>
+          <listitem>
+            <para>Εκτελεί την επόμενη δήλωση και μπαίνει στη συνάρτηση εάν είναι δυνατό. Μερικοί αποσφαλματωτές μπορεί να αποκαλούν αυτήν την ενέργεια "Step In (είσοδο)". Αυτή η ενέργεια μπορεί να ενεργοποιηθεί από το πληκτρολόγιο με <keycap>F7</keycap>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Έξοδος</term>
+          <listitem>
+            <para>Τελειώνει την εκτέλεση της τρέχουσας συνάρτησης και σταματά όταν επιστρέφει στην καλούσα συνάρτηση. Αυτή η ενέργεια μπορεί να ενεργοποιηθεί από το πληκτρολόγιο με <keycombo><keycap>Shift</keycap><keycap>F7</keycap></keycombo>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Επανεκκίνηση</term>
+          <listitem>
+            <para>Ξαναφορτώνει το τρέχον εκτελέσιμο και ξεκινά την εκτέλεση από την έναρξη. Αυτή η ενέργεια μπορεί να ενεργοποιηθεί από το πληκτρολόγιο με <keycombo><keycap>Shift</keycap><keycap>F5</keycap></keycombo>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Διακοπή</term>
+          <listitem>
+            <para>Χειροκίνητη διακοπή εκτέλεσης του προγράμματος. Αυτή η ενέργεια είναι διαθέσιμη μόνο όταν ο αποσφαλματωτής τρέχει το εκτελέσιμο (π.χ. μετά από κλικ του χρήστη στο <action>συνέχεια</action>). Αυτή η ενέργεια μπορεί να ενεργοποιηθεί από το πληκτρολόγιο με <keycap>F9</keycap>.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Από προεπιλογή, μετά τη φόρτωση ενός εκτελέσιμου, το Nemiver δημιουργεί ένα σημείο διακοπής στη <function>main()</function>, έτσι όταν η εκτέλεση φτάσει στη <function>main()</function>, θα σταματήσει και θα περιμένει για είσοδο. Μπορείτε έπειτα να περιδιαβείτε το πρόγραμμα, να εξετάσετε τις μεταβλητές (δείτε <xref linkend="nemiver-sect-inspecting-variables"/>), ή να ορίσετε πρόσθετα σημεία διακοπής (δείτε <xref linkend="nemiver-sect-breakpoints"/>).</para>
+    </sect2>
+    <sect2 id="nemiver-sect-inspecting-variables">
+      <title>Επιθεώρηση μεταβλητών</title>
+      <para>Το Nemiver εμφανίζει μια λίστα όλων των τοπικών μεταβλητών στην καρτέλα <interface>μεταβλητές</interface> της <interface>κατάσταση σημειωματάριου</interface>. Εάν θέλατε να εξετάσετε μια διαφορετική μεταβλητή (ή ακόμα μια ελεύθερη έκφραση), μπορείτε να χρησιμοποιήσετε τον <interface>επιθεωρητή μεταβλητής</interface>. Για να εμφανίσετε τον <interface>επιθεωρητή μεταβλητής</interface>, επιλέξτε <menuchoice><guimenu>αποσφαλμάτωση</guimenu><guimenuitem>επιθεώρηση μεταβλητής</guimenuitem></menuchoice>. Όταν ο επιθεωρητής μεταβλητής εμφανιστεί, θα δείτε ένα παράθυρο που μοιάζει με το παρακάτω:</para>
+      <screenshot>
+        <mediaobject><imageobject> <imagedata fileref="figures/variable-inspector.png" format="PNG"/> </imageobject> <textobject> <phrase>διάλογος επιθεωρητή μεταβλητής</phrase> </textobject></mediaobject>
+      </screenshot>
+      <para>Μπορείτε να πληκτρολογήσετε οποιοδήποτε όνομα μεταβλητής; ή μια απλή έκφραση (όπως <literal>pFoo-&gt;bar</literal>) στο πλαίσιο εισόδου και εάν η μεταβλητή είναι έγκυρη και σε εμβέλεια, θα εμφανίσει λεπτομέρειες για την έκφραση.</para>
+      <para>Εναλλακτικά, εάν επιλέξετε το όνομα της μεταβλητής στον <interface>επεξεργαστή πηγής</interface> και έπειτα εκκινήσετε τον <interface>επιθεωρητή μεταβλητής</interface>, θα προσπαθήσει να εμφανίσει πληροφορίες για το επιλεγμένο όνομα μεταβλητής.</para>
+      <tip>
+        <title>Συντόμευση πληκτρολογίου</title>
+        <para>Μπορείτε επίσης να ξεκινήσετε τον <interface>επιθεωρητή μεταβλητής</interface> πατώντας <keycap>F12</keycap>.</para>
+      </tip>
+      <para>Το Nemiver επιτρέπει επίσης την εμφάνιση μιας λίστας όλων των γενικών μεταβλητών σε μια εφαρμογή σε ξεχωριστό διάλογο. Για εμφάνιση του διαλόγου <interface>γενικές μεταβλητές</interface>, επιλέξτε <menuchoice><guimenu>αποσφαλμάτωση</guimenu><guimenuitem>εμφάνιση γενικών μεταβλητών</guimenuitem></menuchoice> ή πατήστε <keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo>.</para>
+      <screenshot>
+        <mediaobject><imageobject> <imagedata fileref="figures/global-variables-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>γενικός διάλογος μεταβλητών</phrase> </textobject></mediaobject>
+      </screenshot>
+      <warning>
+        <para>Για μερικά προγράμματα (ειδικά προγράμματα C++), που εμφανίζουν όλες τις γενικές μεταβλητές ίσως πάρει πάρα πολύ χρόνο.</para>
+      </warning>
+    </sect2>
+    <sect2 id="nemiver-sect-breakpoints">
+      <title>Ορισμός σημείων διακοπής</title>
+      <para>Υπάρχουν πολλοί διαφορετικοί τρόποι να ορίσετε σημεία διακοπής στο Nemiver. Το Nemiver αυτόματα ορίζει ένα σημείο διακοπής στη <function>main()</function> όταν πρωτοξεκινάτε την αποσφαλμάτωση ενός νέου εκτελέσιμου. Εάν θέλετε να ορίσετε πρόσθετα σημεία διακοπής μπορείτε να κάνετε ένα από τα παρακάτω:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Κλικ στο περιθώριο δίπλα στη γραμμή όπου θέλετε να οριστεί το σημείο διακοπής</para>
+        </listitem>
+        <listitem>
+          <para>Τοποθετήστε τον δρομέα σας σε μια γραμμή όπου θέλετε το σημείο διακοπής να οριστεί και ορίστε το σημείο διακοπής είτε επιλέγοντας <menuchoice><guimenu>αποσφαλμάτωση</guimenu><guimenuitem>εναλλαγή σημείου διακοπής στον δρομέα</guimenuitem></menuchoice>, ή πατώντας <keycap>F8</keycap></para>
+        </listitem>
+        <listitem>
+          <para>Ορίστε ένα σημείο διακοπής σε ένα συγκεκριμένο όνομα συνάρτησης ή σε μια συγκεκριμένη θέση σε ένα αρχείο επιλέγοντας <menuchoice><guimenu>αποσφαλμάτωση</guimenu><guimenuitem>ορισμός σημείου διακοπής...</guimenuitem></menuchoice> ή πατώντας <keycombo><keycap>Ctrl</keycap><keycap>B</keycap></keycombo>. Αυτό θα εμφανίσει έναν διάλογο που φαίνεται σαν τον παρακάτω:</para>
+          <screenshot>
+            <mediaobject><imageobject> <imagedata fileref="figures/set-breakpoint-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Ορισμός διαλόγου σημείου διακοπής</phrase> </textobject></mediaobject>
+          </screenshot>
+          <para>Μπορείτε να ορίσετε ένα σημείο διακοπής σε μια συγκεκριμένη θέση σε ένα αρχείο, ή με όνομα συνάρτησης. Εάν υπάρχουν περισσότερες από μία συναρτήσεις με το ίδιο όνομα, το Nemiver θα εμφανίσει μια λίστα όλων των συναρτήσεων που συμφωνούν και θα σας ζητήσει να επιλέξετε την επιθυμητή συνάρτηση.</para>
+        </listitem>
+      </itemizedlist>
+      <sect3>
+        <title>Απενεργοποιημένα σημεία διακοπής</title>
+        <para>Τα σημεία διακοπής μπορεί να είναι είτε ενεργά είτε ανενεργά. Ο αποσφαλματωτής θα σταματήσει την εκτέλεση όποτε φτάσει ένα ενεργό σημείο διακοπής, αλλά δεν θα επηρεαστεί από οποιοδήποτε σημεία διακοπής σε ανενεργή κατάσταση. Αυτό επιτρέπει την προσωρινή αφαίρεση σημείου διακοπής χωρίς στην πραγματικότητα να διαγράφεται.</para>
+        <para>Για απενεργοποίηση ή ενεργοποίηση σημείου διακοπής, κλικ στο πλαίσιο ελέγχου δίπλα στον επιθυμητό αριθμό του σημείου διακοπής για ενεργοποίηση ή απενεργοποίηση στην καρτέλα <interface>σημεία διακοπής</interface> της <interface>κατάστασης σημειωματαρίου</interface>. Εναλλακτικά, μπορείτε να πατήσετε <keycombo><keycap>Shift</keycap><keycap>F8</keycap></keycombo> για ενεργοποίηση ή απενεργοποίηση σημείου διακοπής που ορίστηκε στη γραμμή που ο δρομέας είναι προς το παρόν ενεργός.</para>
+        <para>Οι παρακάτω εικόνες εμφανίζουν τη διαφορά μεταξύ ενεργών και ανενεργών σημείων διακοπής στον επεξεργαστή πηγής.</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/enabled-breakpoint.png" format="PNG"/> </imageobject> <textobject> <phrase>Επεξήγηση ενεργού σημείου διακοπής</phrase> </textobject> <caption><para>Ενεργό σημείο διακοπής</para></caption></mediaobject>
+        </screenshot>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/disabled-breakpoint.png" format="PNG"/> </imageobject> <textobject> <phrase>Επεξήγηση ανενεργού σημείου διακοπής</phrase> </textobject> <caption><para>Ανενεργό σημείο διακοπής</para></caption></mediaobject>
+        </screenshot>
+      </sect3>
+      <sect3>
+        <title>Άνοιγμα πηγαίων αρχείων</title>
+        <para>Μερικές φορές δεν ξέρετε ακριβώς το όνομα της συνάρτησης ή τον αριθμό της γραμμής όπου θέλετε ένα σημείο διακοπής να οριστεί, έτσι πρέπει να ανοίξετε ένα πηγαίο αρχείο για το καταλάβετε. Θα μπορούσατε να ανοίξετε απλά τυχαία αρχεία από το σύστημα αρχείων, αλλά το Nemiver μπορεί να δώσει επίσης μια λίστα αρχείων πηγών που χρησιμοποιήθηκε για την κατασκευή του εκτελέσιμου και να σας επιτρέψει να επιλέξετε από αυτή τη λίστα. Όταν επιλέγετε <menuchoice><guimenu>αρχείο</guimenu><guimenuitem>άνοιγμα αρχείου πηγής...</guimenuitem></menuchoice>, το παρακάτω παράθυρο θα εμφανιστεί:</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/open-files-target.png" format="PNG"/> </imageobject> <textobject> <phrase>Εμφανίζει τον διάλογο ανοίγματος πηγαίων αρχείων</phrase> </textobject></mediaobject>
+        </screenshot>
+        <para>Για επιλογή τυχαίου αρχείου από το σύστημα αρχείων, διαλέξτε την δυνατότητα <guilabel>επιλογή από σύστημα αρχείων</guilabel>. Για επιλογή από μια λίστα αρχείων που παρήγαγαν το εκτελέσιμο, επιλέξτε <guilabel>επιλογή από εκτελέσιμο στόχο</guilabel>.</para>
+        <warning>
+          <title>Προσδιορισμός των πηγαίων αρχείων για δυναμικά φορτωμένα αρθρώματα</title>
+          <para>Εάν ο εκτελέσιμος στόχος φορτώνει αρθρώματα στον χρόνο εκτέλεσης (π.χ. χρησιμοποιώντας <function>dlopen()</function>), το Nemiver δεν θα μπορεί να προσδιορίσει ποια αρχεία χρησιμοποιήθηκαν για δόμηση αυτών των αρθρωμάτων μέχρι να φορτωθούν στην πραγματικότητα.</para>
+        </warning>
+      </sect3>
+    </sect2>
+    <sect2 id="nemiver-sect-advanced">
+      <title>Προχωρημένη αποσφαλμάτωση</title>
+      <sect3 id="nemiver-sect-registers">
+        <title>Καταχωριστές</title>
+        <para>Το γραφικό συστατικό επεξεργασίας καταχωριστή τοποθετείται στην καρτέλα <interface>καταχωριστές</interface> της <interface>κατάστασης σημειωματαρίου</interface>. Εναλλακτικά, μπορείτε να πατήσετε <keycombo><keycap>Alt</keycap><keycap>F5</keycap></keycombo> για άμεση μετάβαση στην σωστή καρτέλα.</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/registers-view.png" format="PNG"/> </imageobject> <textobject> <phrase>Το γραφικό συστατικό επεξεργασίας καταχωριστή</phrase> </textobject></mediaobject>
+        </screenshot>
+        <para>Αυτό το γραφικό συστατικό εμφανίζει τις τρέχουσες τιμές όλων των καταχωριστών CPU. Μπορείτε να επεξεργαστείτε τις τιμές με κλικ στη στήλη <interface>τιμή</interface> και εισαγωγή μιας νέας τιμής. Εάν η τιμή για τον καταχωριστή άλλαξε από την τελευταία φορά που σταμάτησε ο αποσφαλματωτής, θα τονιστεί με κόκκινο.</para>
+      </sect3>
+      <sect3 id="nemiver-sect-memory">
+        <title>Μνήμη</title>
+        <para>Το γραφικό συστατικό μνήμης επιτρέπει την προβολή μιας ενότητας άμεσης μνήμης. Αυτό ενεργοποιεί τη λήψη μιας προβολής χαμηλότερου επιπέδου του τι συμβαίνει ενώ το πρόγραμμά σας τρέχει.</para>
+        <screenshot>
+          <mediaobject><imageobject> <imagedata fileref="figures/memory-view.png" format="PNG"/> </imageobject> <textobject> <phrase>Το γραφικό συστατικό επεξεργασίας μνήμης</phrase> </textobject></mediaobject>
+        </screenshot>
+        <para>Για εμφάνιση τμήματος μνήμης στο γραφικό συστατικό προβολής μνήμης, εισάγετε μια διεύθυνση μνήμης στο πεδίο <interface>διεύθυνση</interface>. Εάν η διεύθυνση είναι έγκυρη για το αποσφαλματούμενο πρόγραμμα, η προβολή μνήμης θα εμφανίσει τις τιμές μνήμης ξεκινώντας από την συγκεκριμένη διεύθυνση. Οι τιμές μνήμης μπορούν να εμφανιστούν σε μορφή ψηφιολέξης, σε μορφή λέξης (2 ψηφιολέξεις), ή μορφή μεγάλης λέξης (4 ψηφιολέξεις) διαλέγοντας μια επιλογή από το πτυσσόμενο μενού <interface>ομαδοποίηση κατά</interface>. Οι τιμές μνήμης θα ενημερωθούν αυτόματα καθώς διασχίζετε το πρόγραμμα.</para>
+        <para>Πέρα από την προβολή τιμών μνήμης, μπορείτε επίσης να χρησιμοποιήσετε το γραφικό συστατικό μνήμης για τροποποίηση των τιμών μνήμης. Μπορείτε να επεξεργαστείτε είτε την δεκαεξαδική αναπαράσταση ψηφιολέξης (η αριστερή ενότητα του γραφικού συστατικού μνήμης), ή η αναπαράσταση ASCII (η δεξιά ενότητα του γραφικού συστατικού μνήμης). Όλες οι αλλαγές θα εφαρμοστούν αμέσως.</para>
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="nemiver-sect-sessions">
+    <title>Αποθήκευση συνόδου και επαναφορά</title>
+    <para>Το Nemiver μπορεί να αποθηκεύσει τις συνόδους αποσφαλμάτωσης για σας έτσι ώστε να μπορείτε να τις συνεχίσετε αργότερα. Αυτό περιλαμβάνει αποθήκευση πληροφοριών όπως ποιο εκτελέσιμο αποσφαλματώνεται, τι μεταβλητές περιβάλλοντος ορίζονται, ποιες επιλογές γραμμής εντολών περνούν στο εκτελέσιμο, ποια αρχεία είναι ανοικτά και ποια σημεία διακοπής ορίζονται έτσι ώστε να μπορείτε να πάρετε πίσω όπου τα αφήσατε την τελευταία φορά όσο το δυνατό πιο γρήγορα.</para>
+    <sect2 id="nemiver-sect-saving-sessions">
+      <title>Αποθηκευμένες συνόδων</title>
+      <para>Το Nemiver θα αποθηκεύσει τη σύνοδο σας αυτόματα στην έξοδο, έτσι δεν χρειάζεται να ανησυχείτε για αυτό. Όμως, εάν θέλετε να αποθηκεύσετε ρητά τη σύνοδο πριν το κλείσιμο του Nemiver, μπορείτε να το κάνετε επιλέγοντας <menuchoice><guimenu>αρχείο</guimenu><guimenuitem>αποθήκευση συνόδου στον δίσκο</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <sect2 id="nemiver-sect-resuming-sessions">
+      <title>Συνέχιση αποθηκευμένων συνόδων</title>
+      <sect3>
+        <title>Χρήση του πάγκου εργασίας</title>
+        <para>Επιλέξτε <menuchoice><guimenu>αρχείο</guimenu><guimenuitem>συνέχιση αποθηκευμένης συνόδου...</guimenuitem></menuchoice> και επιλέξτε μια σύνοδο από τη λίστα.</para>
+        <figure id="nemiver-sessions-dialog">
+          <title>Διάλογος συνόδου</title>
+          <screenshot>
+            <mediaobject><imageobject> <imagedata fileref="figures/sessions-dialog.png" format="PNG"/> </imageobject> <textobject> <phrase>Εμφανίζει τον διάλογο συνέχισης αποθηκευμένης συνεδρίας</phrase> </textobject></mediaobject>
+          </screenshot>
+        </figure>
+      </sect3>
+      <sect3>
+        <title>Από τη γραμμή εντολών</title>
+        <para>Εάν ξέρετε την ταυτότητα της επιθυμητής συνόδου προς εκτέλεση, μπορείτε να ξεκινήσετε αυτήν την σύνοδο αποσφαλμάτωσης από τη γραμμή εντολών. Για παράδειγμα, εάν θέλετε να τρέξετε την σύνοδο με αριθμό 3, μπορείτε να το κάνετε με την επόμενη εντολή: <command>nemiver --session 3</command>.</para>
+      </sect3>
+    </sect2>
+  </sect1>
+  <!-- This should be the last section in the manual -->
+  <sect1 id="nemiver-sect-about">
+    <title>Περί του Nemiver</title>
+    <para>Η <application>Nemiver</application> γράφτηκε από τους Dodji Seketeli και Jonathon Jongsma, με συνεισφορές από πολλούς άλλους. Για περισσότερες πληροφορίες σχετικά με το Nemiver, παρακαλώ επισκεφτείτε την <ulink url="http://www.gnome.org/projects/nemiver/" type="http">ιστοσελίδα του έργου</ulink>.</para>
+    <para>Για αναφορά σφάλματος ή υποβολή πρότασης σχετικά με αυτή την εφαρμογή ή αυτό το εγχειρίδιο, δείτε την ενότητα ανατροφοδότησης του <ulink url="ghelp:user-guide?feedback-bugs" type="help">οδηγού χρήστη GNOME</ulink>.</para>
+    <para>Αυτό το πρόγραμμα διανέμεται με τους όρους της γενικής δημόσιας άδειας GNU όπως δημοσιεύτηκε από το ίδρυμα ελεύθερου λογισμικού· είτε έκδοση 2 της άδειας, ή (προαιρετικά) οποιαδήποτε μεταγενέστερη έκδοση. Αντίγραφο αυτής της άδειας μπορεί να βρεθεί στον <ulink url="ghelp:gpl" type="help">σύνδεσμο</ulink>, ή στο αρχείο COPYING που περιλαμβάνεται στον πηγαίο κώδικα αυτού του προγράμματος.</para>
+  </sect1>
+</article>
+<!--
+vim: ts=2 sw=2 et
+-->
